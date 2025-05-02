@@ -1,0 +1,8 @@
+@import "../../../node_modules/swiper/swiper-bundle.min";
+
+.swiper-padding {
+
+  .swiper {
+    padding-inline: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
+  }
+}

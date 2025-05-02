@@ -1,0 +1,204 @@
+@use "mixins" as mixins;
+
+.portfolio {
+  color: var(--light);
+  background-color: var(--dark);
+  padding-block: 4rem;
+  position: relative;
+  overflow: hidden;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-block: 6.25rem;
+  }
+
+  &-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    opacity: .1;
+  }
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lines {
+    --line-color: var(--light);
+  }
+
+  .section-header {
+    max-width: 450px;
+  }
+
+  &-swiper {
+    position: relative;
+    z-index: 10;
+
+    @include mixins.breakpoint-up(lg) {
+      min-height: 32.25vw;
+    }
+
+    @include mixins.breakpoint-up(xxxxxl) {
+      min-height: 600px;
+    }
+  }
+
+  .swiper {
+    overflow: initial;
+
+    &-wrapper {
+
+      @include mixins.breakpoint-up(lg) {
+        transition-duration: var(--transition-duration) !important;
+      }
+    }
+
+    .swiper-slide {
+
+      @include mixins.breakpoint-up(lg) {
+        width: 360px;
+        transform: translateY(calc(32.25vw - 100%));
+
+        transition-property: width, transform;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        width: 448px;
+      }
+
+      @include mixins.breakpoint-up(xxxxxl) {
+        transform: translateY(calc(600px - 100%));
+      }
+
+      &-active {
+
+        @include mixins.breakpoint-up(lg) {
+          width: var(--slide-active-size);
+          transform: translateY(0%);
+        }
+      }
+    }
+
+    &-navigation {
+      width: max-content;
+      display: flex;
+      gap: .75rem;
+      background-color: var(--primary-rgba-80);
+      margin-top: 2rem;
+      position: relative;
+      z-index: 10;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &-spacer {
+        width: 1px;
+        display: block;
+        flex: 1;
+        flex-shrink: 0;
+        background-color: var(--light);
+        margin-block: 1.25rem;
+
+        @include mixins.breakpoint-up(lg) {
+          margin-block: 1.5rem;
+        }
+      }
+    }
+
+    &-button-next,
+    &-button-prev {
+      min-width: 3.75rem;
+      min-height: 3.75rem;
+      color: var(--light);
+      position: static;
+      margin: 0;
+
+      @include mixins.breakpoint-up(lg) {
+        min-width: 5rem;
+        min-height: 5rem;
+      }
+
+      &::after {
+        all: initial;
+      }
+
+      .icon {
+        --_size: 1rem;
+
+        @include mixins.breakpoint-up(lg) {
+          --_size: 1.25rem;
+        }
+      }
+    }
+
+    &-button-next {
+
+      .icon {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &-button-prev {
+
+      .icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &-card {
+    width: 100%;
+
+    picture {
+      flex: 1;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &-btn {
+    --_color: inherit;
+
+    margin-top: 3rem;
+    position: relative;
+
+    @include mixins.breakpoint-up(lg) {
+      --_height: auto;
+      --_fs: 1.375rem;
+      --_fw: 400;
+      --_lh: 1.4;
+      --_border-width: 0px;
+      --_border-color: transparent;
+      --_padding: 0;
+
+      --_color-hover: var(--primary);
+      --_bg-hover: transparent;
+      --_border-color-hover: transparent;
+
+      --_color-active: var(--primary);
+      --_bg-active: transparent;
+      --_border-color-active: transparent;
+
+      margin-top: 2rem;
+      margin-left: auto;
+      text-decoration: underline;
+      text-decoration-color: var(--primary);
+      text-underline-offset: .375em;
+    }
+  }
+}

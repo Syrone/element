@@ -1,0 +1,287 @@
+@use "mixins" as mixins;
+
+.service {
+  color: var(--light);
+  background-color: var(--dark);
+	position: relative;
+  z-index: 1;
+
+  .lines {
+    --line-color: var(--light);
+  }
+
+  &-bg {
+
+    > * {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+
+      &::after {
+        content: '';
+        background-color: var(--dark-rgba-80);
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+      }
+
+      &.is-show {
+        opacity: 1;
+      }
+    }
+  }
+
+  > .container {
+    padding-block: 3.75rem 1.25rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding-block: 2.5rem 0;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-bottom: 1.5rem;
+      margin-left: 2.5rem;
+      padding-left: 0;
+    }
+
+    &::after {
+
+      @include mixins.breakpoint-up(lg) {
+        display: none;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 2.5rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-left: 2.5rem;
+      margin-bottom: 6.25rem;
+    }
+  }
+
+  &-title {
+    font-family: var(--font-second);
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.3;
+    text-transform: uppercase;
+    padding-left: 2.5rem;
+    padding-block: 2.5rem;
+    position: relative;
+
+    transition-property: opacity;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    @include mixins.breakpoint-up(lg) {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+      padding-block: 0;
+    }
+
+    @include mixins.breakpoint-up(xl) {
+      padding-left: 2.5rem;
+    }
+
+    > span {
+      display: block;
+      transition-property: transform;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+
+      .service-item.is-active > & {
+
+        @include mixins.breakpoint-up(xl) {
+          transform: scale(1.25);
+        }
+
+        @include mixins.breakpoint-up(xxl) {
+          transform: scale(1.25) translateX(1.125em);
+        }
+      }
+    }
+
+    &::before {
+
+      @include mixins.breakpoint-up(lg) {
+        content: '';
+        width: .625rem;
+        height: 2.25rem;
+        display: block;
+        background-color: var(--primary);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        transition-property: opacity;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+      }
+
+      .service-item.is-active > & {
+
+        @include mixins.breakpoint-up(lg) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 100%;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  &-item {
+
+    &:not(:last-child) {
+
+      .service-title {
+        border-bottom: 1px solid var(--light-rgba-50);
+
+        @include mixins.breakpoint-up(lg) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &-close,
+    &-link {
+      --_color: inherit;
+
+      --_color-hover: var(--light);
+
+      --_color-active: var(--light);
+    }
+
+    &-close {
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+
+      @media (hover: hover) {
+        display: none;
+      }
+    }
+
+    &-link {
+      --_width: 100%;
+      --_fs: 1.25rem;
+      --_fw: 400;
+      --_padding: 0 2.5rem;
+
+      justify-content: initial;
+      text-align: start;
+      position: relative;
+
+      @include mixins.breakpoint-up(lg) {
+        --_fs: 1rem;
+        --_padding: 0 1.25rem;
+      }
+
+      @include mixins.breakpoint-up(xl) {
+        --_fs: 1.125rem;
+        --_padding: 0 1.75rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        --_fs: 1.25rem;
+        --_padding: 0 2.5rem;
+      }
+
+      &::after {
+        content: '';
+        width: .625rem;
+        height: 2rem;
+        background-color: currentColor;
+        position: absolute;
+        top: 50%;
+        left: .25rem;
+        transform: translateY(-50%);
+        opacity: 0;
+
+        transition-property: opacity;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+      }
+
+      &:is(:hover, :focus-visible) {
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding-block: 3.75rem;
+      color: var(--light);
+      background-color: var(--primary);
+      text-transform: uppercase;
+      opacity: 0;
+
+      transition-property: opacity;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+
+      @include mixins.breakpoint-up(lg) {
+        width: 100%;
+        gap: 3rem;
+        padding-block: 2.5rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        gap: 4.5rem;
+        padding-block: 3.75rem;
+      }
+
+      @include mixins.breakpoint-down(lg) {
+        pointer-events: none;
+        position: absolute;
+        right: var(--container-offset);
+        left: var(--container-offset);
+        z-index: 1;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &.is-active {
+
+      ul {
+        opacity: 1;
+
+        @include mixins.breakpoint-down(lg) {
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.contacts-list {
+  flex-direction: column;
+  align-items: stretch;
+  gap: .5rem;
+
+  &,
+  &-item {
+    display: flex;
+  }
+
+  &-item {
+    align-items: center;
+  }
+
+  &-link {
+    --_fs: 1rem;
+    --_color: var(--light-200);
+    --_lh: 1;
+
+    font-family: var(--font-family);
+    justify-content: stretch;
+    text-align: end;
+
+    &--phone {
+      --_fs: 1.375rem;
+      --_color: var(--light-450);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.socials-list {
+  gap: 1rem;
+
+  &,
+  &-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &-link {
+    --_bg: var(--light-450);
+    --_padding: .375rem;
+    --_rounded: 50%;
+
+    --_icon-size: .875rem;
+
+    --_color-hover: var(--dark);
+    --_bg-hover: var(--primary);
+
+    --_color-active: var(--dark);
+    --_bg-active: var(--primary);
+  }
+}

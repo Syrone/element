@@ -1,0 +1,52 @@
+@use "mixins" as mixins;
+
+.lines {
+  --line-color: var(--dark);
+
+  display: none;
+
+  @include mixins.breakpoint-up(lg) {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
+    bottom: 0;
+    left: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
+  }
+
+  > * {
+
+    @include mixins.breakpoint-up(lg) {
+      opacity: .2;
+      border-right: 1px solid var(--line-color);
+    }
+
+    &:first-child {
+
+      @include mixins.breakpoint-up(lg) {
+        border-left: 1px solid var(--line-color);
+      }
+    }
+  }
+
+  &-inline {
+
+    > * {
+
+      @include mixins.breakpoint-up(lg) {
+        border-right: none;
+      }
+
+      &:last-child {
+
+        @include mixins.breakpoint-up(lg) {
+          border-right: 1px solid var(--line-color);
+        }
+      }
+    }
+  }
+}

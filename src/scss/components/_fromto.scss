@@ -1,0 +1,167 @@
+@use "mixins" as mixins;
+
+.fromto {
+  padding-block: 8.25rem 6rem;
+  position: relative;
+
+  > .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+
+    @include mixins.breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0;
+    }
+  }
+
+  .section-header {
+    order: -5;
+  }
+
+  &-content {
+    margin-top: 2rem;
+    grid-column: -1 / 1;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: 1 / 4;
+      margin-top: initial;
+      padding-inline: 1.75rem 3rem;
+    }
+
+    @include mixins.breakpoint-up(xxl) {
+      grid-column: 1 / 3;
+      padding-inline: 1.75rem 6.25rem;
+    }
+
+    .section-header {
+      display: none;
+
+      @include mixins.breakpoint-up(lg) {
+        display: block;
+      }
+    }
+
+    .section-title {
+
+      @include mixins.breakpoint-up(lg) {
+        padding-left: 0;
+      }
+
+      &::after {
+
+        @include mixins.breakpoint-up(lg) {
+          left: auto;
+          right: calc(100% + 1.125rem);
+        }
+      }
+    }
+  }
+
+  &-footer {
+    margin-top: 2rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-top: 4rem;
+    }
+  }
+
+  &-button {
+    --_width: 100%;
+
+    @include mixins.breakpoint-up(lg) {
+      --_width: auto;
+
+      min-width: 17.5rem;
+    }
+  }
+
+  &-from,
+  &-to {
+    height: 60vw;
+    flex-basis: calc(50% - .5rem);
+    position: relative;
+    order: -1;
+
+    @include mixins.breakpoint-up(lg) {
+      height: initial;
+      flex-basis: initial;
+      order: initial;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--primary-400);
+      mix-blend-mode: darken;
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &-from {
+
+    @include mixins.breakpoint-up(lg) {
+      height: 50%;
+      align-self: start;
+      margin-right: 1rem;
+    }
+
+    .fromto-text {
+      bottom: 0;
+
+      @include mixins.breakpoint-up(lg) {
+        top: 0;
+      }
+    }
+  }
+
+  &-to {
+
+    @include mixins.breakpoint-up(lg) {
+      margin-left: 1rem;
+    }
+
+    .fromto-text {
+      top: 0;
+      right: 0;
+      text-align: end;
+
+      @include mixins.breakpoint-up(lg) {
+        bottom: 0;
+        right: auto;
+        text-align: start;
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-second);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--light);
+    text-transform: uppercase;
+    padding: .875rem;
+    position: absolute;
+    z-index: 1;
+
+    @include mixins.breakpoint-up(lg) {
+      padding: 1.25rem;
+    }
+
+    span {
+      font-size: 4rem;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}

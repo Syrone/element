@@ -1,0 +1,111 @@
+@use "mixins" as mixins;
+
+.advantage {
+  position: relative;
+
+  > .container {
+    padding-block: 2rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding-block: 8.75rem;
+    }
+  }
+
+  .section-title {
+
+    @include mixins.breakpoint-up(lg) {
+      max-width: 45%;
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 3rem;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      margin-top: 4.5rem;
+      padding-inline: 2.5rem;
+    }
+
+    @include mixins.breakpoint-up(xl) {
+      gap: 4rem;
+    }
+
+    @include mixins.breakpoint-up(xxl) {
+      gap: 6rem;
+    }
+  }
+
+  &-item {
+
+    @include mixins.breakpoint-down(lg) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .desc {
+
+      @include mixins.breakpoint-down(lg) {
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &-image {
+    display: block;
+    aspect-ratio: 4 / 3;
+
+    @include mixins.breakpoint-down(lg) {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &-title {
+    font-family: var(--font-second);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin: 0;
+    border-top: 1px solid var(--dark-rgba-50);
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+
+    @include mixins.breakpoint-up(lg) {
+      margin: 3rem 0 2rem 0;
+      border-top: none;
+      padding: 0 0 0 1.5rem;
+    }
+
+    &::after {
+      content: '';
+      width: .625rem;
+      height: 1.375rem;
+      position: absolute;
+      left: 0;
+      top: 1.5rem;
+      background-color: var(--primary);
+
+      @include mixins.breakpoint-up(lg) {
+        top: 0;
+      }
+    }
+
+    .icon {
+
+      @include mixins.breakpoint-up(lg) {
+        display: none;
+      }
+    }
+  }
+}

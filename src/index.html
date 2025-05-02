@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Главная страница'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <div class="main-sections">
+        <section class="hero">
+          <span class="hero-bg" style="background-image: url(./img/hero-bg.webp);"></span>
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-desc hero-desc--desktop">
+                Прототипирование и серийное производство изделий из пластика
+              </p>
+              <h2 class="hero-title">
+                ПРОЕКТИРУЕМ И ИЗГОТАВЛИВАЕМ ИЗДЕЛИЯ из пластика ЛЮБОЙ СЛОЖНОСТИ,
+                РАЗМЕРОВ И КОЛИЧЕСТВА
+              </h2>
+              <p class="hero-desc">
+                Решим вашу задачу в лучшем качестве, с гарантией результата и точно в срок!
+              </p>
+            </div>
+
+            <ul class="list-reset hero-info">
+              <li class="hero-info-item">
+                <h3 class="hero-info-number">5</h3>
+                <p class="hero-info-desc">
+                  Лет работы в решении самых сложных проектов
+                </p>
+              </li>
+              <li class="hero-info-item">
+                <h3 class="hero-info-number">01</h3>
+                <p class="hero-info-desc">
+                  День сроки изготовления проектов
+                </p>
+              </li>
+              <li class="hero-info-item">
+                <h3 class="hero-info-number">3000<span>+</span></h3>
+                <p class="hero-info-desc">
+                  Успешно реализованных проектов
+                </p>
+              </li>
+              <li class="hero-info-item">
+                <h3 class="hero-info-number">24/7</h3>
+                <p class="hero-info-desc">
+                  Производство работает без выходных
+                </p>
+              </li>
+              <li class="hero-info-item">
+                <h3 class="hero-info-number">80%</h3>
+                <p class="hero-info-desc">
+                  заказов выполняем раньше срока
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="fromto">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header" data-transfer-target="fromto-title"></div>
+            <div class="fromto-content">
+              <div class="section-header">
+                <h2 class="section-title" data-transfer-origin="fromto-title" data-transfer-breakpoint="991.98">
+                  ВЫПОЛНИМ ВАШ ПРОЕКТ «ПОД КЛЮЧ» ЛЮБОЙ СЛОЖНОСТИ И МАСШТАБА
+                </h2>
+              </div>
+              <p class="desc">
+                3D-ELEMENT – производственная компания, которая более 5 лет
+                выполняет полный комплекс работ от разработки проекта и
+                дизайна до серийного производства. Мы решаем самые смелые,
+                сложные, технические и дизайнерские задачи. У нас большой опыт
+                работы в различных отраслях и направлениях, где каждый проект
+                уникален. В своей работе мы используем современные технологии
+                производства и только качественные материалы! В нашей команде
+                работают настоящие профессионалы и фанаты своего дела, каждый
+                из которых постоянно обучается и совершенствует свои навыки.
+              </p>
+              <div class="fromto-footer">
+                <button type="button" class="btn btn-xl btn-outline-primary fromto-button">
+                  О компании
+                </button>
+              </div>
+            </div>
+            <div class="fromto-from">
+              <picture>
+                <source srcset="./img/fromto-1.webp" type="image/webp">
+                <img loading="lazy" src="./img/fromto-1.png" class="fromto-image" width="343" height="508"
+                  alt="Картинка">
+              </picture>
+              <div class="fromto-text">
+                <span>от</span>
+                шестеренки
+              </div>
+            </div>
+            <div class="fromto-to">
+              <picture>
+                <source srcset="./img/fromto-2.webp" type="image/webp">
+                <img loading="lazy" src="./img/fromto-2.png" class="fromto-image" width="343" height="905"
+                  alt="Картинка">
+              </picture>
+              <div class="fromto-text">
+                <span>до</span>
+                Двигателя
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="service">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="service-bg">
+            <span style="background-image: url(./img/service/bg-1.webp);" data-service-id="service-item-1"></span>
+            <span style="background-image: url(./img/service/bg-2.webp);" data-service-id="service-item-2"></span>
+            <span style="background-image: url(./img/service/bg-3.webp);" data-service-id="service-item-3"></span>
+            <span style="background-image: url(./img/service/bg-4.webp);" data-service-id="service-item-4"></span>
+            <span style="background-image: url(./img/service/bg-5.webp);" data-service-id="service-item-5"></span>
+          </div>
+          <div class="container">
+            <h2 class="section-title">решение ваших задач в одном месте</h2>
+            <p class="desc">
+              Вам не нужно больше искать множество подрядчиков, <br />
+              заключать массу договоров и каждый раз объяснять все заново.
+            </p>
+            <div class="service-list">
+              <div class="service-item" data-service-target="service-item-1">
+                <div class="service-title">
+                  <span>3D-услуги</span>
+                </div>
+                <ul class="list-reset">
+                  <button type="button" class="btn btn-close service-item-close" data-service-close="">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close.svg#svg-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <li><a href="#" class="btn service-item-link">3D-печать</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-сканирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-контроль и обмер</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-моделирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-анимация</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-визуализация</a></li>
+                  <li><a href="#" class="btn service-item-link">Реверс-инжиниринг</a></li>
+                </ul>
+              </div>
+              <div class="service-item" data-service-target="service-item-2">
+                <div class="service-title">
+                  <span>ЧПУ услуги</span>
+                </div>
+                <ul class="list-reset">
+                  <button type="button" class="btn btn-close service-item-close" data-service-close="">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close.svg#svg-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <li><a href="#" class="btn service-item-link">3D-печать</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-сканирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-контроль и обмер</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-моделирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-анимация</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-визуализация</a></li>
+                  <li><a href="#" class="btn service-item-link">Реверс-инжиниринг</a></li>
+                </ul>
+              </div>
+              <div class="service-item" data-service-target="service-item-3">
+                <div class="service-title">
+                  <span>услуги литья</span>
+                </div>
+                <ul class="list-reset">
+                  <button type="button" class="btn btn-close service-item-close" data-service-close="">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close.svg#svg-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <li><a href="#" class="btn service-item-link">3D-печать</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-сканирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-контроль и обмер</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-моделирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-анимация</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-визуализация</a></li>
+                  <li><a href="#" class="btn service-item-link">Реверс-инжиниринг</a></li>
+                </ul>
+              </div>
+              <div class="service-item" data-service-target="service-item-4">
+                <div class="service-title">
+                  <span>Комплексные услуги</span>
+                </div>
+                <ul class="list-reset">
+                  <button type="button" class="btn btn-close service-item-close" data-service-close="">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close.svg#svg-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <li><a href="#" class="btn service-item-link">3D-печать</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-сканирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-контроль и обмер</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-моделирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-анимация</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-визуализация</a></li>
+                  <li><a href="#" class="btn service-item-link">Реверс-инжиниринг</a></li>
+                </ul>
+              </div>
+              <div class="service-item" data-service-target="service-item-5">
+                <div class="service-title">
+                  <span>Другие услуги</span>
+                </div>
+                <ul class="list-reset">
+                  <button type="button" class="btn btn-close service-item-close" data-service-close="">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close.svg#svg-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <li><a href="#" class="btn service-item-link">3D-печать</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-сканирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-контроль и обмер</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-моделирование</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-анимация</a></li>
+                  <li><a href="#" class="btn service-item-link">3D-визуализация</a></li>
+                  <li><a href="#" class="btn service-item-link">Реверс-инжиниринг</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="perform">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                ВЫПОЛНЯЕМ ПОЛНЫЙ КОМПЛЕКС РАБОТ ОТ РАЗРАБОТКИ ДО СЕРИЙНОГО ПРО-ВА
+              </h2>
+            </div>
+
+            <div class="tab">
+              <div class="tab-nav-header">
+                <ul class="list-reset tab-nav scrollable-x" role="tablist">
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" class="btn tab-nav-link active" id="tab-perform-1" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-1" role="tab" aria-controls="pane-perform-1" aria-selected="true">
+                      Составим <br> подробное ТЗ
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-2" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-2" type="button" role="tab" aria-controls="pane-perform-2"
+                      aria-selected="false">
+                      Сделаем 3D-модель и визуализацию
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-3" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-3" type="button" role="tab" aria-controls="pane-perform-3"
+                      aria-selected="false">
+                      Создадим изделие <br> с нужными требованиями
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-4" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-4" type="button" role="tab" aria-controls="pane-perform-4"
+                      aria-selected="false">
+                      Произведем в 2 раза <br> быстрее остальных
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-5" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-5" type="button" role="tab" aria-controls="pane-perform-5"
+                      aria-selected="false">
+                      Выполним монтаж и гарантийное обслуживание
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="pane-perform-1" role="tabpanel"
+                  aria-labelledby="tab-perform-1">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Составим подробное ТЗ
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем
+                          техническое задание, вы получаете документ:
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            с точными размерами и масштабами
+                          </li>
+                          <li>
+                            стоимостью и сроками про-ва
+                          </li>
+                          <li>
+                            материалами и их свойствами
+                          </li>
+                          <li>
+                            комплектацию и условия поставки
+                          </li>
+                        </ul>
+
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-1"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-1" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-1.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-2" role="tabpanel" aria-labelledby="tab-perform-2">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Сделаем 3D-модель и визуализацию
+                        </h3>
+                        <p>
+                          Создадим цифровую модель с учётом ваших пожеланий и необходимых требований, вы получаете:
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            Несколько вариантов эскизов для легкости выбора
+                          </li>
+                          <li>
+                            3D-визуализацию вашего проекта
+                          </li>
+                          <li>
+                            Подготовленную 3D-модель для последующего производства
+                          </li>
+                        </ul>
+
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-2"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-2" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-2.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-2.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-3" role="tabpanel" aria-labelledby="tab-perform-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Создадим изделие с нужными требованиями
+                        </h3>
+                        <p>
+                          Изготовим проект, чтобы он обладал необходимыми свойствами и характеристиками важными для вас
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            Составим смету производства
+                          </li>
+                          <li>
+                            Подберем материалы и технологии
+                          </li>
+                          <li>
+                            Обработаем, покрасим по RAL и соберем
+                          </li>
+                        </ul>
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-3"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-3" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-3.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-3.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-4" role="tabpanel" aria-labelledby="tab-perform-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Произведем в 2 раза быстрее остальных
+                        </h3>
+                        <p>
+                          80% заказов мы выполняем раньше оговоренного срока
+                          На нашем производстве применяются лучшие мировые методы управления проектами и контроля над их
+                          исполнением. Вам не придется переживать о сроках, все процессы автоматизированы и отлажены!
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-4"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-4" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-4.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-4.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-5" role="tabpanel" aria-labelledby="tab-perform-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Качественно упакуем и отгрузим в срок
+                        </h3>
+                        <p>
+                          Руководитель производства лично проверяет перед отправкой, каждое изделие на соответствие ТЗ и
+                          чек-листу контроля качества. Готовое изделие вы можете получить удобным для вас способом:
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            Самостоятельно из нашего офиса
+                          </li>
+                          <li>
+                            Отправим удобной вам транспортной компанией
+                          </li>
+                        </ul>
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-5"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-5" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-5.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-5.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="advantage">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                экономим вам до 30% затрат, за счет собственного производства
+                полного цикла
+              </h2>
+              <p class="section-subtitle">
+                У нас свой проектно-конструкторский, производственный и
+                монтажный
+                <br />
+                отдел, поэтому вы не переплачиваете сторонним подрядчикам
+              </p>
+            </div>
+            <ul class="list-reset advantage-list">
+              <li class="advantage-item">
+                <picture>
+                  <source srcset="./img/advantage/image-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/advantage/image-1.jpg" class="advantage-image" width="499" height="340" alt="Картинка">
+                </picture>
+                <div class="advantage-title">
+                  Разработка
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </div>
+                <p class="desc">
+                  На этапе проектирования вы уже увидите, как будет выглядеть
+                  ваш проект. Конструкторы определяют характеристики и
+                  параметры вашего проекта, разрабатываю егов системе
+                  трёхмерного проектирования
+                </p>
+              </li>
+              <li class="advantage-item">
+                <picture>
+                  <source srcset="./img/advantage/image-2.webp" type="image/webp">
+                  <img loading="lazy" src="./img/advantage/image-2.jpg" class="advantage-image" width="499" height="340" alt="Картинка">
+                </picture>
+                <div class="advantage-title">
+                  Производство
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </div>
+                <p class="desc">
+                  Более 50 видов профессионального и промышленного
+                  оборудования, постоянное наличие основных расходных
+                  материалов, квалифицированная команда и современная система
+                  управления проектами, все это позволяет выполнять 80%
+                  заказов раньше оговоренного <br />
+                  срока
+                </p>
+              </li>
+              <li class="advantage-item">
+                <picture>
+                  <source srcset="./img/advantage/image-3.webp" type="image/webp">
+                  <img loading="lazy" src="./img/advantage/image-3.jpg" class="advantage-image" width="499" height="340" alt="Картинка">
+                </picture>
+                <div class="advantage-title">
+                  Монтаж
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </div>
+                <p class="desc">
+                  Опытные сборщики и монтажники произведут весь комплекс работ
+                  с соблюдением чек- листов контроля качества. Руководитель
+                  производства лично проверяет качество монтажа и
+                  геометрические размеры всех элементов проекта.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="order">
+          <div class="lines lines-3-invisible">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+					<div class="container">
+						<div class="order-body">
+							<div class="order-top">
+                <div class="section-header">
+                  <h2 class="section-title">
+                    Узнайте точную стоимость и сроки вашего проекта
+                  </h2>
+                  <p class="section-subtitle">
+                    Инженер-технолог ответит на ваши вопросы, а также:
+                  </p>
+                </div>
+
+                <div class="order-top-picture"
+                  data-transfer-target="order-picture"></div>
+
+								<ul class="list-reset">
+									<li>
+                    Подскажет по выбору материалов
+                  </li>
+									<li>
+										Подберет лучшую технологию производства
+									</li>
+									<li>
+                    Поможет в составлении ТЗ
+                  </li>
+									<li>
+										Пришлет чек-лист: «Как выбрать подрядчика и не пожалеть о выборе»
+									</li>
+								</ul>
+							</div>
+							<div class="order-picture">
+                <div class="order-picture-content"
+                  data-transfer-origin="order-picture"
+                  data-transfer-breakpoint="991.98">
+                  <picture>
+                    <source srcset="./img/order/image-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/order/image-1.jpg" class="image" width="358" height="513" alt="Картинка">
+                  </picture>
+                  <p class="order-picture-name">Александра</p>
+                </div>
+							</div>
+							<form class="order-form">
+								<h3 class="section-title">
+                  ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ
+                </h3>
+
+								<input type="text" placeholder="Имя" />
+								<input type="tel" placeholder="Телефон" />
+								<a href="#" class="btn btn-download order-form-download">
+									Загрузить файл
+									<span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/download.svg#svg-download"></use>
+                    </svg>
+                  </span>
+								</a>
+								<button class="btn btn-xl btn-outline-primary order-form-submit">
+                  Получить
+                </button>
+								<div class="order-form-contact">
+									Напишите нам:
+									<a href="#">
+                    <picture>
+                      <source srcset="./img/order/telegram.webp" type="image/webp">
+                      <img loading="lazy" src="./img/order/telegram.png" class="image" width="32" height="32" alt="Telegram">
+                    </picture>
+                  </a>
+									<a href="#">
+                    <picture>
+                      <source srcset="./img/order/whatsapp.webp" type="image/webp">
+                      <img loading="lazy" src="./img/order/whatsapp.png" class="image" width="32" height="32" alt="Whatsapp">
+                    </picture>
+                  </a>
+								</div>
+								<div class="order-form-contact">
+									Или позвоните:
+									<a href="#">+7 (499) 350-73-79</a>
+								</div>
+							</form>
+							<div class="order-logo">
+								<picture>
+                  <source srcset="./img/order/logo.webp" type="image/webp">
+                  <img loading="lazy" src="./img/order/logo.png" class="image" width="161" height="656" alt="Element">
+                </picture>
+							</div>
+						</div>
+					</div>
+				</section>
+
+        <section class="portfolio">
+          <span class="portfolio-bg" style="background-image: url(./img/portfolio/bg.webp);"></span>
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+					<div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Посмотрите примеры выполненных работ
+              </h2>
+              <p class="section-subtitle">
+                Работая с нами вы будете спокойны за качество и результат Вашего проекта!
+              </p>
+            </div>
+
+            <div class="portfolio-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article class="portfolio-card">
+                      <a href="#" class="stretched-link"></a>
+
+                      <picture>
+                        <source srcset="./img/portfolio/image-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/portfolio/image-1.jpg" class="image" width="" height="" alt="">
+                      </picture>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="portfolio-card">
+                      <a href="#" class="stretched-link"></a>
+
+                      <picture>
+                        <source srcset="./img/portfolio/image-2.webp" type="image/webp">
+                        <img loading="lazy" src="./img/portfolio/image-2.jpg" class="image" width="" height="" alt="">
+                      </picture>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="portfolio-card">
+                      <a href="#" class="stretched-link"></a>
+
+                      <picture>
+                        <source srcset="./img/portfolio/image-3.webp" type="image/webp">
+                        <img loading="lazy" src="./img/portfolio/image-3.jpg" class="image" width="" height="" alt="">
+                      </picture>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="portfolio-card">
+                      <a href="#" class="stretched-link"></a>
+
+                      <picture>
+                        <source srcset="./img/portfolio/image-4.webp" type="image/webp">
+                        <img loading="lazy" src="./img/portfolio/image-4.jpg" class="image" width="" height="" alt="">
+                      </picture>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="portfolio-card">
+                      <a href="#" class="stretched-link"></a>
+
+                      <picture>
+                        <source srcset="./img/portfolio/image-5.webp" type="image/webp">
+                        <img loading="lazy" src="./img/portfolio/image-5.jpg" class="image" width="" height="" alt="">
+                      </picture>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-navigation">
+                <div class="swiper-button-prev">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </div>
+                <span class="swiper-navigation-spacer"></span>
+                <div class="swiper-button-next">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-xl btn-outline-primary portfolio-btn">Все портфолио</a>
+					</div>
+				</section>
+
+        <section class="quality">
+          <span class="quality-bg" style="background-image: url(./img/quality/bg.webp);"></span>
+
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+					<div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                нас выбирают за качество, скорость и лучший сервис
+              </h2>
+              <p class="section-subtitle">
+                Это основные причины, но есть и другие
+              </p>
+            </div>
+            <div class="quality-items">
+              <div class="quality-item">
+                <div class="quality-top">
+                  <div class="number">01</div>
+                  <div class="quality-title">Даем лучшие цены на рынке</div>
+                </div>
+                <p class="desc">
+                  Мы приступаем к работе над проектом в течение часа после
+                  утверждения ТЗ. Производственные мощности и наличие на
+                  складе основных расходных материалов, позволяют
+                  изготавливать срочные заказа день в день.
+                </p>
+              </div>
+              <div class="quality-item">
+                <div class="quality-top">
+                  <div class="number">02</div>
+                  <div class="quality-title">Выполняем заказы за 1 день</div>
+                </div>
+                <p class="desc">
+                  Мы приступаем к работе над проектом в течение часа после
+                  утверждения ТЗ. Производственные мощности и наличие на
+                  складе основных расходных материалов, позволяют
+                  изготавливать срочные заказа день в день.
+                </p>
+              </div>
+              <div class="quality-item">
+                <div class="quality-top">
+                  <div class="number">03</div>
+                  <div class="quality-title">
+                    Предоставляем реальные гарантии
+                  </div>
+                </div>
+                <p class="desc">
+                  Мы приступаем к работе над проектом в течение часа после
+                  утверждения ТЗ. Производственные мощности и наличие на
+                  складе основных расходных материалов, позволяют
+                  изготавливать срочные заказа день в день.
+                </p>
+              </div>
+              <div class="quality-item">
+                <div class="quality-top">
+                  <div class="number">04</div>
+                  <div class="quality-title">Сделаем 3D-модель за Вас</div>
+                </div>
+                <p class="desc">
+                  Мы приступаем к работе над проектом в течение часа после
+                  утверждения ТЗ. Производственные мощности и наличие на
+                  складе основных расходных материалов, позволяют
+                  изготавливать срочные заказа день в день.
+                </p>
+              </div>
+              <div class="quality-item">
+                <div class="quality-top">
+                  <div class="number">05</div>
+                  <div class="quality-title">
+                    Осуществляем тройной контроль
+                  </div>
+                </div>
+                <p class="desc">
+                  Мы приступаем к работе над проектом в течение часа после
+                  утверждения ТЗ. Производственные мощности и наличие на
+                  складе основных расходных материалов, позволяют
+                  изготавливать срочные заказа день в день.
+                </p>
+              </div>
+              <div class="quality-item">
+                <div class="quality-top">
+                  <div class="number">06</div>
+                  <div class="quality-title">
+                    Делаем отчеты и быстро отвечаем
+                  </div>
+                </div>
+                <p class="desc">
+                  Мы приступаем к работе над проектом в течение часа после
+                  утверждения ТЗ. Производственные мощности и наличие на
+                  складе основных расходных материалов, позволяют
+                  изготавливать срочные заказа день в день.
+                </p>
+              </div>
+            </div>
+					</div>
+				</section>
+      </div>
+    </div>
+
+    @include('partials/offcanvases.html')
+  </main>
+
+  @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

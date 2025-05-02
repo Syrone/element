@@ -1,0 +1,28 @@
+@use "mixins" as mixins;
+
+.perform {
+  position: relative;
+  padding-block: 4rem 2rem;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-block: 8.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 3.75rem;
+  }
+
+  .section-title {
+
+    @include mixins.breakpoint-up(lg) {
+      max-width: 40%;
+    }
+  }
+
+  .tab {
+
+    @include mixins.breakpoint-up(lg) {
+      padding-inline: 2.5rem;
+    }
+  }
+}

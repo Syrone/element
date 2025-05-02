@@ -1,0 +1,236 @@
+@use "mixins" as mixins;
+
+.order {
+  position: relative;
+
+  .lines {
+
+    > *:nth-child(3) {
+      opacity: 0;
+    }
+  }
+
+  > .container {
+    padding-block: 2rem 4rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding-block: 8.75rem;
+    }
+  }
+
+  &-body {
+    display: grid;
+    grid-template-columns: 100%;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  &-top {
+
+    &-picture {
+      margin-inline: calc(var(--container-offset) * -1);
+      margin-bottom: 2rem;
+
+      @include mixins.breakpoint-up(lg) {
+        display: none;
+      }
+
+      .image {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-position: top;
+      }
+
+      .order-picture-name {
+        text-align: end;
+        margin-inline: var(--container-offset);
+      }
+    }
+
+    .section-header {
+
+      @include mixins.breakpoint-down(lg) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .section-title,
+    .section-subtitle {
+
+      @include mixins.breakpoint-down(xl) {
+        padding-left: 1.75rem;
+      }
+    }
+
+    .section-subtitle {
+      margin-top: 1rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 3rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        margin-top: 4.5rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      font-size: .9375rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-left: 1.75rem;
+      }
+
+      @include mixins.breakpoint-up(xl) {
+        margin-left: 2.75rem;
+      }
+
+      li {
+        display: flex;
+        gap: 1.25rem;
+
+        &::before {
+          content: '';
+          width: .375rem;
+          height: 1.75rem;
+          display: inline-block;
+          flex-shrink: 0;
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+
+  &-picture {
+    display: flex;
+    flex-direction: column;
+
+    &-content,
+    picture {
+      display: flex;
+      flex: 1;
+    }
+
+    &-content {
+      flex-direction: column;
+    }
+
+    .image {
+      width: 100%;
+      display: block;
+    }
+
+    &-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-top: 1.25rem;
+    }
+  }
+
+  &-form {
+    max-width: 20rem;
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-top: 4rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-top: 0;
+    }
+
+    .section-title {
+      padding-left: 0;
+      margin-bottom: 2.5rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-bottom: 4.5rem;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    input {
+      width: 100%;
+      font-family: inherit;
+      font-size: .9375rem;
+      font-weight: 500;
+      line-height: 1.4;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid var(--dark);
+      padding: 0 10px 10px 10px;
+      margin: 0 0 3rem 0;
+
+      &::placeholder {
+        color: inherit;
+      }
+    }
+
+    &-download {
+      --_width: max-content;
+
+      font-family: var(--font-family);
+      margin-bottom: 2rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &-submit {
+      margin-bottom: 2rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &-contact {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 140%;
+      color: var(--grey);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 11px 0;
+
+      a {
+        display: flex;
+        font-family: var(--d_Kallisto);
+        font-size: 15px;
+        font-weight: 900;
+        line-height: 140%;
+        color: var(--grey);
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &-logo {
+    display: none;
+
+    @include mixins.breakpoint-up(lg) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image {
+
+      @include mixins.breakpoint-up(lg) {
+        width: 5.625rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use "mixins" as mixins;
+
+.brand {
+  --_fs: .75rem;
+  --_fw: 500;
+  --_lh: 1.4;
+  --_color: inherit;
+  --_color-hover: inherit;
+  --_color-active: inherit;
+
+  align-items: center;
+  justify-content: stretch;
+  font-family: var(--font-family);
+  text-align: start;
+
+  @include mixins.breakpoint-up(xxxxl) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &-pictures {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    > * {
+      display: block;
+      pointer-events: none;
+      user-select: none;
+      transition-property: opacity;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+
+      &:last-child {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &-logo {
+    width: auto;
+    height: 2.375rem;
+    display: block;
+    object-fit: contain;
+  }
+
+  &-text {
+    max-width: 15rem;
+    display: none;
+
+    @include mixins.breakpoint-up(lg) {
+      display: block;
+    }
+  }
+}

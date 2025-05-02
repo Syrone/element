@@ -1,0 +1,8 @@
+import './components/header.js'
+import './components/transfer.js'
+import './components/catalog-menu.js'
+import './components/service.js'
+import './components/dropdown.js'
+import './components/offcanvas.js'
+import './components/tabs.js'
+import './components/swiper.js'

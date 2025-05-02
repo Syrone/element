@@ -1,0 +1,91 @@
+@use "mixins" as mixins;
+
+.header {
+  width: 100%;
+  color: var(--light);
+  background-color: var(--dark-rgba-90);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  transition-property: background-color, color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding-block: 1.25rem;
+    position: relative;
+  }
+
+  &-main,
+  &-nav {
+    flex: 1;
+  }
+
+  &-main {
+    display: flex;
+    align-items: center;
+  }
+
+  &-nav {
+    order: -1;
+
+    &-list {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+
+      @include mixins.breakpoint-up(xxxxxl) {
+        gap: 3rem;
+      }
+    }
+
+    &-link {
+      --_fs: 1rem;
+      --_color: inherit;
+
+      white-space: nowrap;
+    }
+  }
+
+  &-end {
+    display: none;
+
+    @include mixins.breakpoint-up(md) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: .75rem;
+      margin-left: auto;
+    }
+
+    @include mixins.breakpoint-up(xxxxl) {
+      flex-direction: column;
+    }
+  }
+
+  .socials-list,
+  .contacts-list-item {
+    justify-content: flex-end;
+  }
+
+  .btn-menu {
+
+    @include mixins.breakpoint-up(xxxxl) {
+      display: none;
+    }
+  }
+}
+
+.header--home {
+  background-color: transparent;
+}
+
+.header--sticky {
+  background-color: var(--dark-rgba-90);
+}
