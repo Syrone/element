@@ -1,9 +1,9 @@
 import Swiper from 'swiper'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Grid } from 'swiper/modules'
 
 import { throttle } from '../functions/throttle.js'
 
-Swiper.use([Navigation])
+Swiper.use([Navigation, Grid])
 
 document.querySelectorAll('.portfolio-swiper')?.forEach(container => {
   const swiperEl = container.querySelector('.swiper')
@@ -43,4 +43,74 @@ document.querySelectorAll('.portfolio-swiper')?.forEach(container => {
 
   setSlideActiveSize()
   swiper.init()
+})
+
+document.querySelectorAll('.review-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+  const btnNext = container.querySelector('.swiper-button-next')
+  const btnPrev = container.querySelector('.swiper-button-prev')
+
+  const swiper = new Swiper(swiperEl, {
+    slidesPerView: 4,
+    spaceBetween: 48,
+    loop: true,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        grid: {
+          fill: 'row',
+          rows: 2,
+        },
+      },
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 48,
+        grid: {
+          fill: 'row',
+          rows: 1,
+        },
+      },
+    }
+  })
+})
+
+document.querySelectorAll('.review-swiper-2')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+  const btnNext = container.querySelector('.swiper-button-next')
+  const btnPrev = container.querySelector('.swiper-button-prev')
+
+  const swiper = new Swiper(swiperEl, {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+    breakpoints: {
+      0: {
+        direction: 'horizontal',
+        slidesPerView: 2,
+        spaceBetween: 16,
+        grid: {
+          fill: 'row',
+          rows: 2,
+        },
+      },
+      991: {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        grid: {
+          fill: 'row',
+          rows: 1,
+        },
+      },
+    }
+  })
 })

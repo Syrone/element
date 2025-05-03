@@ -1,0 +1,195 @@
+@use "mixins" as mixins;
+
+.footer {
+  color: var(--light);
+  background-color: var(--dark);
+  padding-block: 4rem;
+  position: relative;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-block: 2.5rem;
+  }
+
+  .lines {
+    --line-color: var(--light);
+  }
+
+  .brand {
+    --_fs: .9375rem;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    &-text {
+      display: block;
+
+      @include mixins.breakpoint-down(lg) {
+        max-width: 20rem;
+      }
+    }
+  }
+
+  .socials-list {
+    margin-top: 1rem;
+
+    &-link {
+      --_bg: var(--light);
+    }
+  }
+
+  &-top,
+  &-bottom {
+
+    @include mixins.breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  &-bottom {
+    font-size: .75rem;
+    margin-top: 5rem;
+
+    @include mixins.breakpoint-up(xxl) {
+      font-size: .9375rem;
+    }
+
+    @include mixins.breakpoint-down(lg) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: .9375rem;
+    }
+
+    &-text {
+      color: #bbb;
+      text-transform: uppercase;
+      order: 1;
+
+      @include mixins.breakpoint-up(lg) {
+        padding-inline: 1rem;
+        order: initial;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        padding-inline: 2.5rem;
+      }
+    }
+
+    &-link {
+      --_fs: inherit;
+      --_color: #bbb;
+
+      font-family: var(--font-family);
+      justify-content: flex-start;
+      text-align: start;
+
+      @include mixins.breakpoint-up(lg) {
+        --_padding: 0 1rem;
+        --_icon-size: .75rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        --_padding: 0 2.5rem;
+        --_icon-size: 1rem;
+      }
+    }
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.breakpoint-up(lg) {
+      padding-inline: 1rem;
+    }
+
+    @include mixins.breakpoint-up(xxl) {
+      padding-inline: 2.5rem;
+    }
+
+    &:last-child {
+      gap: 2rem;
+
+      .footer-title {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &:not(:last-child) {
+
+      @include mixins.breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    &-link {
+      --_fs: 1rem;
+      --_lh: 1.4;
+      --_color: inherit;
+      --_padding: .5rem 0;
+
+      justify-content: initial;
+      text-align: start;
+
+      @media (hover: hover) {
+
+        &:is(:hover, :focus-visible) {
+          text-decoration: underline;
+        }
+      }
+
+      @include mixins.breakpoint-up(lg) {
+        --_fs: .875rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        --_fs: 1rem;
+      }
+
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-title {
+    font-family: var(--font-second);
+    font-size: .9375rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &-text {
+    font-size: .875rem;
+    line-height: 1.4;
+
+    @include mixins.breakpoint-up(lg) {
+      font-size: 1rem;
+    }
+  }
+
+  &-phones {
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+      --_fw: 800;
+      --_color: inherit;
+
+      justify-content: initial;
+      text-align: start;
+
+      @include mixins.breakpoint-down(lg) {
+        --_fs: .9375rem;
+      }
+
+      &:last-child {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

@@ -61,7 +61,7 @@
     .section-subtitle {
 
       @include mixins.breakpoint-down(xl) {
-        padding-left: 1.75rem;
+        padding-left: 2rem;
       }
     }
 

@@ -41,8 +41,24 @@
       list-style: none;
       margin: 0;
 
+      @include mixins.breakpoint-up(xl) {
+        gap: 1.25rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        gap: 2rem;
+      }
+
       @include mixins.breakpoint-up(xxxxxl) {
         gap: 3rem;
+      }
+    }
+
+    &-item {
+
+      @include mixins.breakpoint-up(xl) {
+        display: flex;
+        align-items: center;
       }
     }
 
@@ -51,21 +67,25 @@
       --_color: inherit;
 
       white-space: nowrap;
+
+      @include mixins.breakpoint-up(xl) {
+        --_fs: .875rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        --_fs: 1rem;
+      }
     }
   }
 
   &-end {
     display: none;
 
-    @include mixins.breakpoint-up(md) {
+    @include mixins.breakpoint-up(xxxxl) {
       display: flex;
       flex-direction: row-reverse;
       gap: .75rem;
       margin-left: auto;
-    }
-
-    @include mixins.breakpoint-up(xxxxl) {
-      flex-direction: column;
     }
   }
 
@@ -76,7 +96,7 @@
 
   .btn-menu {
 
-    @include mixins.breakpoint-up(xxxxl) {
+    @include mixins.breakpoint-up(xl) {
       display: none;
     }
   }

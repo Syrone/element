@@ -1,8 +1,84 @@
-@import "../../../node_modules/swiper/swiper-bundle.min";
+@use "mixins" as mixins;
+
+@use "../../../node_modules/swiper/swiper-bundle.min";
 
 .swiper-padding {
 
   .swiper {
     padding-inline: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
+  }
+}
+
+.swiper {
+
+  &-navigation {
+    width: max-content;
+    display: flex;
+    gap: .75rem;
+    background-color: var(--primary-rgba-80);
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-top: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &-spacer {
+      width: 1px;
+      display: block;
+      flex: 1;
+      flex-shrink: 0;
+      background-color: var(--light);
+      margin-block: 1.25rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-block: 1.5rem;
+      }
+    }
+  }
+
+  &-button-next,
+  &-button-prev {
+    min-width: 3.75rem;
+    min-height: 3.75rem;
+    color: var(--light);
+    position: static;
+    margin: 0;
+
+    @include mixins.breakpoint-up(lg) {
+      min-width: 5rem;
+      min-height: 5rem;
+    }
+
+    &::after {
+      all: initial;
+    }
+
+    .icon {
+      --_size: 1rem;
+
+      @include mixins.breakpoint-up(lg) {
+        --_size: 1.25rem;
+      }
+    }
+  }
+
+  &-button-next {
+
+    .icon {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &-button-prev {
+
+    .icon {
+      transform: rotate(90deg);
+    }
   }
 }

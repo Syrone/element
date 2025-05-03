@@ -52,7 +52,7 @@
     max-width: 15rem;
     display: none;
 
-    @include mixins.breakpoint-up(lg) {
+    @include mixins.breakpoint-up(xxxxxl) {
       display: block;
     }
   }

@@ -1,0 +1,138 @@
+@use "mixins" as mixins;
+
+.presentation {
+  position: relative;
+  padding-block: 4rem 0;
+
+  @include mixins.breakpoint-up(lg) {
+    color: var(--light);
+    padding-block: 8.75rem;
+  }
+
+  &::after,
+  &::before {
+
+    @include mixins.breakpoint-up(lg) {
+      content: '';
+      width: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
+      background-color: var(--dark-rgba-90);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+  }
+
+  &::after {
+
+    @include mixins.breakpoint-up(lg) {
+      right: 0;
+    }
+
+    @include mixins.breakpoint-down(lg) {
+      content: '';
+      background-color: var(--light-rgba-70);
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+    }
+  }
+
+  &::before {
+
+    @include mixins.breakpoint-up(lg) {
+      left: 0;
+    }
+  }
+
+  .lines {
+    --line-color: var(--light-rgba-20);
+
+    > * {
+      opacity: 1;
+
+      &:not(:nth-child(3)) {
+        background-color: var(--dark-rgba-90);
+      }
+    }
+  }
+
+  &-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  > .container {
+    display: grid;
+    grid-template-columns: 100%;
+    position: relative;
+    z-index: 10;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-bottom: 6.25rem;
+    }
+  }
+
+  &-body {
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 2;
+      margin-left: 2.5rem;
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    margin-inline: calc(var(--container-offset) * -1);
+    padding: 3rem var(--container-offset) 4rem;
+    background-color: var(--primary-rgba-70);
+
+    @include mixins.breakpoint-up(lg) {
+      max-width: 32.5rem;
+      margin-inline: 2.5rem 1.25rem;
+      margin-bottom: 5rem;
+      padding: 3rem;
+    }
+
+    @include mixins.breakpoint-up(xl) {
+      padding: 4rem;
+    }
+
+    @include mixins.breakpoint-up(xxl) {
+      padding: 4rem 6rem;
+    }
+
+    input {
+      font-size: .9375rem;
+      line-height: 1.4;
+      color: var(--light);
+      background-color: transparent;
+      margin-bottom: 2.5rem;
+      padding: 0 0 .6rem .625rem;
+      border: none;
+      border-bottom: 2px solid var(--light);
+      outline: none;
+
+      &::placeholder {
+        color: inherit;
+      }
+    }
+
+    button {
+      margin-top: 2.5rem;
+    }
+  }
+}

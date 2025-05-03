@@ -170,3 +170,31 @@
   --_bg-active: var(--primary);
   --_border-color-active: var(--primary);
 }
+
+.btn-outline-light {
+  --_color: var(--light);
+  --_border-width: 2px;
+  --_border-color: var(--light);
+
+  --_color-hover: var(--text-color);
+  --_bg-hover: var(--light);
+  --_border-color-hover: var(--light);
+
+  --_color-active: var(--text-color);
+  --_bg-active: var(--light);
+  --_border-color-active: var(--light);
+}
+
+.btn-outline-dark {
+  --_color: var(--text-color);
+  --_border-width: 2px;
+  --_border-color: var(--text-color);
+
+  --_color-hover: var(--light);
+  --_bg-hover: var(--text-color);
+  --_border-color-hover: var(--text-color);
+
+  --_color-active: var(--light);
+  --_bg-active: var(--text-color);
+  --_border-color-active: var(--text-color);
+}

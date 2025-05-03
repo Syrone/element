@@ -16338,7 +16338,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Grid]);
 document.querySelectorAll('.portfolio-swiper')?.forEach(container => {
   const swiperEl = container.querySelector('.swiper');
   const btnNext = container.querySelector('.swiper-button-next');
@@ -16372,6 +16372,72 @@ document.querySelectorAll('.portfolio-swiper')?.forEach(container => {
   });
   setSlideActiveSize();
   swiper.init();
+});
+document.querySelectorAll('.review-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    slidesPerView: 4,
+    spaceBetween: 48,
+    loop: true,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        grid: {
+          fill: 'row',
+          rows: 2
+        }
+      },
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 48,
+        grid: {
+          fill: 'row',
+          rows: 1
+        }
+      }
+    }
+  });
+});
+document.querySelectorAll('.review-swiper-2')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev
+    },
+    breakpoints: {
+      0: {
+        direction: 'horizontal',
+        slidesPerView: 2,
+        spaceBetween: 16,
+        grid: {
+          fill: 'row',
+          rows: 2
+        }
+      },
+      991: {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        grid: {
+          fill: 'row',
+          rows: 1
+        }
+      }
+    }
+  });
 });
 
 /***/ }),
@@ -16693,3 +16759,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map

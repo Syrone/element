@@ -179,7 +179,7 @@
     --bs-dropdown-item-padding-x: 0;
     --bs-dropdown-item-padding-y: .625rem;
 
-    @include mixins.breakpoint-up(xxxxl) {
+    @include mixins.breakpoint-up(xl) {
       --bs-dropdown-padding-x: 0;
       --bs-dropdown-padding-y: 0;
       --bs-dropdown-item-padding-x: 1.75rem;
@@ -188,7 +188,7 @@
       max-height: 80vh;
     }
 
-    @include mixins.breakpoint-down(xxxxl) {
+    @include mixins.breakpoint-down(xl) {
       --bs-dropdown-box-shadow: unset;
 
       position: initial !important;
@@ -205,7 +205,7 @@
       width: 100%;
       padding-top: .625rem;
 
-      @include mixins.breakpoint-up(xxxxl) {
+      @include mixins.breakpoint-up(xl) {
         width: auto;
         flex: 1;
         display: flex;
@@ -217,7 +217,7 @@
   .dropdown-item {
     white-space: initial;
 
-    @include mixins.breakpoint-down(xxxxl) {
+    @include mixins.breakpoint-down(xl) {
       --_fw: 400;
     }
 
@@ -229,7 +229,7 @@
 
 .dropdown--catalog {
 
-  @include mixins.breakpoint-down(xxxxl) {
+  @include mixins.breakpoint-down(xl) {
     display: flex;
     flex-direction: column;
     position: static;
@@ -245,7 +245,7 @@
     width: 100%;
     flex-shrink: 0;
 
-    @include mixins.breakpoint-up(xxxxl) {
+    @include mixins.breakpoint-up(xl) {
       width: 15rem;
     }
   }
@@ -255,7 +255,7 @@
     &-menu {
       display: contents;
 
-      @include mixins.breakpoint-up(xxxxl) {
+      @include mixins.breakpoint-up(xl) {
         height: 100%;
         display: block;
       }
@@ -267,7 +267,7 @@
         justify-content: flex-start;
         text-align: start;
 
-        @include mixins.breakpoint-up(xxxxl) {
+        @include mixins.breakpoint-up(xl) {
           display: none;
         }
 
@@ -295,7 +295,7 @@
         transition-duration: var(--transition-duration);
         transition-timing-function: var(--transition-timing-function);
 
-        @include mixins.breakpoint-up(xxxxl) {
+        @include mixins.breakpoint-up(xl) {
           width: auto;
           display: none;
           grid-template-columns: repeat(2, 1fr);
@@ -309,12 +309,15 @@
           left: initial;
           z-index: initial;
           transform: initial;
+        }
+
+        @media (hover: hover) {
           scrollbar-width: none;
         }
 
         &::-webkit-scrollbar {
 
-          @include mixins.breakpoint-up(xxxxl) {
+          @media (hover: hover) {
             display: none;
           }
         }
@@ -322,7 +325,7 @@
         &.is-show {
           transform: translateX(0%);
 
-          @include mixins.breakpoint-up(xxxxl) {
+          @include mixins.breakpoint-up(xl) {
             height: 100%;
             display: grid;
             transform: initial;
@@ -340,7 +343,7 @@
       flex-direction: column;
       gap: 1.25rem;
 
-      @include mixins.breakpoint-up(xxxxl) {
+      @include mixins.breakpoint-up(xl) {
         gap: .75rem;
       }
     }
@@ -351,11 +354,11 @@
 
     &-link {
 
-      @include mixins.breakpoint-up(xxxxl) {
+      @include mixins.breakpoint-up(xl) {
         --_fs: .875rem;
       }
 
-      @include mixins.breakpoint-down(xxxxl) {
+      @include mixins.breakpoint-down(xl) {
         --_fw: 400;
       }
 
@@ -366,7 +369,7 @@
         justify-content: initial;
         text-align: start;
 
-        @include mixins.breakpoint-up(xxxxl) {
+        @include mixins.breakpoint-up(xl) {
           font-family: var(--font-family);
         }
       }
@@ -374,7 +377,7 @@
       &-header {
         --_fw: 800;
 
-        @include mixins.breakpoint-up(xxxxl) {
+        @include mixins.breakpoint-up(xl) {
           --_fw: 600;
 
           margin-bottom: .25rem;
@@ -384,7 +387,7 @@
 
         &::before {
 
-          @include mixins.breakpoint-up(xxxxl) {
+          @include mixins.breakpoint-up(xl) {
             content: '';
             width: .625rem;
             height: 100%;
