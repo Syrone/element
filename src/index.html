@@ -7,7 +7,9 @@
   @include('partials/h1.html', {title: 'Главная страница'})
 
   <div class="site-container">
-    @include('partials/header.html')
+    @include('partials/header.html', {
+      home: true
+    })
 
     <main class="main">
       <div class="main-section">

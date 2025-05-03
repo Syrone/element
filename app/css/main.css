@@ -1062,14 +1062,6 @@ textarea {
     margin-left: auto;
   }
 }
-@media (min-width: 1599.98px) {
-  .header-end {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
 .header .socials-list,
 .header .contacts-list-item {
   -webkit-box-pack: end;
