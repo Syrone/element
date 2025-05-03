@@ -58,11 +58,6 @@
   }
 
   &-bg {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    inset: 0;
     z-index: -1;
   }
 
@@ -98,10 +93,11 @@
     flex-direction: column;
     margin-inline: calc(var(--container-offset) * -1);
     padding: 3rem var(--container-offset) 4rem;
-    background-color: var(--primary-rgba-70);
+    background-color: var(--primary-rgba-80);
 
     @include mixins.breakpoint-up(lg) {
       max-width: 32.5rem;
+      background-color: var(--primary-rgba-70);
       margin-inline: 2.5rem 1.25rem;
       margin-bottom: 5rem;
       padding: 3rem;

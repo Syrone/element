@@ -44,6 +44,7 @@ p {
 
 .desc {
   font-size: .9375rem;
+  line-height: 1.4;
 
   @include mixins.breakpoint-up(lg) {
     font-size: 1rem;

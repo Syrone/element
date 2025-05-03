@@ -1,0 +1,49 @@
+@use "mixins" as mixins;
+
+.collapse {
+
+  &-button {
+
+    &-icon {
+
+      @include mixins.breakpoint-down(lg) {
+        transition-property: transform;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+      }
+    }
+
+    &.is-collapsed {
+
+      .collapse-body {
+
+        @include mixins.breakpoint-down(lg) {
+          grid-template-rows: 1fr;
+        }
+      }
+
+      .collapse-button-icon {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  &-body {
+
+    @include mixins.breakpoint-down(lg) {
+      display: grid;
+      grid-template-rows: 0fr;
+
+      transition-property: grid-template-rows;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+    }
+
+    > div {
+
+      @include mixins.breakpoint-down(lg) {
+        overflow: hidden;
+      }
+    }
+  }
+}

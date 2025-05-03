@@ -8,6 +8,13 @@
     padding-block: 8.75rem;
   }
 
+  .section-header {
+
+    @include mixins.breakpoint-down(lg) {
+      margin-bottom: 3rem;
+    }
+  }
+
   .section-subtitle {
 
     @include mixins.breakpoint-up(lg) {
@@ -17,15 +24,17 @@
 
   &-image {
     max-width: 1560px;
-    width: 100%;
+    width: calc(100% + (var(--container-offset) * 4));
     display: block;
-    margin-inline: auto;
+    margin-inline: calc(var(--container-offset) * 2 * -1);
+    margin-block: 0 .5rem;
 
     @include mixins.breakpoint-up(md) {
       margin-block: 0rem -2.5rem;
     }
 
     @include mixins.breakpoint-up(lg) {
+      margin-inline: auto;
       margin-block: -2rem -5rem;
     }
 
@@ -50,7 +59,7 @@
 
     ul {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: minmax(0, 1fr) minmax(0, .75fr);
       justify-content: space-between;
       gap: 1rem;
       font-size: .9375rem;
@@ -62,8 +71,12 @@
       }
 
       li {
-        padding-left: 1.75rem;
+        padding-left: 1.125rem;
         position: relative;
+
+        @include mixins.breakpoint-up(lg) {
+          padding-left: 1.75rem;
+        }
 
         &::after {
           position: absolute;

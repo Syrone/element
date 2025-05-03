@@ -73,7 +73,11 @@
 
   &-body {
     display: flex;
-    padding-top: 4rem;
+    padding-top: 2rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding-top: 4rem;
+    }
 
     @include mixins.breakpoint-up(xxl) {
       gap: 1.5rem;
@@ -161,7 +165,7 @@
     }
 
     &-picture {
-      margin-top: 1.25rem;
+      margin: 1.25rem calc(var(--container-offset) * 2 * -1) .75rem;
 
       @include mixins.breakpoint-up(lg) {
         display: none;

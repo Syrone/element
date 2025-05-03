@@ -99,7 +99,7 @@ document.querySelectorAll('.review-swiper-2')?.forEach(container => {
         spaceBetween: 16,
         grid: {
           fill: 'row',
-          rows: 2,
+          rows: 3,
         },
       },
       991: {

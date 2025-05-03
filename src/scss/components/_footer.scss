@@ -3,7 +3,7 @@
 .footer {
   color: var(--light);
   background-color: var(--dark);
-  padding-block: 4rem;
+  padding-block: 3.75rem 4rem;
   position: relative;
 
   @include mixins.breakpoint-up(lg) {
@@ -19,7 +19,11 @@
 
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1.25rem;
+
+    @include mixins.breakpoint-up(lg) {
+      gap: 1.5rem;
+    }
 
     &-text {
       display: block;
@@ -31,7 +35,11 @@
   }
 
   .socials-list {
-    margin-top: 1rem;
+    margin-top: .625rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-top: 1rem;
+    }
 
     &-link {
       --_bg: var(--light);
@@ -81,8 +89,11 @@
       --_fs: inherit;
       --_color: #bbb;
 
+      --_icon-size: .875rem;
+
       font-family: var(--font-family);
       justify-content: flex-start;
+      gap: 1rem;
       text-align: start;
 
       @include mixins.breakpoint-up(lg) {
@@ -113,7 +124,11 @@
       gap: 2rem;
 
       .footer-title {
-        margin-bottom: 1rem;
+        margin-bottom: 1.75rem;
+
+        @include mixins.breakpoint-up(lg) {
+          margin-bottom: 1rem;
+        }
       }
     }
 
@@ -164,12 +179,8 @@
   }
 
   &-text {
-    font-size: .875rem;
+    font-size: 1rem;
     line-height: 1.4;
-
-    @include mixins.breakpoint-up(lg) {
-      font-size: 1rem;
-    }
   }
 
   &-phones {
@@ -184,11 +195,17 @@
       text-align: start;
 
       @include mixins.breakpoint-down(lg) {
-        --_fs: .9375rem;
+        --_lh: 1.4;
       }
 
       &:last-child {
         margin-top: 1rem;
+
+        @include mixins.breakpoint-down(lg) {
+          --_fs: 1.25rem;
+
+          margin-top: 1.75rem;
+        }
       }
     }
   }

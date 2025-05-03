@@ -108,6 +108,7 @@
       .service-item.is-active > & {
 
         @include mixins.breakpoint-up(xl) {
+          width: 80%;
           transform: scale(1.25);
         }
 

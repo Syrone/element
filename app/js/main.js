@@ -15982,10 +15982,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_transfer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/transfer.js */ "./src/js/components/transfer.js");
 /* harmony import */ var _components_catalog_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/catalog-menu.js */ "./src/js/components/catalog-menu.js");
 /* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/service.js */ "./src/js/components/service.js");
-/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
-/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
-/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_swiper_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/swiper.js */ "./src/js/components/swiper.js");
+/* harmony import */ var _components_collapse_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/collapse.js */ "./src/js/components/collapse.js");
+/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
+/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_swiper_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/swiper.js */ "./src/js/components/swiper.js");
+
 
 
 
@@ -16087,6 +16089,30 @@ window.addEventListener('resize', (0,_functions_throttle_js__WEBPACK_IMPORTED_MO
   updateDeviceCapabilities();
   setupHoverMenu();
 }, 300));
+
+/***/ }),
+
+/***/ "./src/js/components/collapse.js":
+/*!***************************************!*\
+  !*** ./src/js/components/collapse.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+document.querySelectorAll('[data-collapse]')?.forEach(collapse => {
+  collapse.addEventListener('click', event => {
+    const button = event.target.closest('[data-collapse-button]');
+    if (!button) return;
+    const isAlreadyCollapsed = button.classList.contains('is-collapsed');
+    collapse.querySelectorAll('[data-collapse-button]').forEach(btn => {
+      btn.classList.remove('is-collapsed');
+    });
+    if (!isAlreadyCollapsed) {
+      button.classList.add('is-collapsed');
+    }
+  });
+});
 
 /***/ }),
 
@@ -16424,7 +16450,7 @@ document.querySelectorAll('.review-swiper-2')?.forEach(container => {
         spaceBetween: 16,
         grid: {
           fill: 'row',
-          rows: 2
+          rows: 3
         }
       },
       991: {

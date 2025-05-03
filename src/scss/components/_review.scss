@@ -186,6 +186,13 @@
           width: max-content;
         }
 
+        &-wrapper {
+
+          @include mixins.breakpoint-down(lg) {
+            align-items: center;
+          }
+        }
+
         &-slide {
           height: auto;
 
