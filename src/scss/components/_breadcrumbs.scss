@@ -1,0 +1,55 @@
+@use "mixins" as mixins;
+
+.breadcrumb {
+  padding-block: var(--header-height) 3.75rem;
+  position: relative;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-block: calc(var(--header-height) + 2.5rem) 2.5rem;
+  }
+
+  &-nav,
+  &-list,
+  &-item {
+    display: none;
+
+    @include mixins.breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-list,
+  &-item,
+  &-item-link {
+    gap: .375rem;
+  }
+
+  &-nav {
+    margin-inline: 2.5rem;
+  }
+
+  &-list {
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    font-family: var(--font-family);
+    font-size: .9375rem;
+    line-height: 1.4;
+
+    &:not(:last-child) {
+
+      &::after {
+        content: '>';
+      }
+    }
+
+    &-link {
+      --_fs: inherit;
+      --_lh: inherit;
+
+      font-family: inherit;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Макеты'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Макеты'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html')
+
+        <section class="all-services">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <h2 class="all-services-title">
+              Все услуги компании
+            </h2>
+
+            <div class="section-header">
+              <h2 class="section-title">
+                От идеи до готового <br> продукта
+              </h2>
+            </div>
+
+            <div class="all-services-body">
+              @loop('partials/cards/all-services.html', [
+                {
+                  "isVisible": true,
+                  "title": "3D-печать",
+                  "image": "image-1",
+                },
+                {
+                  "isVisible": true,
+                  "title": "3D-моделирование",
+                  "image": "image-2",
+                },
+                {
+                  "isVisible": true,
+                  "title": "3D-сканирование",
+                  "image": "image-3",
+                },
+                {
+                  "isVisible": true,
+                  "title": "Реверс-инжиниринг",
+                  "image": "image-4",
+                },
+                {
+                  "isVisible": false,
+                  "title": "3D-контроль геометрии",
+                  "image": "image-5",
+                },
+                {
+                  "isVisible": false,
+                  "title": "3D-визуализация",
+                  "image": "image-6",
+                },
+                {
+                  "isVisible": false,
+                  "title": "ЧПУ фрезеровка",
+                  "image": "image-7",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Лазерная резка",
+                  "image": "image-8",
+                },
+                {
+                  "isVisible": false,
+                  "title": "3D-фрезеровка",
+                  "image": "image-9",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Гравировка",
+                  "image": "image-10",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Вакуумное литье",
+                  "image": "image-11",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Литье под давлением",
+                  "image": "image-12",
+                },
+                {
+                  "isVisible": false,
+                  "title": "RIM литье",
+                  "image": "image-13",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Производство изделий из пластика",
+                  "image": "image-14",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Прототипирование изделий",
+                  "image": "image-15",
+                },
+                {
+                  "isVisible": false,
+                  "title": "изготовление корпусов",
+                  "image": "image-16",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Производство мастер-моделей",
+                  "image": "image-17",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Изготовление силиконовых форм",
+                  "image": "image-18",
+                },
+                {
+                  "isVisible": false,
+                  "title": "производство сувенирных изделий",
+                  "image": "image-19",
+                },
+                {
+                  "isVisible": false,
+                  "title": "изготовление макетов",
+                  "image": "image-20",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Промышленный дизайн",
+                  "image": "image-21",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Постобработка и покраска",
+                  "image": "image-22",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Вакуумная формовка",
+                  "image": "image-23",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Контрактное производство",
+                  "image": "image-24",
+                },
+                {
+                  "isVisible": false,
+                  "title": "Импортозамещение",
+                  "image": "image-25",
+                },
+              ])
+
+              <div class="all-services-more">
+                <button type="button" class="btn btn-xl btn-outline-primary">
+                  Показать еще
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

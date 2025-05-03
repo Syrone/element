@@ -1,0 +1,23 @@
+<article class="all-services-card @if(isVisible === true){is-visible}">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    @title
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/@image.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/@image.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>

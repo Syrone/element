@@ -1,4 +1,36 @@
-<header class="header @if(home === true){header--home}">
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+
+  <title>Макеты</title>
+
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/d_kallisto.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/d_Kallisto-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page-body">
+  <h1 class="visually-hidden">
+    Макеты
+</h1>
+
+  <div class="site-container">
+    <header class="header ">
   <div class="container">
     <a href="#" class="btn brand">
       <div class="brand-pictures">
@@ -12,11 +44,6 @@
         </picture>
       </div>
 
-      @if(home === true) {
-        <p class="brand-text">
-          Прототипирование и серийное производство изделий из пластика
-        </p>
-      }
     </a>
     <div class="header-main">
       <nav class="header-nav"
@@ -30,7 +57,7 @@
                 data-bs-offset="0, 16"
                 data-bs-hover=""
                 data-bs-auto-close="outside">
-                О компании
+                О компании
 
                 <span class="icon">
                   <svg>
@@ -694,7 +721,7 @@
           </li>
           <li class="header-nav-item">
             <a href="#" class="btn header-nav-link">
-              Материалы и технологии
+              Материалы и технологии
             </a>
           </li>
           <li class="header-nav-item">
@@ -831,7 +858,7 @@
         <ul class="list-reset contacts-list">
           <li class="contacts-list-item">
             <a href="tel:+74993507379" class="btn contacts-list-link contacts-list-link--phone">
-              +7 (499) 350-73-79
+              +7 499 350-73-79
             </a>
           </li>
           <li class="contacts-list-item">
@@ -876,3 +903,854 @@
     </button>
   </div>
 </header>
+
+    <main class="main">
+      <div class="main-section">
+        <section class="breadcrumb">
+  <div class="lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="container">
+    <nav class="breadcrumb-nav">
+      <ul class="list-reset breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="#" class="btn breadcrumb-item-link">
+            Главная
+          </a>
+        </li>
+        <li class="breadcrumb-item">
+          <span>
+            Услуги
+          </span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+        <section class="all-services">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <h2 class="all-services-title">
+              Все услуги компании
+            </h2>
+
+            <div class="section-header">
+              <h2 class="section-title">
+                От идеи до готового <br> продукта
+              </h2>
+            </div>
+
+            <div class="all-services-body">
+              <article class="all-services-card is-visible">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    3D-печать
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-1.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-1.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card is-visible">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    3D-моделирование
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-2.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-2.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card is-visible">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    3D-сканирование
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-3.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-3.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card is-visible">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Реверс-инжиниринг
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-4.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-4.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    3D-контроль геометрии
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-5.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-5.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    3D-визуализация
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-6.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-6.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    ЧПУ фрезеровка
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-7.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-7.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Лазерная резка
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-8.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-8.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    3D-фрезеровка
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-9.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-9.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Гравировка
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-10.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-10.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Вакуумное литье
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-11.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-11.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Литье под давлением
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-12.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-12.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    RIM литье
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-13.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-13.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Производство изделий из пластика
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-14.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-14.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Прототипирование изделий
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-15.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-15.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    изготовление корпусов
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-16.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-16.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Производство мастер-моделей
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-17.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-17.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Изготовление силиконовых форм
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-18.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-18.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    производство сувенирных изделий
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-19.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-19.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    изготовление макетов
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-20.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-20.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Промышленный дизайн
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-21.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-21.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Постобработка и покраска
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-22.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-22.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Вакуумная формовка
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-23.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-23.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Контрактное производство
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-24.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-24.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+<article class="all-services-card ">
+  <a href="" class="stretched-link"></a>
+
+  <h3 class="all-services-card-title">
+    Импортозамещение
+  </h3>
+
+  <div class="all-services-card-picture">
+    <picture>
+      <source srcset="./img/service/image-25.webp" type="image/webp">
+      <img loading="lazy" src="./img/service/image-25.jpg" class="image" width="280" height="180" alt="Картинка">
+    </picture>
+    <button type="button" class="btn all-services-card-btn">
+      Заказать
+
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</article>
+
+              <div class="all-services-more">
+                <button type="button" class="btn btn-xl btn-outline-primary">
+                  Показать еще
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="offcanvas offcanvas-menu offcanvas-end" tabindex="-1" id="offcanvas-menu">
+  <div class="offcanvas-header">
+    <a href="#" class="btn brand">
+      <picture>
+        <source srcset="./img/logo-dark.webp" type="image/webp">
+        <img loading="lazy" src="./img/logo-dark.png" class="brand-logo" width="145" height="38" alt="Element">
+      </picture>
+    </a>
+
+    <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/close.svg#svg-close"></use>
+                </svg>
+            </span>
+        </button>
+  </div>
+  <div class="offcanvas-body"
+		data-transfer-target="header-nav">
+
+  </div>
+
+    <div class="offcanvas-footer">
+
+    </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+  <div class="lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-group">
+        <div class="footer-title">компания</div>
+        <a href="#" class="btn footer-group-link">О нас</a>
+        <a href="#" class="btn footer-group-link">Отзывы</a>
+        <a href="#" class="btn footer-group-link">Работа у нас</a>
+        <a href="#" class="btn footer-group-link">FAQ</a>
+        <a href="#" class="btn footer-group-link">Оплата и доставка</a>
+      </div>
+
+      <div class="footer-group">
+        <div class="footer-title">Услуги</div>
+        <a href="#" class="btn footer-group-link">3D-печать</a>
+        <a href="#" class="btn footer-group-link">3D-моделирование</a>
+        <a href="#" class="btn footer-group-link">3D-сканирование</a>
+        <a href="#" class="btn footer-group-link">3D-контроль геометрии</a>
+        <a href="#" class="btn footer-group-link">3D-визуализация</a>
+        <a href="#" class="btn footer-group-link">Реверс-инжиниринг</a>
+        <a href="#" class="btn footer-group-link">Лазерная резка</a>
+        <a href="#" class="btn footer-group-link">ЧПУ фрезеровка</a>
+        <a href="#" class="btn footer-group-link">3D-фрезеровка</a>
+        <a href="#" class="btn footer-group-link">Гравировка</a>
+        <a href="#" class="btn footer-group-link">
+          Вакуумное литье в <br />
+          силиконовые формы
+        </a>
+        <a href="#" class="btn footer-group-link">Литье под давлением (ТПА)</a>
+        <a href="#" class="btn footer-group-link">RIM литье</a>
+        <a href="#" class="btn footer-group-link">
+          Изготовление силиконовых <br />
+          форм
+        </a>
+      </div>
+
+      <div class="footer-group">
+        <div class="footer-title">Комплексные решения</div>
+        <a href="#" class="btn footer-group-link">
+          Изготовление макетов
+        </a>
+        <a href="#" class="btn footer-group-link">
+          Производство <br />
+          изделий из пластика
+        </a>
+        <a href="#" class="btn footer-group-link">
+          Прототипирование <br />
+          изделий
+        </a>
+        <a href="#" class="btn footer-group-link">
+          Разработка и изготовление <br />
+          корпусов
+        </a>
+        <a href="#" class="btn footer-group-link">
+          Производство <br />
+          мастер-моделей
+        </a>
+        <a href="#" class="btn footer-group-link">
+          Производство сувенирных <br />
+          изделий
+        </a>
+        <a href="#" class="btn footer-group-link">
+          Постобработка и <br />
+          покраска
+        </a>
+        <a href="#" class="btn footer-group-link">Вакуумная формовка</a>
+        <a href="#" class="btn footer-group-link">Промышленный дизайн</a>
+        <a href="#" class="btn footer-group-link">Контрактное производство</a>
+        <a href="#" class="btn footer-group-link">Импортозамещение</a>
+      </div>
+
+      <div class="footer-group">
+        <div class="footer-title">Материалы и технологии</div>
+        <a href="#" class="btn footer-group-link">Портфолио</a>
+        <a href="#" class="btn footer-group-link">Акции</a>
+        <a href="#" class="btn footer-group-link">Блог</a>
+      </div>
+
+      <div class="footer-group">
+        <a href="#" class="btn brand">
+          <div class="brand-pictures">
+            <picture>
+              <source srcset="./img/logo.webp" type="image/webp">
+              <img loading="lazy" src="./img/logo.png" class="brand-logo" width="145" height="38" alt="Element">
+            </picture>
+            <picture>
+              <source srcset="./img/logo-dark.webp" type="image/webp">
+              <img loading="lazy" src="./img/logo-dark.png" class="brand-logo" width="145" height="38" alt="Element">
+            </picture>
+          </div>
+          <p class="brand-text">
+            Прототипирование и серийное производство изделий из пластика
+          </p>
+        </a>
+        <div class="">
+          <div class="footer-title">Контакты</div>
+          <div class="footer-phones">
+            <a href="tel:+78007776579" class="btn">+7 (800-77) 7-65-79</a>
+            <a href="tel:+74993507379" class="btn">+7 499 350-73-79</a>
+            <a href="mailto:info@3d-element.ru" class="btn">info@3d-element.ru</a>
+          </div>
+        </div>
+        <div class="">
+          <p class="footer-text">Написать в мессенджер</p>
+
+          <ul class="list-reset socials-list">
+            <li class="socials-list-item">
+              <a href="#" target="_blank" class="btn socials-list-link">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/whatsapp.svg#svg-whatsapp"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="socials-list-item">
+              <a href="#" target="_blank" class="btn socials-list-link">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/telegram.svg#svg-telegram"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="footer-text footer-text-address">
+          Адрес: г. Москва, Щербаковская <br />
+          ул., 53, корп. 16 (НПП Сапфир)
+        </p>
+
+        <div class="">
+          <div class="footer-title">Режим работы:</div>
+          <p class="footer-text footer-text-address">
+            Пн. — Пт. с 09:00 до 18:00 <br />
+            Сб. — Вс. — выходной
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2020-2025 3D-ELEMENT</p>
+
+      <a href="#" class="btn footer-bottom-link">
+        Политика конфиденциальности
+        <span class="icon">
+          <svg>
+            <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="btn footer-bottom-link">
+        Пользовательское соглашение
+        <span class="icon">
+          <svg>
+            <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="btn footer-bottom-link">
+        Карта сайта
+        <span class="icon">
+          <svg>
+            <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>

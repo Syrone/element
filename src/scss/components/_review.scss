@@ -69,11 +69,13 @@
   }
 
   .section-header {
+    margin-inline: var(--container-offset);
     margin-bottom: 3rem;
     order: -10;
 
     @include mixins.breakpoint-up(lg) {
       max-width: 32.5rem;
+      margin-inline: 0;
       margin-bottom: 8.75rem;
     }
   }

@@ -87,6 +87,7 @@ document.querySelectorAll('.review-swiper-2')?.forEach(container => {
   const swiper = new Swiper(swiperEl, {
     direction: 'vertical',
     slidesPerView: 'auto',
+    loop: true,
     spaceBetween: 20,
     navigation: {
       nextEl: btnNext,
