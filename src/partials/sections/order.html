@@ -57,44 +57,10 @@
           <p class="order-picture-name">Александра</p>
         </div>
       </div>
-      <form class="order-form">
-        <h3 class="section-title">
-          ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ
-        </h3>
-
-        <input type="text" placeholder="Имя" />
-        <input type="tel" placeholder="Телефон" />
-        <a href="#" class="btn btn-download order-form-download">
-          Загрузить файл
-          <span class="icon">
-            <svg>
-              <use xlink:href="img/icons/download.svg#svg-download"></use>
-            </svg>
-          </span>
-        </a>
-        <button class="btn btn-xl btn-outline-primary order-form-submit">
-          Получить
-        </button>
-        <div class="order-form-contact">
-          Напишите нам:
-          <a href="#">
-            <picture>
-              <source srcset="./img/order/telegram.webp" type="image/webp">
-              <img loading="lazy" src="./img/order/telegram.png" class="image" width="32" height="32" alt="Telegram">
-            </picture>
-          </a>
-          <a href="#">
-            <picture>
-              <source srcset="./img/order/whatsapp.webp" type="image/webp">
-              <img loading="lazy" src="./img/order/whatsapp.png" class="image" width="32" height="32" alt="Whatsapp">
-            </picture>
-          </a>
-        </div>
-        <div class="order-form-contact">
-          Или позвоните:
-          <a href="#">+7 (499) 350-73-79</a>
-        </div>
-      </form>
+      @include('../form.html', {
+        "title": "ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ",
+        "button": "Получить"
+      })
       <div class="order-logo">
         <picture>
           <source srcset="./img/order/logo.webp" type="image/webp">

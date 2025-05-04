@@ -3,6 +3,8 @@
 .tab {
 
   &-nav {
+    margin-bottom: -.5rem;
+    padding-bottom: .5rem;
 
     @include mixins.breakpoint-up(lg) {
       margin-inline: -2.5rem;
@@ -106,6 +108,7 @@
       }
 
       .image {
+        width: 100%;
         display: block;
       }
     }
@@ -127,6 +130,7 @@
 
       p {
         font-size: .9375rem;
+        line-height: 1.4;
 
         @include mixins.breakpoint-up(lg) {
           font-size: 1rem;

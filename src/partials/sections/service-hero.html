@@ -1,0 +1,60 @@
+<section class="service-hero">
+  <div class="lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="container">
+    <div class="service-hero-start">
+      <div class="section-header">
+        <h2 class="section-title">
+          @title
+        </h2>
+        <p class="section-subtitle">
+          @subtitle
+        </p>
+      </div>
+
+      <div class="service-hero-start-picture"
+        data-transfer-target="service-hero-picture"></div>
+
+      <ul class="list-reset service-hero-start-list">
+        <li class="service-hero-start-list-item">
+          @list.item-1
+        </li>
+        <li class="service-hero-start-list-item">
+          @list.item-2
+        </li>
+        <li class="service-hero-start-list-item">
+          @list.item-3
+        </li>
+        <li class="service-hero-start-list-item">
+          @list.item-4
+        </li>
+      </ul>
+
+      <div class="service-hero-start-bottom">
+        <p>
+          Оставьте заявку и получите расчет со скидкой до 20% <br />
+          на первый заказ!
+        </p>
+
+        <a href="#" class="btn btn-base btn-outline-primary">
+          Расчитать стоимость
+        </a>
+      </div>
+    </div>
+
+    <div class="service-hero-end">
+      <picture
+        data-transfer-origin="service-hero-picture"
+        data-transfer-breakpoint="991.98">
+        <source srcset="./img/service/@image.webp" type="image/webp">
+        <img loading="lazy" src="./img/service/@image.jpg" class="service-hero-image" width="1040" height="440" alt="Картинка">
+      </picture>
+    </div>
+  </div>
+</section>

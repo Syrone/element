@@ -126,3 +126,10 @@
     }
   }
 }
+
+.portfolio + .advantage {
+
+  @include mixins.breakpoint-down(lg) {
+    padding-top: 2rem;
+  }
+}
