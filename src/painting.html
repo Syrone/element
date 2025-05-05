@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-@include('partials/head.html', {title: 'Макеты'})
+@include('partials/head.html', {title: 'Покраска'})
 
 <body class="page-body">
-  @include('partials/h1.html', {title: 'Макеты'})
+  @include('partials/h1.html', {title: 'Покраска'})
 
   <div class="site-container">
     @include('partials/header.html', {
@@ -378,45 +378,14 @@
         @include('partials/sections/service-warranty.html')
         @include('partials/sections/quality.html')
         @include('partials/sections/map.html')
-
-        <section class="service-visual service-sale">
-          <div class="lines">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="container">
-            <div class="service-visual-start">
-              <div class="service-visual-header">
-                <p class="service-visual-suptitle">
-                  До конца августа!
-                </p>
-                <h2 class="service-visual-title">
-                  Скидка
-                  20% на
-                  первый
-                  заказ
-                </h2>
-              </div>
-
-              <picture class="service-visual-picture">
-                <source srcset="./img/service/sale.webp" type="image/webp">
-                <img loading="lazy" src="./img/service/sale.png" class="image" width="410" height="808" alt="Картинка">
-              </picture>
-            </div>
-
-            @include('partials/form.html', {
-              "title": "Оставьте заявку и зафиксируйте за собой скидку!",
-              "button": "Получить"
-            })
-          </div>
-        </section>
-
+        @include('partials/sections/service-visual.html', {
+          "sale": true,
+          "suptitle": "До конца августа!",
+          "title": "Скидка 20% на \n первый заказ",
+          "image-desktop": "sale",
+          "image-mobile": "sale"
+        })
         @include('partials/sections/review.html')
-        @include('partials/sections/presentation.html')
       </div>
 
       @include('partials/offcanvases.html')

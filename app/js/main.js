@@ -16001,12 +16001,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_catalog_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/catalog-menu.js */ "./src/js/components/catalog-menu.js");
 /* harmony import */ var _components_service_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/service.js */ "./src/js/components/service.js");
 /* harmony import */ var _components_items_more_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/items-more.js */ "./src/js/components/items-more.js");
-/* harmony import */ var _components_collapse_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/collapse.js */ "./src/js/components/collapse.js");
-/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
-/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
-/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_swiper_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/swiper.js */ "./src/js/components/swiper.js");
-/* harmony import */ var _components_fancybox_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/fancybox.js */ "./src/js/components/fancybox.js");
+/* harmony import */ var _components_materials_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/materials.js */ "./src/js/components/materials.js");
+/* harmony import */ var _components_collapse_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/collapse.js */ "./src/js/components/collapse.js");
+/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
+/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_swiper_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/swiper.js */ "./src/js/components/swiper.js");
+/* harmony import */ var _components_fancybox_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/fancybox.js */ "./src/js/components/fancybox.js");
+
 
 
 
@@ -16310,6 +16312,79 @@ document.querySelectorAll('[data-items-more]')?.forEach(element => {
 
 /***/ }),
 
+/***/ "./src/js/components/materials.js":
+/*!****************************************!*\
+  !*** ./src/js/components/materials.js ***!
+  \****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// найти все таргеты и панели
+const menuTargets = Array.from(document.querySelectorAll('[data-materials-menu-target]'));
+const menuLists = Array.from(document.querySelectorAll('[data-materials-menu-id]'));
+const itemTargets = Array.from(document.querySelectorAll('[data-materials-item-target]'));
+const itemPanes = Array.from(document.querySelectorAll('[data-materials-item-id]'));
+
+// общий обработчик для выбора меню
+function activateMenu(btn) {
+  const targetId = btn.dataset.materialsMenuTarget;
+
+  // сброс классов у верхнего меню
+  menuTargets.forEach(b => b.classList.remove('is-active'));
+  menuLists.forEach(l => l.classList.remove('is-open'));
+
+  // сброс классов у подменю/элементов
+  itemTargets.forEach(b => b.classList.remove('is-active'));
+  itemPanes.forEach(p => p.classList.remove('is-open'));
+
+  // активируем выбранный пункт верхнего меню
+  btn.classList.add('is-active');
+  const list = document.querySelector(`[data-materials-menu-id="${targetId}"]`);
+  if (list) list.classList.add('is-open');
+}
+
+// общий обработчик для выбора элемента подменю
+function activateItem(btn) {
+  const targetId = btn.dataset.materialsItemTarget;
+
+  // сброс классов у элементов подменю
+  itemTargets.forEach(b => b.classList.remove('is-active'));
+  itemPanes.forEach(p => p.classList.remove('is-open'));
+
+  // активируем выбранный элемент подменю
+  btn.classList.add('is-active');
+  const pane = document.querySelector(`[data-materials-item-id="${targetId}"]`);
+  if (pane) pane.classList.add('is-open');
+}
+
+// навешиваем слушатели
+menuTargets.forEach(btn => {
+  btn.addEventListener('mouseenter', () => activateMenu(btn));
+});
+itemTargets.forEach(btn => {
+  btn.addEventListener('mouseenter', () => activateItem(btn));
+});
+
+// инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+  if (menuTargets.length) {
+    // активируем первый пункт меню
+    activateMenu(menuTargets[0]);
+
+    // внутри открытого меню — активируем первый элемент
+    // находим все itemTargets, принадлежащие только что открывшемуся list
+    const openedMenuId = menuTargets[0].dataset.materialsMenuTarget;
+    const openedList = document.querySelector(`[data-materials-menu-id="${openedMenuId}"]`);
+    if (openedList) {
+      const firstItem = Array.from(openedList.querySelectorAll('[data-materials-item-target]'))[0];
+      if (firstItem) activateItem(firstItem);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/offcanvas.js":
 /*!****************************************!*\
   !*** ./src/js/components/offcanvas.js ***!
@@ -16520,6 +16595,47 @@ document.querySelectorAll('.review-swiper-2')?.forEach(container => {
           rows: 1
         }
       }
+    }
+  });
+});
+document.querySelectorAll('.service-material-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const updateNav = swiper => {
+    swiper.slides.forEach((slideEl, idx) => {
+      const nextBtn = slideEl.querySelector('.swiper-button-next');
+      const prevBtn = slideEl.querySelector('.swiper-button-prev');
+      if (!nextBtn || !prevBtn) return;
+      if (idx === swiper.activeIndex) {
+        nextBtn.style.visibility = '';
+        prevBtn.style.visibility = '';
+        nextBtn.disabled = swiper.isEnd;
+        prevBtn.disabled = swiper.isBeginning;
+        nextBtn.classList.toggle('swiper-button-disabled', swiper.isEnd);
+        prevBtn.classList.toggle('swiper-button-disabled', swiper.isBeginning);
+      } else {
+        nextBtn.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+      }
+    });
+  };
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+    allowTouchMove: false,
+    on: {
+      init() {
+        container.querySelectorAll('.swiper-button-next').forEach(btn => {
+          btn.addEventListener('click', () => swiper.slideNext());
+        });
+        container.querySelectorAll('.swiper-button-prev').forEach(btn => {
+          btn.addEventListener('click', () => swiper.slidePrev());
+        });
+        // updateNav(this)
+      }
+      // slideChange() {
+      //   updateNav(this)
+      // }
     }
   });
 });

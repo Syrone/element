@@ -1,0 +1,50 @@
+<section class="service-visual @if(sale){service-sale}">
+  <div class="lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="container">
+    <div class="service-visual-start">
+      <div class="service-visual-header">
+        <p class="service-visual-suptitle">
+          @suptitle
+        </p>
+        <h2 class="service-visual-title">
+          @title
+        </h2>
+      </div>
+
+      @if(sale === true) {
+        <picture class="service-visual-picture">
+          <source
+            srcset="./img/service/@image-mobile.webp"
+            type="image/webp"
+            media="(max-width: 991.98px)">
+          <source
+            srcset="./img/service/@image-mobile.png"
+            type="image/png"
+            media="(max-width: 991.98px)">
+
+          <source srcset="./img/service/@image-desktop.webp" type="image/webp">
+          <img loading="lazy" src="./img/service/@image-desktop.png" class="image" width="1080" height="420" alt="Картинка">
+        </picture>
+      }
+
+      @if(sale === false) {
+        <picture class="service-visual-picture">
+          <source srcset="./img/service/@image-desktop.webp" type="image/webp">
+          <img loading="lazy" src="./img/service/@image-desktop.png" class="image" width="410" height="808" alt="Картинка">
+        </picture>
+      }
+    </div>
+
+    @include('../form.html', {
+      "title": "Оставьте заявку и ПОЛУЧИТЕ 3D-ВИЗУАЛИЗАЦИЮ!",
+      "button": "Получить"
+    })
+  </div>
+</section>

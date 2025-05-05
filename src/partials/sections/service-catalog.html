@@ -1,0 +1,78 @@
+<section class="service-catalog @if(padding){service-catalog--padding}">
+  <div class="lines lines-inline">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        @title
+      </h2>
+    </div>
+
+    <div class="service-catalog-body section-main"
+      data-items-more="">
+      @loop('../cards/service-catalog.html', [
+        {
+          "title": "@cards.card-1.title",
+          "image": "@cards.card-1.image"
+        },
+        {
+          "title": "@cards.card-2.title",
+          "image": "@cards.card-2.image"
+        },
+        {
+          "title": "@cards.card-3.title",
+          "image": "@cards.card-3.image"
+        },
+        {
+          "title": "@cards.card-4.title",
+          "image": "@cards.card-4.image"
+        },
+        {
+          "title": "@cards.card-5.title",
+          "image": "@cards.card-5.image"
+        },
+        {
+          "title": "@cards.card-6.title",
+          "image": "@cards.card-6.image"
+        },
+        {
+          "title": "@cards.card-7.title",
+          "image": "@cards.card-7.image"
+        },
+        {
+          "title": "@cards.card-8.title",
+          "image": "@cards.card-8.image"
+        },
+        {
+          "title": "@cards.card-9.title",
+          "image": "@cards.card-9.image"
+        },
+        {
+          "title": "@cards.card-10.title",
+          "image": "@cards.card-10.image"
+        },
+        {
+          "title": "@cards.card-11.title",
+          "image": "@cards.card-11.image"
+        },
+        {
+          "title": "@cards.card-12.title",
+          "image": "@cards.card-12.image"
+        },
+      ])
+
+      <div class="section-more">
+        <button type="button" class="btn btn-xl btn-outline-primary"
+          data-items-more-button="">
+          Показать еще
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

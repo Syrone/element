@@ -1,0 +1,2822 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Печать'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Печать'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html')
+        @include('partials/sections/service-hero.html', {
+          "title": "3D-ПЕЧАТЬ ИЗДЕЛИЙ ЛЮБОЙ СЛОЖНОСТИ, РАЗМЕРОВ И КОЛИЧЕСТВА",
+          "subtitle": "Решим вашу задачу в лучшем качестве, с гарантией результата и точно в срок!",
+          "list": {
+            "item-1": "Свое производство, более 50 принтеров и 30 материалов",
+            "item-2": "Снизим стоимость вашего изделия до 70%",
+            "item-3": 'Делаем проекты "под ключ"',
+            "item-4": "Срок изготовления от 1 дня",
+          },
+          "image": "bg-10"
+        })
+        @include('partials/sections/service-help.html', {
+          "title": "Какие задачи вы сможете решить с нашей помощью",
+          "subtitle": "У Вашего проекта могут быть разные цели, и мы знаем, как достичь каждую из них:",
+          "items": {
+            "item-1": "Сэкономить Ваши деньги перед серийным запуском",
+            "item-2": "Быстро разработать и протестировать новое изделие, прототип",
+            "item-3": "Снизить стоимость конечного изделия",
+            "item-4": "Модернизировать и улучшить текущее изделие ",
+            "item-5": "Восстановить сломанные или изношенные детали",
+            "item-6": "Получить точную копию",
+            "item-7": "Создать продукт, которого нет на рынке или сложно купить",
+            "item-8": "Получить уникальные свойства изделий",
+          },
+          "image-desktop": "bg-12",
+          "image-mobile": "bg-11",
+        })
+        @include('partials/sections/perform.html')
+
+        <section class="service-materials">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Вы можете заказать 3D-печать более
+                из 30 различных видов материалов
+              </h2>
+              <p class="section-subtitle">
+                Поможем Вам выбрать оптимальный материал для решения вашей задачи
+              </p>
+            </div>
+
+            <div class="service-materials-desktop">
+              <ul class="list-reset service-materials-menu">
+                <li class="service-materials-menu-item">
+                  <button type="button" class="btn service-materials-menu-btn"
+                    data-materials-menu-target="materials-menu-1">
+                    Модельные пластики
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+                <li class="service-materials-menu-item">
+                  <button type="button" class="btn service-materials-menu-btn"
+                    data-materials-menu-target="materials-menu-2">
+                    Профессиональные пластики
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+                <li class="service-materials-menu-item">
+                  <button type="button" class="btn service-materials-menu-btn"
+                    data-materials-menu-target="materials-menu-3">
+                    Пластик с уникальными свойствами
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+                <li class="service-materials-menu-item">
+                  <button type="button" class="btn service-materials-menu-btn"
+                    data-materials-menu-target="materials-menu-4">
+                    Фотополимеры
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+                <li class="service-materials-menu-item">
+                  <button type="button" class="btn service-materials-menu-btn"
+                    data-materials-menu-target="materials-menu-5">
+                    Полиамиды
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+                <li class="service-materials-menu-item">
+                  <button type="button" class="btn service-materials-menu-btn"
+                    data-materials-menu-target="materials-menu-6">
+                    Металл
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+                <li class="service-materials-menu-item">
+                  <button type="button" class="btn service-materials-menu-btn"
+                    data-materials-menu-target="materials-menu-7">
+                    Другие
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+
+              <div class="service-materials-submenus">
+                <ul class="list-reset service-materials-menu"
+                  data-materials-menu-id="materials-menu-1">
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-1-item-1">
+                      ABS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-1-item-2">
+                      SBS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-1-item-3">
+                      Pet-g
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-1-item-4">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-1-item-5">
+                      PLA
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-1-item-6">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-1-item-7">
+                      PLA
+                    </button>
+                  </li>
+                </ul>
+                <ul class="list-reset service-materials-menu"
+                  data-materials-menu-id="materials-menu-2">
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-2-item-1">
+                      ABS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-2-item-2">
+                      SBS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-2-item-3">
+                      Pet-g
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-2-item-4">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-2-item-5">
+                      PLA
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-2-item-6">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-2-item-7">
+                      PLA
+                    </button>
+                  </li>
+                </ul>
+                <ul class="list-reset service-materials-menu"
+                  data-materials-menu-id="materials-menu-3">
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-3-item-1">
+                      ABS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-3-item-2">
+                      SBS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-3-item-3">
+                      Pet-g
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-3-item-4">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-3-item-5">
+                      PLA
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-3-item-6">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-3-item-7">
+                      PLA
+                    </button>
+                  </li>
+                </ul>
+                <ul class="list-reset service-materials-menu"
+                  data-materials-menu-id="materials-menu-4">
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-4-item-1">
+                      ABS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-4-item-2">
+                      SBS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-4-item-3">
+                      Pet-g
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-4-item-4">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-4-item-5">
+                      PLA
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-4-item-6">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-4-item-7">
+                      PLA
+                    </button>
+                  </li>
+                </ul>
+                <ul class="list-reset service-materials-menu"
+                  data-materials-menu-id="materials-menu-5">
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-5-item-1">
+                      ABS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-5-item-2">
+                      SBS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-5-item-3">
+                      Pet-g
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-5-item-4">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-5-item-5">
+                      PLA
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-5-item-6">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-5-item-7">
+                      PLA
+                    </button>
+                  </li>
+                </ul>
+                <ul class="list-reset service-materials-menu"
+                  data-materials-menu-id="materials-menu-6">
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-6-item-1">
+                      ABS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-6-item-2">
+                      SBS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-6-item-3">
+                      Pet-g
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-6-item-4">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-6-item-5">
+                      PLA
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-6-item-6">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-6-item-7">
+                      PLA
+                    </button>
+                  </li>
+                </ul>
+                <ul class="list-reset service-materials-menu"
+                  data-materials-menu-id="materials-menu-7">
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-7-item-1">
+                      ABS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-7-item-2">
+                      SBS
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-7-item-3">
+                      Pet-g
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-7-item-4">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-7-item-5">
+                      PLA
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-7-item-6">
+                      Hips
+                    </button>
+                  </li>
+                  <li class="service-materials-menu-item">
+                    <button type="button" class="btn service-materials-menu-btn"
+                      data-materials-item-target="materials-menu-7-item-7">
+                      PLA
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="service-materials-items">
+                <!-- 1 -->
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-1-item-1">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-1-item-2">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        SBS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-1-item-3">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        Pet-g пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-1-item-4">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        Hips пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-1-item-5">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        PLA пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-1-item-6">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        Hips пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-1-item-7">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        PLA пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+
+                <!-- 2 -->
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-2-item-1">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-2-item-2">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-2-item-3">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-2-item-4">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-2-item-5">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-2-item-6">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-2-item-7">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+
+                <!-- 3 -->
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-3-item-1">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-3-item-2">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-3-item-3">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-3-item-4">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-3-item-5">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-3-item-6">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-3-item-7">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+
+                <!-- 4 -->
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-4-item-1">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-4-item-2">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-4-item-3">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-4-item-4">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-4-item-5">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-4-item-6">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-4-item-7">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+
+                <!-- 5 -->
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-5-item-1">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-5-item-2">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-5-item-3">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-5-item-4">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-5-item-5">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-5-item-6">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-5-item-7">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+
+                <!-- 6 -->
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-6-item-1">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-6-item-2">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-6-item-3">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-6-item-4">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-6-item-5">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-6-item-6">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-6-item-7">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+
+                <!-- 7 -->
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-7-item-1">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-7-item-2">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-7-item-3">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-7-item-4">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-7-item-5">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-7-item-6">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+                <div class="service-materials-item"
+                  data-materials-item-id="materials-menu-7-item-7">
+                  <div class="service-materials-item-content">
+                    <picture class="service-materials-item-picture">
+                      <source srcset="./img/service/material-1-1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/service/material-1-1.jpg" class="image" width="360" height="230" alt="Картинка">
+                    </picture>
+
+                    <div class="service-materials-item-info">
+                      <h3 class="service-materials-item-title">
+                        ABS пластик
+                      </h3>
+                      <p class="service-materials-item-subtitle">
+                        (Технология печати: <a href="#" class="btn">FDM/FFF</a>)
+                      </p>
+
+                      <div class="service-materials-item-detail">
+                        от <span>9</span> руб. за см3
+                      </div>
+
+                      <div class="service-materials-item-prop">
+                        <a href="#" class="btn service-materials-item-link">
+                          Свойства материала
+                        </a>
+                      </div>
+
+                      <div class="service-materials-item-buttons">
+                        <button type="button" class="btn btn-base btn-outline-primary">
+                          Расчитать стоимость
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc">
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                    Несмотря на низкую стоимость пластика данного производителя, он хорошо зарекомендовал себя в нашей мастерской. Замеры диаметра прутка в разных местах катушки 1.73-1.75 мм (Замер производился штанген-циркулем с погрешностью 0,01 мм). Первое, что бросается в глаза при использовании этого пластика в первый раз –  эластичность. Пластик больше похож на резину.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-materials-mobile">
+              <div class="advantage-list"
+                data-collapse="">
+                <div class="advantage-item">
+                  <button type="button" class="btn advantage-item-title collapse-button"
+                    data-collapse-button="">
+                    Модельные пластики
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="collapse-body">
+                    <div>
+                      <div class="service-material-swiper">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "ABS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "SBS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Pet-g пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <button type="button" class="btn advantage-item-title collapse-button"
+                    data-collapse-button="">
+                    Профессиональные пластики
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="collapse-body">
+                    <div>
+                      <div class="service-material-swiper">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "ABS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "SBS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Pet-g пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <button type="button" class="btn advantage-item-title collapse-button"
+                    data-collapse-button="">
+                    Пластик с уникальными свойствами
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="collapse-body">
+                    <div>
+                      <div class="service-material-swiper">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "ABS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "SBS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Pet-g пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <button type="button" class="btn advantage-item-title collapse-button"
+                    data-collapse-button="">
+                    фотополимеры
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="collapse-body">
+                    <div>
+                      <div class="service-material-swiper">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "ABS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "SBS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Pet-g пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <button type="button" class="btn advantage-item-title collapse-button"
+                    data-collapse-button="">
+                    Полиамиды
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="collapse-body">
+                    <div>
+                      <div class="service-material-swiper">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "ABS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "SBS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Pet-g пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <button type="button" class="btn advantage-item-title collapse-button"
+                    data-collapse-button="">
+                    металл
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="collapse-body">
+                    <div>
+                      <div class="service-material-swiper">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "ABS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "SBS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Pet-g пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <button type="button" class="btn advantage-item-title collapse-button"
+                    data-collapse-button="">
+                    другие
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="collapse-body">
+                    <div>
+                      <div class="service-material-swiper">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "ABS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "SBS пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Pet-g пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "Hips пластик"
+                              })
+                            </div>
+                            <div class="swiper-slide">
+                              @include('partials/cards/service-material-mobile.html', {
+                                "title": "PLA пластик"
+                              })
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/service-catalog.html', {
+          "padding": true,
+          "title": "У нас огромный опыт 3d-печати для разных задач и направлений",
+          "cards": {
+            "card-1": {
+              "title": "3d-печать <br> корпусов",
+              "image": "catalog-13"
+            },
+            "card-2": {
+              "title": "3d-печать крупногабаритная",
+              "image": "catalog-14"
+            },
+            "card-3": {
+              "title": "3d-печать для авто",
+              "image": "catalog-15"
+            },
+            "card-4": {
+              "title": "3d-печать бутылок, тары",
+              "image": "catalog-16"
+            },
+            "card-5": {
+              "title": "3d-печать деталей и запчастей",
+              "image": "catalog-17"
+            },
+            "card-6": {
+              "title": "3d-печать макетов",
+              "image": "catalog-18"
+            },
+            "card-7": {
+              "title": "3d-печатьмастер моделей",
+              "image": "catalog-19"
+            },
+            "card-8": {
+              "title": "3d-печать скульптур бюстов",
+              "image": "catalog-20"
+            },
+            "card-9": {
+              "title": "3d-печать декора",
+              "image": "catalog-21"
+            },
+            "card-10": {
+              "title": "3d-печатьпрототипов",
+              "image": "catalog-22"
+            },
+            "card-11": {
+              "title": "3d-печать мелкосерийная",
+              "image": "catalog-23"
+            },
+            "card-12": {
+              "title": "3d-печать сувениров, наград",
+              "image": "catalog-24"
+            },
+          }
+        })
+        @include('partials/sections/portfolio.html')
+        @include('partials/sections/advantage.html')
+        @include('partials/sections/service-control.html')
+        @include('partials/sections/order.html')
+        @include('partials/sections/service-warranty.html')
+        @include('partials/sections/quality.html')
+        @include('partials/sections/map.html')
+        @include('partials/sections/service-visual.html', {
+          "sale": true,
+          "suptitle": "До конца августа!",
+          "title": "Скидка 20% на \n первый заказ",
+          "image-desktop": "sale",
+          "image-mobile": "sale"
+        })
+        @include('partials/sections/review.html')
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

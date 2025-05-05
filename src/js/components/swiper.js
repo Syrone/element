@@ -115,3 +115,48 @@ document.querySelectorAll('.review-swiper-2')?.forEach(container => {
     }
   })
 })
+
+document.querySelectorAll('.service-material-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+
+  const updateNav = swiper => {
+    swiper.slides.forEach((slideEl, idx) => {
+      const nextBtn = slideEl.querySelector('.swiper-button-next')
+      const prevBtn = slideEl.querySelector('.swiper-button-prev')
+      if (!nextBtn || !prevBtn) return
+
+      if (idx === swiper.activeIndex) {
+        nextBtn.style.visibility = ''
+        prevBtn.style.visibility = ''
+        nextBtn.disabled = swiper.isEnd
+        prevBtn.disabled = swiper.isBeginning
+        nextBtn.classList.toggle('swiper-button-disabled', swiper.isEnd)
+        prevBtn.classList.toggle('swiper-button-disabled', swiper.isBeginning)
+      } else {
+        nextBtn.style.visibility = 'hidden'
+        prevBtn.style.visibility = 'hidden'
+      }
+    })
+  }
+
+  const swiper = new Swiper(swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+    allowTouchMove: false,
+    on: {
+      init() {
+        container.querySelectorAll('.swiper-button-next').forEach(btn => {
+          btn.addEventListener('click', () => swiper.slideNext())
+        })
+        container.querySelectorAll('.swiper-button-prev').forEach(btn => {
+          btn.addEventListener('click', () => swiper.slidePrev())
+        })
+        // updateNav(this)
+      },
+      // slideChange() {
+      //   updateNav(this)
+      // }
+    }
+  })
+})
