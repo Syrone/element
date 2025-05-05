@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Макеты'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Макеты'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html')
+
+        @include('partials/sections/service-hero.html', {
+          "title": "Профессиональная постобработка и покраска изделий любой сложности!",
+          "subtitle": "Решим вашу задачу в лучшем качестве, с гарантией результата и точно в срок!",
+          "list": {
+            "item-1": "100% попадание в цвет по RAL или Pantone",
+            "item-2": "Придадим нужную фактуру (гладкую, шагрень, глянец, мат)",
+            "item-3": "Проф. покрасочный инструмент от Iwata, DeVilbiss",
+            "item-4": "Сроки от 3 дней",
+          },
+          "image": "bg-9"
+        })
+
+        <section class="service-complex">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Выполняем полный комплекс работ: ПО ДОВОДКЕ Изделий до финишного вида
+              </h2>
+            </div>
+
+            <div class="tab">
+              <div class="tab-nav-header">
+                <ul class="list-reset tab-nav scrollable-x" role="tablist">
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" role="tab" class="btn tab-nav-link active"
+                      id="tab-service-complex-1"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pane-service-complex-1"
+                      aria-controls="pane-service-complex-1"
+                      aria-selected="true">
+                      Шлифовка
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" role="tab" class="btn tab-nav-link"
+                      id="tab-service-complex-2"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pane-service-complex-2"
+                      aria-controls="pane-service-complex-2"
+                      aria-selected="false">
+                      Химическая обработка
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" role="tab" class="btn tab-nav-link"
+                      id="tab-service-complex-3"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pane-service-complex-3"
+                      aria-controls="pane-service-complex-3"
+                      aria-selected="false">
+                      Покраска
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" role="tab" class="btn tab-nav-link"
+                      id="tab-service-complex-4"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pane-service-complex-4"
+                      aria-controls="pane-service-complex-4"
+                      aria-selected="false">
+                      Художественная роспись
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" role="tab" class="btn tab-nav-link"
+                      id="tab-service-complex-5"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pane-service-complex-5"
+                      aria-controls="pane-service-complex-5"
+                      aria-selected="false">
+                      Аэрография
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" role="tab" class="btn tab-nav-link"
+                      id="tab-service-complex-6"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pane-service-complex-6"
+                      aria-controls="pane-service-complex-6"
+                      aria-selected="false">
+                      Хромирование
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" role="tab" class="btn tab-nav-link"
+                      id="tab-service-complex-7"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pane-service-complex-7"
+                      aria-controls="pane-service-complex-7"
+                      aria-selected="false">
+                      УФ печать
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel"
+                  id="pane-service-complex-1"
+                  aria-labelledby="tab-service-complex-1">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Шлифовка
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <h4>
+                          Стоимость от 1500 руб. за час работы
+                        </h4>
+
+                        <div class="tab-body-picture" data-transfer-target="tab-service-complex-1"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="tab-service-complex-1" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/service/complex-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/service/complex-1.png" class="image" width="666" height="570"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-service-complex-2"
+                  aria-labelledby="tab-service-complex-2">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Химическая обработка
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <h4>
+                          Стоимость от 1500 руб. за час работы
+                        </h4>
+
+                        <div class="tab-body-picture" data-transfer-target="tab-service-complex-2"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="tab-service-complex-2" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/service/complex-2.webp" type="image/webp">
+                        <img loading="lazy" src="./img/service/complex-2.png" class="image" width="666" height="570"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-service-complex-3"
+                  aria-labelledby="tab-service-complex-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Покраска
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <h4>
+                          Стоимость от 1500 руб. за час работы
+                        </h4>
+
+                        <div class="tab-body-picture" data-transfer-target="tab-service-complex-3"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="tab-service-complex-3" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/service/complex-3.webp" type="image/webp">
+                        <img loading="lazy" src="./img/service/complex-3.png" class="image" width="666" height="570"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-service-complex-4"
+                  aria-labelledby="tab-service-complex-4">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Художественная роспись
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <h4>
+                          Стоимость от 1500 руб. за час работы
+                        </h4>
+
+                        <div class="tab-body-picture" data-transfer-target="tab-service-complex-4"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="tab-service-complex-4" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/service/complex-4.webp" type="image/webp">
+                        <img loading="lazy" src="./img/service/complex-4.png" class="image" width="666" height="570"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-service-complex-5"
+                  aria-labelledby="tab-service-complex-5">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Аэрография
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <h4>
+                          Стоимость от 1500 руб. за час работы
+                        </h4>
+
+                        <div class="tab-body-picture" data-transfer-target="tab-service-complex-5"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="tab-service-complex-5" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/service/complex-5.webp" type="image/webp">
+                        <img loading="lazy" src="./img/service/complex-5.png" class="image" width="666" height="570"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-service-complex-6"
+                  aria-labelledby="tab-service-complex-6">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Хромирование
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое задание, вы получаете документ: Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем техническое
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <h4>
+                          Стоимость от 1500 руб. за час работы
+                        </h4>
+
+                        <div class="tab-body-picture" data-transfer-target="tab-service-complex-6"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="tab-service-complex-6" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/service/complex-6.webp" type="image/webp">
+                        <img loading="lazy" src="./img/service/complex-6.png" class="image" width="666" height="570"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-service-complex-7"
+                  aria-labelledby="tab-service-complex-7">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          УФ печать
+                        </h3>
+                        <p>
+                          Здесь текст будет написан, а пока просто для вида.
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <h4>
+                          Стоимость от 1500 руб. за час работы
+                        </h4>
+
+                        <div class="tab-body-picture" data-transfer-target="tab-service-complex-7"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="tab-service-complex-7" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/service/complex-7.webp" type="image/webp">
+                        <img loading="lazy" src="./img/service/complex-7.png" class="image" width="666" height="570"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/portfolio.html')
+        @include('partials/sections/advantage.html')
+        @include('partials/sections/service-control.html')
+        @include('partials/sections/order.html')
+        @include('partials/sections/service-warranty.html')
+        @include('partials/sections/quality.html')
+        @include('partials/sections/map.html')
+
+        <section class="service-visual service-sale">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="service-visual-start">
+              <div class="service-visual-header">
+                <p class="service-visual-suptitle">
+                  До конца августа!
+                </p>
+                <h2 class="service-visual-title">
+                  Скидка
+                  20% на
+                  первый
+                  заказ
+                </h2>
+              </div>
+
+              <picture class="service-visual-picture">
+                <source srcset="./img/service/sale.webp" type="image/webp">
+                <img loading="lazy" src="./img/service/sale.png" class="image" width="410" height="808" alt="Картинка">
+              </picture>
+            </div>
+
+            @include('partials/form.html', {
+              "title": "Оставьте заявку и зафиксируйте за собой скидку!",
+              "button": "Получить"
+            })
+          </div>
+        </section>
+
+        @include('partials/sections/review.html')
+        @include('partials/sections/presentation.html')
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -1213,6 +1213,165 @@
   }
 }
 
+.service-complex {
+  position: relative;
+  padding-block: 4rem;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-block: 8.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 5.75rem;
+  }
+
+  > .container {
+
+    @include mixins.breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  .tab {
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: -1 / 1;
+      margin-inline: 2.5rem;
+    }
+
+    &-nav {
+      justify-content: space-between;
+
+      &-item {
+        flex: initial;
+
+        &:not(:last-child) {
+          padding-right: 4rem;
+        }
+      }
+
+      &-link {
+        --_width: max-content;
+
+        min-width: unset;
+      }
+    }
+
+    &-body {
+
+      @include mixins.breakpoint-up(lg) {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 3rem;
+      }
+
+      @include mixins.breakpoint-up(xl) {
+        gap: 4rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        gap: 5rem;
+      }
+
+      @include mixins.breakpoint-up(xxxxl) {
+        gap: 8.75rem;
+      }
+
+      @include mixins.breakpoint-down(lg) {
+        padding-top: 3rem;
+      }
+
+      &-start {
+
+        @include mixins.breakpoint-up(lg) {
+          max-width: 30rem;
+        }
+
+        @include mixins.breakpoint-up(xxl) {
+          max-width: 40rem;
+        }
+
+        @include mixins.breakpoint-up(xxl) {
+          max-width: 48.25rem;
+        }
+      }
+
+      &-end {
+
+        @include mixins.breakpoint-up(lg) {
+          max-width: 666px;
+          margin-block:-4rem  0;
+        }
+
+        .image {
+          object-fit: contain;
+        }
+      }
+
+      &-header {
+
+        @include mixins.breakpoint-down(lg) {
+          margin-bottom: 3rem;
+        }
+      }
+
+      &-main {
+
+        h4 {
+          font-size: .75rem;
+          font-weight: 800;
+        }
+      }
+
+      &-picture {
+        margin-inline: 0;
+
+        @include mixins.breakpoint-down(lg) {
+          margin-bottom: 2rem;
+        }
+
+        .image {
+          width: 100%;
+        }
+      }
+
+      &-footer {
+
+        .btn {
+
+          @include mixins.breakpoint-up(lg) {
+            flex: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+.service-sale {
+
+  .service-visual-start {
+
+    @include mixins.breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .service-visual-picture {
+    max-width: 25rem;
+    justify-self: center;
+    margin-inline: 1.25rem;
+    mix-blend-mode: darken;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 2;
+      margin-inline: 5rem;
+    }
+  }
+}
+
 .all-services {
   position: relative;
   padding-bottom: 4rem;
