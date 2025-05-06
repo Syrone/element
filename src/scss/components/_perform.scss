@@ -25,4 +25,17 @@
       padding-inline: 2.5rem;
     }
   }
+
+  &--modeling {
+
+    .tab {
+
+      &-nav {
+
+        &-item {
+          flex: initial;
+        }
+      }
+    }
+  }
 }
