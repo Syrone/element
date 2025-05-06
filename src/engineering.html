@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-@include('partials/head.html', {title: '3D-Моделирование'})
+@include('partials/head.html', {title: 'Реверс инжиниринг'})
 
 <body class="page-body">
-  @include('partials/h1.html', {title: '3D-Моделирование'})
+  @include('partials/h1.html', {title: 'Реверс инжиниринг'})
 
   <div class="site-container">
     @include('partials/header.html', {
@@ -15,18 +15,20 @@
       <div class="main-section">
         @include('partials/sections/breadcrumbs.html')
         @include('partials/sections/service-hero.html', {
-          "title": "3D-моделирование и проектирование объектов любой сложности!",
+          "title": "Создадим 3D-модель и КД по вашему образцу любой сложности и размера!",
           "subtitle": "Решим вашу задачу в лучшем качестве, с гарантией результата и точно в срок!",
           "list": {
-            "item-1": "Моделируем по фото, чертежам, эскизам и образцам",
-            "item-2": "Предоставим 3D-модель в нужном формате",
-            "item-3": 'Сроки 3D-моделирования от 1 дня.',
-            "item-4": "Выполняем художественное и техническое моделирование",
+            "item-1": "Предоставим вам 3D-модель в нужном формате",
+            "item-2": "Сделаем конструкторскую документацию по ЕСКД",
+            "item-3": 'Выезжаем по РФ и СНГ',
+            "item-4": "Сроки работ от 2 дней",
           },
-          "image": "bg-13"
+          "image": "bg-17"
         })
 
-        <section class="service-onphoto">
+        <section class="service-help service-help--scaning">
+          <span class="service-help-bg" style="background-image: url(./img/service/bg-16.webp);"></span>
+
           <div class="lines lines-inline">
             <span></span>
             <span></span>
@@ -36,16 +38,50 @@
           </div>
 
           <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">
-                3d-моделирование по фотографии
-              </h2>
+            <div class="service-help-start">
+              <span class="service-help-bg" style="background-image: url(./img/service/bg-15.webp);"></span>
+
+              <div class="section-header">
+                <h2 class="section-title">
+                  Какие задачи вы сможете решить с нашей помощью
+                </h2>
+                <p class="section-subtitle">
+                  У Вашего проекта могут быть разные цели, и мы знаем, как достичь каждую из них:
+                </p>
+              </div>
             </div>
 
-            <div class="service-onphoto-content">
-              <p class="desc">
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-              </p>
+            <div class="service-help-end">
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">01</span>
+                <span class="service-help-button-subtitle">Выполнить обратное проектирование (реверс-инжиниринг)</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">02</span>
+                <span class="service-help-button-subtitle">Получить точную цифровую 3D-модель физического объекта</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">03</span>
+                <span class="service-help-button-subtitle">Выявить отклонения в размерах, контроль геометрии и качества</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">04</span>
+                <span class="service-help-button-subtitle">Восстановить сломанные или изношенные детали</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">05</span>
+                <span class="service-help-button-subtitle">Произвести копию или улучшить текущее изделие</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">06</span>
+                <span class="service-help-button-subtitle">Создать цифровой архив данных</span>
+              </button>
+
+              <div class="service-help-bottom">
+                <button type="button" class="btn btn-xl btn-outline-primary">
+                  Решить свою задачу
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -141,29 +177,23 @@
                     <div class="tab-body-start">
                       <div class="tab-body-header">
                         <h3>
-                          Сделаем 3D-модель и визуализацию
+                          После 3D-сканирования, вы получите модель с учётом ваших пожеланий и необходимых требований, вы получаете:
                         </h3>
-                        <p>
-                          Создадим цифровую модель с учётом ваших пожеланий и необходимых требований, вы получаете:
-                        </p>
                       </div>
                       <div class="tab-body-main">
                         <ul class="list-reset">
                           <li>
-                            Продумываем 3D-модель для лучше собираемости
+                            Цифровой файл в нужном для вас формате: STL, STEP, OBJ, VMRL, ASCII, AOP, CSV, PTX, PTC, OBJ, RCP, E57
                           </li>
                           <li>
-                            Доработаем ошибки 3D-моделей или сканов
-                          </li>
-                          <li>
-                            3D-модель под производство (фрезеровка, печать)
+                            Адаптируем 3D-модель под производство (фрезеровка, печать, контроль геометрии)
                           </li>
                           <li>
                             Проведем прочностные, тепловые, аэрогидродинамические расчеты
                           </li>
                         </ul>
 
-                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-6"></div>
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-8"></div>
                       </div>
                       <div class="tab-body-footer">
                         <button type="button" class="btn btn-xl btn-outline-primary">
@@ -172,9 +202,9 @@
                       </div>
                     </div>
                     <div class="tab-body-end">
-                      <picture data-transfer-origin="perform-tab-picture-6" data-transfer-breakpoint="991.98">
-                        <source srcset="./img/perform/image-6.webp" type="image/webp">
-                        <img loading="lazy" src="./img/perform/image-6.png" class="image" width="884" height="640"
+                      <picture data-transfer-origin="perform-tab-picture-8" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-8.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-8.png" class="image" width="884" height="640"
                           alt="Картинка">
                       </picture>
                     </div>
@@ -211,6 +241,77 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-catalog service-catalog--padding service-catalog--engineering">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                У нас огромный опыт 3d-моделирования для разных задач и направлений
+              </h2>
+            </div>
+
+            <div class="service-catalog-body section-main"
+              data-items-more="">
+              @loop('partials/cards/service-catalog.html', [
+                {
+                  "title": "Машиностроение",
+                  "image": "catalog-47"
+                },
+                {
+                  "title": "Двигателестроение",
+                  "image": "catalog-48"
+                },
+                {
+                  "title": "Судостроение",
+                  "image": "catalog-49"
+                },
+                {
+                  "title": "Авиационная и ракетно-космическая промышленность",
+                  "image": "catalog-50"
+                },
+                {
+                  "title": "Технологическое оборудование",
+                  "image": "catalog-51"
+                },
+                {
+                  "title": "Нефтеперерабатывающая промышленность",
+                  "image": "catalog-52"
+                },
+                {
+                  "title": "Сельскохозяйственное машиностроение",
+                  "image": "catalog-53"
+                },
+                {
+                  "title": "Автомобилестроение",
+                  "image": "catalog-54"
+                },
+                {
+                  "title": "Приборостроение",
+                  "image": "catalog-55"
+                },
+                {
+                  "title": "Оборонно-промышленная промышленность",
+                  "image": "catalog-56"
+                },
+              ])
+
+              <div class="section-more">
+                <button type="button" class="btn btn-xl btn-outline-primary"
+                  data-items-more-button="">
+                  Показать еще
+                </button>
               </div>
             </div>
           </div>

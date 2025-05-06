@@ -717,7 +717,6 @@
 
     @include mixins.breakpoint-up(lg) {
       min-height: 13.75rem;
-      padding: 1.75rem;
     }
 
     @include mixins.breakpoint-up(xxl) {
@@ -757,6 +756,14 @@
       font-size: .9375rem;
       font-weight: 800;
       text-transform: uppercase;
+
+      @include mixins.breakpoint-up(lg) {
+        font-size: .75rem;
+      }
+
+      @include mixins.breakpoint-up(xl) {
+        font-size: .9375rem;
+      }
     }
 
     &-button {
@@ -883,6 +890,34 @@
 
       &:nth-child(10) {
         grid-row: initial;
+      }
+    }
+  }
+
+  &--engineering {
+
+    .service-catalog-card {
+
+      &:nth-child(4) {
+
+        @include mixins.breakpoint-up(xxl) {
+          grid-row: span 3;
+        }
+      }
+
+      &:nth-child(8) {
+
+        @include mixins.breakpoint-up(xxl) {
+          grid-row: initial;
+        }
+      }
+
+      &:nth-child(10) {
+        grid-row: initial;
+
+        @include mixins.breakpoint-up(xxl) {
+          grid-column: span 2;
+        }
       }
     }
   }
