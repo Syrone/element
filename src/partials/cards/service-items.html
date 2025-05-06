@@ -1,0 +1,35 @@
+<article class="service-items-card">
+  <picture class="service-items-card-picture"
+    data-transfer-origin="@image"
+    data-transfer-breakpoint="991.98"
+    data-transfer-placement="first">
+    <source srcset="./img/service/@image.webp" type="image/webp">
+    <img loading="lazy" src="./img/service/@image.png" class="image" width="317" height="209" alt="Картинка">
+  </picture>
+  <button class="btn service-items-card-title collapse-button"
+    data-collapse-button="">
+    @title
+    <span class="icon collapse-button-icon">
+      <svg>
+        <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+      </svg>
+    </span>
+  </button>
+  <div class="collapse-body">
+    <div
+      data-transfer-target="@image">
+      <div class="service-items-card-content">
+        <p class="desc">
+          @desc
+        </p>
+
+        <a href="#" class="btn service-items-card-link">
+          Подробнее
+        </a>
+      </div>
+      <button type="button" class="btn btn-base btn-outline-primary service-items-card-btn">
+        Рассчитать проект
+      </button>
+    </div>
+  </div>
+</article>

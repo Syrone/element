@@ -24,6 +24,16 @@
     @include mixins.breakpoint-up(lg) {
       padding-inline: 2.5rem;
     }
+
+    &-body {
+
+      &-start {
+
+        @include mixins.breakpoint-up(lg) {
+          min-height: 34rem;
+        }
+      }
+    }
   }
 
   &--modeling {

@@ -1,0 +1,57 @@
+<section class="service-catalog service-catalog--plastic @class">
+  <div class="lines lines-inline">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        Используем современные технологии производства
+      </h2>
+      <p class="section-subtitle">
+        Подберем лучший вариант для решения вашей задачи и в рамках вашего бюджета!
+      </p>
+    </div>
+
+    <div class="service-catalog-body section-main"
+      data-items-more="">
+      @loop('../cards/service-catalog.html', [
+        {
+          "title": "3D-печать",
+          "image": "catalog-67"
+        },
+        {
+          "title": "ЧПУ фрезеровка",
+          "image": "catalog-68"
+        },
+        {
+          "title": "Лазерная резка",
+          "image": "catalog-69"
+        },
+        {
+          "title": "Литье под давлением",
+          "image": "catalog-70"
+        },
+        {
+          "title": "Вакуумное литье",
+          "image": "catalog-71"
+        },
+        {
+          "title": "Вакуумная формовка",
+          "image": "catalog-72"
+        }
+      ])
+
+      <div class="section-more">
+        <button type="button" class="btn btn-xl btn-outline-primary"
+          data-items-more-button="">
+          Показать еще
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

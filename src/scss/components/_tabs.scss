@@ -166,6 +166,14 @@
           }
         }
       }
+
+      .text-primary {
+        margin-top: 1.5rem;
+
+        @include mixins.breakpoint-up(lg) {
+          margin-top: 2rem;
+        }
+      }
     }
 
     &-picture {
