@@ -16325,6 +16325,8 @@ const menuTargets = Array.from(document.querySelectorAll('[data-materials-menu-t
 const menuLists = Array.from(document.querySelectorAll('[data-materials-menu-id]'));
 const itemTargets = Array.from(document.querySelectorAll('[data-materials-item-target]'));
 const itemPanes = Array.from(document.querySelectorAll('[data-materials-item-id]'));
+const submenusContainer = document.querySelector('.service-materials-submenus');
+const itemsContainer = document.querySelector('.service-materials-items');
 
 // общий обработчик для выбора меню
 function activateMenu(btn) {
@@ -16342,6 +16344,13 @@ function activateMenu(btn) {
   btn.classList.add('is-active');
   const list = document.querySelector(`[data-materials-menu-id="${targetId}"]`);
   if (list) list.classList.add('is-open');
+  if (targetId === 'materials-form') {
+    submenusContainer?.classList.add('is-hidden');
+    itemsContainer?.classList.add('is-hidden');
+  } else {
+    submenusContainer?.classList.remove('is-hidden');
+    itemsContainer?.classList.remove('is-hidden');
+  }
 }
 
 // общий обработчик для выбора элемента подменю

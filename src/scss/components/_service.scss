@@ -1574,7 +1574,9 @@
   }
 
   &-submenus .service-materials-menu,
-  &-item {
+  &-item,
+  &-table,
+  &-form {
 
     &:not(.is-open) {
       display: none;
@@ -1729,6 +1731,132 @@
     }
   }
 
+  &-table {
+    display: flex;
+    flex-direction: column;
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border-color: var(--light-450);
+
+      th,
+      td {
+        border: 1px solid var(--light-450);
+        text-align: start;
+        padding: .25rem;
+
+        @include mixins.breakpoint-up(lg) {
+          padding: 1rem 2rem;
+        }
+
+        @include mixins.breakpoint-up(xxl) {
+          padding: 1.25rem 2.5rem;
+        }
+
+        &:first-child {
+          border-inline-start: none;
+          padding-inline-start: 0;
+
+          @include mixins.breakpoint-up(lg) {
+            padding-inline-start: 1.5rem;
+          }
+
+          @include mixins.breakpoint-up(xxl) {
+            padding-inline-start: 2rem;
+          }
+        }
+
+        &:last-child {
+          border-inline-end: none;
+          padding-inline-end: 0;
+
+          @include mixins.breakpoint-up(lg) {
+            padding-inline-end: 1.5rem;
+          }
+
+          @include mixins.breakpoint-up(xxl) {
+            padding-inline-end: 2rem;
+          }
+        }
+      }
+
+      thead {
+
+        tr {
+
+          &:first-child {
+
+            > * {
+
+              &:first-child {
+
+                @include mixins.breakpoint-down(lg) {
+                  width: 4rem;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+
+            > * {
+
+              &:first-child {
+
+                @include mixins.breakpoint-down(lg) {
+                  width: 22.5%;
+                  padding-inline-start: .25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      th {
+        font-size: .75rem;
+
+        @include mixins.breakpoint-up(lg) {
+          font-size: .9375rem;
+        }
+      }
+
+      td {
+        font-size: .9375rem;
+
+        @include mixins.breakpoint-up(lg) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &-price {
+      font-size: 0.875rem;
+      color: var(--primary);
+      margin-block: 3.75rem 1.25rem;
+
+      @include mixins.breakpoint-up(lg) {
+        font-size: 0.9375rem;
+        margin-block: 1.25rem;
+      }
+
+    }
+  }
+
+  &-form {
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 4;
+      padding-inline: 2.5rem;
+    }
+
+    .form {
+      max-width: unset;
+      margin-inline: unset;
+    }
+  }
+
   &-desktop {
     display: none;
 
@@ -1758,6 +1886,18 @@
             grid-template-rows: 1fr;
           }
         }
+      }
+    }
+
+    .collapse-body {
+
+      .form {
+        margin-top: .75rem;
+      }
+
+      .service-materials-table {
+        display: flex;
+        margin-bottom: 2rem;
       }
     }
   }
