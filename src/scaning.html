@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: '3D-Сканирование'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: '3D-Сканирование'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html')
+        @include('partials/sections/service-hero.html', {
+          "title": "Высокоточное 3D-сканирование объектов любой сложности и размеров!",
+          "subtitle": "Решим вашу задачу в лучшем качестве, с гарантией результата и точно в срок!",
+          "list": {
+            "item-1": "Точность сканирования от 0,025 мм",
+            "item-2": "Выполняем выездное 3D-сканирование по РФ",
+            "item-3": 'Сроки 3D-сканирования от 1 дня',
+            "item-4": "Предоставим вам 3D-модель в нужном формате",
+          },
+          "image": "bg-14"
+        })
+
+        <section class="service-help service-help--scaning">
+          <span class="service-help-bg" style="background-image: url(./img/service/bg-16.webp);"></span>
+
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="service-help-start">
+              <span class="service-help-bg" style="background-image: url(./img/service/bg-15.webp);"></span>
+
+              <div class="section-header">
+                <h2 class="section-title">
+                  Какие задачи вы сможете решить с нашей помощью
+                </h2>
+                <p class="section-subtitle">
+                  У Вашего проекта могут быть разные цели, и мы знаем, как достичь каждую из них:
+                </p>
+              </div>
+            </div>
+
+            <div class="service-help-end">
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">01</span>
+                <span class="service-help-button-subtitle">Выполнить обратное проектирование (реверс-инжиниринг)</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">02</span>
+                <span class="service-help-button-subtitle">Получить точную цифровую 3D-модель физического объекта</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">03</span>
+                <span class="service-help-button-subtitle">Выявить отклонения в размерах, контроль геометрии и качества</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">04</span>
+                <span class="service-help-button-subtitle">Восстановить сломанные или изношенные детали</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">05</span>
+                <span class="service-help-button-subtitle">Произвести копию или улучшить текущее изделие</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">06</span>
+                <span class="service-help-button-subtitle">Создать цифровой архив данных</span>
+              </button>
+
+              <div class="service-help-bottom">
+                <button type="button" class="btn btn-xl btn-outline-primary">
+                  Решить свою задачу
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="perform perform--modeling">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                ВЫПОЛНЯЕМ ПОЛНЫЙ КОМПЛЕКС РАБОТ ОТ РАЗРАБОТКИ ДО СЕРИЙНОГО ПРО-ВА
+              </h2>
+            </div>
+
+            <div class="tab">
+              <div class="tab-nav-header">
+                <ul class="list-reset tab-nav scrollable-x" role="tablist">
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" class="btn tab-nav-link active" id="tab-perform-1" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-1" role="tab" aria-controls="pane-perform-1" aria-selected="true">
+                      Составим <br> подробное ТЗ
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-2" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-2" type="button" role="tab" aria-controls="pane-perform-2"
+                      aria-selected="false">
+                      Сделаем 3D-модель <br> и визуализацию
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-4" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-4" type="button" role="tab" aria-controls="pane-perform-4"
+                      aria-selected="false">
+                      Произведем в 2 раза <br> быстрее остальных
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="pane-perform-1" role="tabpanel"
+                  aria-labelledby="tab-perform-1">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Составим подробное ТЗ
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем
+                          техническое задание, вы получаете документ:
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            с точными размерами и масштабами
+                          </li>
+                          <li>
+                            стоимостью и сроками про-ва
+                          </li>
+                          <li>
+                            комплектацию и условия поставки
+                          </li>
+                        </ul>
+
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-1"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-1" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-1.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-2" role="tabpanel" aria-labelledby="tab-perform-2">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          После 3D-сканирования, вы получите модель с учётом ваших пожеланий и необходимых требований, вы получаете:
+                        </h3>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            Цифровой файл в нужном для вас формате: STL, STEP, OBJ, VMRL, ASCII, AOP, CSV, PTX, PTC, OBJ, RCP, E57
+                          </li>
+                          <li>
+                            Адаптируем 3D-модель под производство (фрезеровка, печать, контроль геометрии)
+                          </li>
+                          <li>
+                            Проведем прочностные, тепловые, аэрогидродинамические расчеты
+                          </li>
+                        </ul>
+
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-7"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-7" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-7.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-7.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-4" role="tabpanel" aria-labelledby="tab-perform-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Произведем в 2 раза быстрее остальных
+                        </h3>
+                        <p>
+                          80% заказов мы выполняем раньше оговоренного срока
+                          На нашем производстве применяются лучшие мировые методы управления проектами и контроля над их
+                          исполнением. Вам не придется переживать о сроках, все процессы автоматизированы и отлажены!
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-4"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-4" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-4.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-4.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/service-catalog.html', {
+          "class": "service-catalog--padding-b",
+          "padding": false,
+          "title": "У нас огромный опыт 3d-сканирования для разных задач и направлений",
+          "cards": {
+            "card-1": {
+              "title": "Здания <br> и фасады",
+              "image": "catalog-35"
+            },
+            "card-2": {
+              "title": "Помещения, квартиры и интерьера",
+              "image": "catalog-36"
+            },
+            "card-3": {
+              "title": "Человека и частей тела",
+              "image": "catalog-37"
+            },
+            "card-4": {
+              "title": "Промышленных объекты",
+              "image": "catalog-38"
+            },
+            "card-5": {
+              "title": "Больших объекты ",
+              "image": "catalog-39"
+            },
+            "card-6": {
+              "title": "Объекты культуры",
+              "image": "catalog-40"
+            },
+            "card-7": {
+              "title": "Архитектурный обмер",
+              "image": "catalog-41"
+            },
+            "card-8": {
+              "title": "Создание полигональных и твердотельных моделей",
+              "image": "catalog-42"
+            },
+            "card-9": {
+              "title": "Детали и запчасти ",
+              "image": "catalog-43"
+            },
+            "card-10": {
+              "title": "Авто и мото",
+              "image": "catalog-44"
+            },
+            "card-11": {
+              "title": "Лазерное сканирование",
+              "image": "catalog-45"
+            },
+            "card-12": {
+              "title": "Контроль качества и геометрии",
+              "image": "catalog-46"
+            },
+          }
+        })
+        @include('partials/sections/portfolio.html')
+        @include('partials/sections/advantage.html')
+        @include('partials/sections/service-control.html')
+        @include('partials/sections/order.html')
+        @include('partials/sections/service-warranty.html')
+        @include('partials/sections/quality.html')
+        @include('partials/sections/map.html')
+        @include('partials/sections/service-visual.html', {
+          "sale": true,
+          "suptitle": "До конца августа!",
+          "title": "Скидка 20% на \n первый заказ",
+          "image-desktop": "sale",
+          "image-mobile": "sale"
+        })
+        @include('partials/sections/review.html')
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

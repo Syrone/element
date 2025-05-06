@@ -633,6 +633,30 @@
       display: none;
     }
   }
+
+  &--scaning {
+
+    .service-help-end {
+
+      @include mixins.breakpoint-up(xl) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .service-help-button {
+
+      &:nth-child(n+4) {
+
+        @include mixins.breakpoint-up(xl) {
+          margin-top: -5rem;
+        }
+      }
+    }
+  }
+
+  + .service-onphoto {
+    padding-top: 0;
+  }
 }
 
 .service-catalog {
@@ -827,6 +851,14 @@
 
     @include mixins.breakpoint-up(lg) {
       padding-block: 8.75rem;
+    }
+  }
+
+  &--padding-b {
+    padding-block: 2rem 4rem;
+
+    @include mixins.breakpoint-up(lg) {
+      padding-block: 0 8.75rem;
     }
   }
 
@@ -1815,10 +1847,12 @@
 }
 
 .service-onphoto {
+  display: none;
   position: relative;
   padding-block: 4rem 0;
 
   @include mixins.breakpoint-up(lg) {
+    display: block;
     padding-block: 8.75rem 0;
   }
 
