@@ -115,17 +115,15 @@
 }
 
 .btn-lg {
-	--_height: 2.5rem;
-	--_fs: 1.25rem;
-	--_rounded: 1.25rem;
-	--_padding: .25rem 1.5rem;
+	--_height: 3rem;
+	--_fs: 1.125rem;
+	--_padding: .25rem 1.25rem;
+}
 
-	@include mixins.breakpoint-up(lg) {
-		--_height: 3.125rem;
-		--_fs: 1.5rem;
-		--_rounded: 1.5rem;
-		--_padding: .25rem 1.25rem;
-	}
+.btn-lg2 {
+	--_height: 3.75rem;
+	--_fs: 1.125rem;
+	--_padding: .25rem 1.25rem;
 }
 
 .btn-xl {

@@ -1025,6 +1025,39 @@
       }
     }
   }
+
+  &--master {
+
+    .service-catalog-card {
+
+
+      &:nth-child(6) {
+
+        @include mixins.breakpoint-up(lg) {
+          grid-row: span 2;
+        }
+
+        @include mixins.breakpoint-up(xxl) {
+          grid-row: initial;
+        }
+      }
+
+      &:nth-child(7) {
+
+        @include mixins.breakpoint-up(lg) {
+          grid-column: span 3;
+        }
+
+        @include mixins.breakpoint-up(xxl) {
+          grid-column: span 2;
+        }
+
+        @include mixins.breakpoint-up(xxxxl) {
+          padding-left: 5rem;
+        }
+      }
+    }
+  }
 }
 
 .service-layout {

@@ -1,0 +1,140 @@
+@use "../mixins" as mixins;
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include mixins.breakpoint-up(lg) {
+    gap: 2.5rem;
+  }
+
+  &-mobile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include mixins.breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &-offcanvas-button {
+    --_icon-size: 1.5rem;
+
+    flex: 1;
+  }
+
+  &-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    order: -1;
+  }
+
+  &-accordion {
+    gap: 2rem;
+
+    @include mixins.breakpoint-up(lg) {
+      gap: 2.5rem;
+    }
+
+    .accordion-item {
+
+      & + .accordion-item,
+      &:last-child {
+        border: none;
+      }
+    }
+
+    .accordion-button {
+      --_padding: 0rem;
+
+      --_icon-size: .5rem;
+      --_icon-color: currentColor;
+
+      @include mixins.breakpoint-up(lg) {
+        --_fs: 1.25rem;
+      }
+
+      &.is-collapsed {
+        --_color: var(--dark);
+      }
+    }
+
+    .accordion-body {
+
+      .filter-items {
+        padding-block: 1rem 0;
+      }
+    }
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    &:not(.is-visible) {
+
+      .filter-checkboxes {
+
+        > * {
+
+          &:nth-child(n + 6) {
+
+            @include mixins.breakpoint-up(lg) {
+              display: none;
+            }
+          }
+
+          &:nth-child(n + 9) {
+
+            @include mixins.breakpoint-down(lg) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &-more {
+
+      .btn {
+        --_fs: 1rem;
+        --_fw: 600;
+        --_color: var(--primary);
+        --_color-hover: var(--dark);
+        --_color-active: var(--dark);
+
+        font-family: var(--font-family);
+
+        @include mixins.breakpoint-up(lg) {
+          --_fs: 1.125rem;
+        }
+      }
+    }
+  }
+
+  &-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: .25rem;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &-reset {
+    --_fs: 1rem;
+    --_color: #474750;
+  }
+}

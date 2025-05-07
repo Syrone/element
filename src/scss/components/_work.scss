@@ -1,0 +1,229 @@
+@use "mixins" as mixins;
+
+.work-about {
+  position: relative;
+  padding-block-start: 4rem;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-block-start: 8.75rem;
+  }
+
+  > .container {
+
+    @include mixins.breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      align-content: first baseline;
+    }
+  }
+
+  .section-header {
+    margin-bottom: 1rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .section-subtitle {
+    margin-top: 3.75rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-top: 2.5rem;
+    }
+
+    @include mixins.breakpoint-down(lg) {
+      padding-left: 0;
+    }
+  }
+
+  &-picture {
+    display: none;
+
+    @include mixins.breakpoint-up(lg) {
+      height: 100%;
+      display: block;
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      display: block;
+      mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 80%);
+      mask-repeat: no-repeat;
+      mask-size: 100%;
+      mask-position: center;
+    }
+  }
+
+  &-accordion {
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 2;
+      padding-left: 2.5rem;
+    }
+  }
+}
+
+.work-vacancy {
+  position: relative;
+  padding-block-start: 4rem;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-block-start: 8.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  .section-title {
+    max-width: 12.5rem;
+
+    @include mixins.breakpoint-up(lg) {
+      max-width: initial;
+      padding-top: .25em;
+    }
+  }
+
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    align-items: start;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  &-start {
+    margin-bottom: 2.5rem;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 2;
+      padding-left: 2.5rem;
+      margin-bottom: 0;
+    }
+
+    @include mixins.breakpoint-up(xxxxl) {
+      grid-column: span 1;
+    }
+
+    .filter {
+
+      @include mixins.breakpoint-up(lg) {
+        background-color: var(--light);
+        padding: 2rem;
+        box-shadow: 4px 0 25px 0 rgba(0, 0, 0, 0.08);
+      }
+
+      @include mixins.breakpoint-up(xxxxl) {
+        padding: 2.5rem;
+      }
+    }
+  }
+
+  &-end {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 3;
+      padding-left: 3.75rem;
+    }
+
+    @include mixins.breakpoint-up(xxxxl) {
+      grid-column: span 4;
+      padding-left: 5rem;
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background-color: var(--light);
+    padding: 2rem;
+    box-shadow: 4px 0 25px 0 rgba(0, 0, 0, 0.08);
+
+    &-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .5rem 1.25rem;
+    }
+
+    &-label {
+      min-height: 2rem;
+      display: flex;
+      align-items: center;
+      gap: .625rem;
+      font-size: 1rem;
+      white-space: nowrap;
+      background-color: #E4E4E4;
+      padding: .25rem 1rem;
+      flex: 1;
+
+      @include mixins.breakpoint-up(sm) {
+        flex: initial;
+      }
+
+      .icon {
+        --_size: 1.5rem;
+        --_color: var(--primary);
+      }
+    }
+
+    &-title {
+      font-size: .9375rem;
+      font-weight: 800;
+
+      @include mixins.breakpoint-up(lg) {
+        font-size: 1.25rem;
+      }
+    }
+
+    &-price {
+      font-size: 1.25rem;
+    }
+
+    &-footer {
+
+      @include mixins.breakpoint-down(lg) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+
+      @include mixins.breakpoint-down(lg) {
+        --_height: initial;
+        --_fs: 1.25rem;
+        --_color: var(--primary);
+        --_border-width: 0rem;
+        --_padding: 0rem;
+
+        --_color-hover: var(--dark);
+
+        --_color-active: var(--dark);
+
+        font-family: var(--font-family);
+      }
+    }
+  }
+}

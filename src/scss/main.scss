@@ -16,6 +16,7 @@
 @use "./components/socials-list";
 @use "./components/lines";
 @use "./components/form";
+@use "./components/breadcrumbs";
 @use "./components/brand";
 @use "./components/header";
 @use "./components/hero";
@@ -30,11 +31,15 @@
 @use "./components/presentation";
 @use "./components/review";
 @use "./components/news";
-@use "./components/breadcrumbs";
+@use "./components/work";
+@use "./components/join-team";
 @use "./components/footer";
+@use "./components/filter";
 @use "./components/collapse";
+@use "./components/accordion";
 @use "./components/tabs";
 @use "./components/dropdown";
 @use "./components/offcanvas";
 @use "./components/swiper";
 @use "./components/fancybox";
+@use "./components/range-slider";

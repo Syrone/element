@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Работа у нас'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Работа у нас'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+    home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html')
+        <section class="service-hero">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="service-hero-start">
+              <div class="section-header">
+                <h2 class="section-title">
+                  Построй свою успешную карьеру с лидером рынка!
+                </h2>
+              </div>
+
+              <div class="service-hero-start-picture" data-transfer-target="service-hero-picture"></div>
+
+              <ul class="list-reset service-hero-start-list">
+                <li class="service-hero-start-list-item">
+                  Современная компания без бюрократии и формализма
+                </li>
+                <li class="service-hero-start-list-item">
+                  Работа с комфортом из дома или в офисе, днем или вечером
+                </li>
+                <li class="service-hero-start-list-item">
+                  Достойная зарплата и без задержек
+                </li>
+                <li class="service-hero-start-list-item">
+                  Большие перспективы работаем с международными проектами
+                </li>
+              </ul>
+
+              <div class="service-hero-start-bottom">
+                <p>
+                  Начни расти и развиваться вместе с нами!
+                </p>
+
+                <a href="#" class="btn btn-base btn-outline-primary">
+                  Отправить резюме
+                </a>
+              </div>
+            </div>
+
+            <div class="service-hero-end">
+              <picture data-transfer-origin="service-hero-picture" data-transfer-breakpoint="991.98">
+                <source srcset="./img/service/bg-31.webp" type="image/webp">
+                <img loading="lazy" src="./img/service/bg-31.jpg" class="service-hero-image" width="1040" height="440"
+                  alt="Картинка">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="work-about">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Живем и работаем согласно <br> нашему ДНК
+              </h2>
+              <p class="section-subtitle">
+                Мы ценим отношения друг с другом, ценим наших клиентов и ценим
+                возможность создавать крутые и сложные проекты! Наши ценности мы
+                объединили в пять главных основ – это и стало нашим ДНК, то, что, помогает
+                нам понять «свой-чужой»!
+              </p>
+            </div>
+
+            <picture class="work-about-picture">
+              <source srcset="./img/work/work-about-1.webp" type="image/webp">
+              <img loading="lazy" src="./img/work/work-about-1.png" class="image" width="1080" height="700" alt="Картинка">
+            </picture>
+
+            <div class="accordion work-about-accordion"
+              data-collapse="">
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  Ответственность
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div>
+                    <div>
+                      <p class="desc">
+                        Мы ценим отношения друг с другом, ценим наших клиентов и ценим возможность создавать крутые и сложные проекты! Наши ценности мы объединили в пять главных основ – это и стало нашим ДНК, то, что, помогает нам понять «свой-чужой»!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  Отношения
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div>
+                    <div>
+                      <p class="desc">
+                        Мы ценим отношения друг с другом, ценим наших клиентов и ценим возможность создавать крутые и сложные проекты! Наши ценности мы объединили в пять главных основ – это и стало нашим ДНК, то, что, помогает нам понять «свой-чужой»!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  Бережливость
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div>
+                    <div>
+                      <p class="desc">
+                        Мы ценим отношения друг с другом, ценим наших клиентов и ценим возможность создавать крутые и сложные проекты! Наши ценности мы объединили в пять главных основ – это и стало нашим ДНК, то, что, помогает нам понять «свой-чужой»!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  Открытость
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div>
+                    <div>
+                      <p class="desc">
+                        Мы ценим отношения друг с другом, ценим наших клиентов и ценим возможность создавать крутые и сложные проекты! Наши ценности мы объединили в пять главных основ – это и стало нашим ДНК, то, что, помогает нам понять «свой-чужой»!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  Гибкость
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div>
+                    <div>
+                      <p class="desc">
+                        Мы ценим отношения друг с другом, ценим наших клиентов и ценим возможность создавать крутые и сложные проекты! Наши ценности мы объединили в пять главных основ – это и стало нашим ДНК, то, что, помогает нам понять «свой-чужой»!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="work-vacancy">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Наши вакансии
+              </h2>
+            </div>
+
+            <div class="work-vacancy-body">
+              <div class="work-vacancy-start">
+                <div class="filter-mobile">
+                  <button type="button" class="btn btn-lg btn-outline-dark filter-offcanvas-button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvas-filter"
+                    aria-controls="Меню Фильтров">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/filter.svg#svg-filter"></use>
+                      </svg>
+                    </span>
+
+                    Фильтры
+                  </button>
+                </div>
+
+                <form class="filter"
+                  data-transfer-origin="offcanvas-filter-body"
+                  data-transfer-breakpoint="991.98">
+                  <h3 class="filter-title"
+                    data-transfer-origin="offcanvas-filter-header"
+                    data-transfer-breakpoint="991.98">
+                    Фильтры
+                  </h3>
+
+                  <div class="accordion filter-accordion"
+                    data-collapse="">
+                    <div class="accordion-item">
+                      <button type="button" class="btn accordion-button"
+                        data-collapse-button="">
+                        Направление
+                        <span class="icon accordion-button-icon">
+                          <svg>
+                            <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="accordion-body">
+                        <div>
+                          <div class="filter-items"
+                            data-items-more="">
+                            <div class="filter-checkboxes">
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                            </div>
+
+                            <div class="filter-items-more">
+                              <button type="button" class="btn"
+                                data-items-more-button="">
+                                Показать еще
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button type="button" class="btn accordion-button"
+                        data-collapse-button="">
+                        Тип занятости
+                        <span class="icon accordion-button-icon">
+                          <svg>
+                            <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="accordion-body">
+                        <div>
+                          <div class="filter-items"
+                            data-items-more="">
+                            <div class="filter-checkboxes">
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                            </div>
+
+                            <div class="filter-items-more">
+                              <button type="button" class="btn"
+                                data-items-more-button="">
+                                Показать еще
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button type="button" class="btn accordion-button"
+                        data-collapse-button="">
+                        Формат работы
+                        <span class="icon accordion-button-icon">
+                          <svg>
+                            <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="accordion-body">
+                        <div>
+                          <div class="filter-items"
+                            data-items-more="">
+                            <div class="filter-checkboxes">
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                              <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <p class="form-check-label">
+                                  Банкетка
+                                </p>
+                              </label>
+                            </div>
+
+                            <div class="filter-items-more">
+                              <button type="button" class="btn"
+                                data-items-more-button="">
+                                Показать еще
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <button type="button" class="btn accordion-button"
+                        data-collapse-button="">
+                        Заработная плата
+                        <span class="icon accordion-button-icon">
+                          <svg>
+                            <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="accordion-body">
+                        <div>
+                          <div class="filter-items">
+                            <div class="range-slider-container"
+                              data-min="0"
+                              data-max="150000"
+                              data-step="1000"
+                              data-start="25000,125000">
+                              <div class="range-labels">
+                                <span class="range-label range-label-from">
+                                  от <span class="range-value"></span>
+                                </span>
+                                <span class="range-label range-label-to">
+                                  до <span class="range-value"></span>
+                                </span>
+                              </div>
+                              <div class="range-slider"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-footer">
+                    <button type="button" class="btn btn-base btn-outline-primary filter-apply">
+                      Применить
+                    </button>
+                    <button type="button" class="btn filter-reset">
+                      Сбросить фильтры
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="work-vacancy-end">
+                @loop('partials/cards/work-vacancy.html', [
+                  {
+                    "title": "Менеджер по работе с клиентами"
+                  },
+                  {
+                    "title": "Менеджер по работе с клиентами"
+                  },
+                  {
+                    "title": "Менеджер по работе с клиентами"
+                  },
+                ])
+                <div class="work-vacancy-more">
+                  <button type="button" class="btn btn-lg2 btn-outline-primary">
+                    Показать еще
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/join-team.html')
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

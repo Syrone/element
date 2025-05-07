@@ -184,6 +184,34 @@
       }
     }
 
+    &-fullpicture {
+      margin: 2rem 0 2.5rem;
+
+      @include mixins.breakpoint-up(lg) {
+        max-width: initial;
+        align-items: stretch;
+        margin: 0 -2.5rem 0 0;
+      }
+
+      picture {
+        width: 100%;
+        display: block;
+      }
+
+      .image {
+        width: 100%;
+        display: block;
+        mask-image: linear-gradient(to left, black 50%, transparent 100%);
+        mask-repeat: no-repeat;
+        mask-size: 100%;
+        aspect-ratio: 4/3;
+
+        @include mixins.breakpoint-up(lg) {
+          aspect-ratio: initial;
+        }
+      }
+    }
+
     &-footer {
       display: flex;
 

@@ -1,0 +1,60 @@
+@use "../../../node_modules/nouislider/dist/nouislider";
+
+.range-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.range-slider {
+  height: 1rem;
+  padding-inline: .5rem;
+  background-color: transparent;
+  border: unset;
+  border-radius: unset;
+  box-shadow: unset;
+
+  .noUi-connects {
+    height: .25rem;
+    background-color: var(--light-200);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .noUi-connect {
+    background-color: var(--primary);
+  }
+
+  .noUi-handle {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    top: 0;
+    right: -.5rem;
+
+    > *,
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.range-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.range-label {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #474750;
+}
+
+.range-value {
+  font-family: var(--font-second);
+}

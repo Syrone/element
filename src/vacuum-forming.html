@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Вакуумная формовка'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Вакуумная формовка'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html')
+        @include('partials/sections/service-hero.html', {
+          "title": "Вакуумная формовка пластика любой сложности и размеров!",
+          "subtitle": "Решим вашу задачу с гарантией результата и точно в срок!",
+          "list": {
+            "item-1": "Габариты изделий до 1700 х 2700 х 700 мм",
+            "item-2": "Сроки изготовления от 3 дней",
+            "item-3": 'Толщина материла от 0,5 до 7 мм',
+            "item-4": "Делаем проекты под ключ, любой сложности",
+          },
+          "image": "bg-30"
+        })
+        <section class="perform">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                ВЫПОЛНЯЕМ ПОЛНЫЙ КОМПЛЕКС РАБОТ ОТ РАЗРАБОТКИ ДО СЕРИЙНОГО ПРО-ВА
+              </h2>
+            </div>
+
+            <div class="tab">
+              <div class="tab-nav-header">
+                <ul class="list-reset tab-nav scrollable-x" role="tablist">
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" class="btn tab-nav-link active" id="tab-perform-1" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-1" role="tab" aria-controls="pane-perform-1" aria-selected="true">
+                      Составим <br> подробное ТЗ
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-2" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-2" type="button" role="tab" aria-controls="pane-perform-2"
+                      aria-selected="false">
+                      Сделаем 3D-модель и визуализацию
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-3" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-3" type="button" role="tab" aria-controls="pane-perform-3"
+                      aria-selected="false">
+                      Создадим изделие <br> с нужными требованиями
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-4" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-4" type="button" role="tab" aria-controls="pane-perform-4"
+                      aria-selected="false">
+                      Произведем в 2 раза <br> быстрее остальных
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-perform-5" data-bs-toggle="tab"
+                      data-bs-target="#pane-perform-5" type="button" role="tab" aria-controls="pane-perform-5"
+                      aria-selected="false">
+                      Выполним монтаж и гарантийное обслуживание
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="pane-perform-1" role="tabpanel"
+                  aria-labelledby="tab-perform-1">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Составим подробное ТЗ
+                        </h3>
+                        <p>
+                          Перед стартом работ детально изучим вашу задачу, соберём всю информацию и сформулируем
+                          техническое задание, вы получаете документ:
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            с точными размерами и масштабами
+                          </li>
+                          <li>
+                            стоимостью и сроками про-ва
+                          </li>
+                          <li>
+                            материалами и их свойствами
+                          </li>
+                          <li>
+                            комплектацию и условия поставки
+                          </li>
+                        </ul>
+
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-1"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-1" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-1.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-2" role="tabpanel" aria-labelledby="tab-perform-2">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Сделаем 3D-модель и визуализацию
+                        </h3>
+                        <p>
+                          Создадим цифровую модель с учётом ваших пожеланий и необходимых требований, вы получаете:
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            Несколько вариантов эскизов для легкости выбора
+                          </li>
+                          <li>
+                            3D-визуализацию вашего проекта
+                          </li>
+                          <li>
+                            Подготовленную 3D-модель для последующего производства
+                          </li>
+                        </ul>
+
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-14"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-14" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-14.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-14.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-3" role="tabpanel" aria-labelledby="tab-perform-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Создадим изделие с нужными требованиями
+                        </h3>
+                        <p>
+                          Изготовим проект, чтобы он обладал необходимыми свойствами и характеристиками важными для вас.
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            Составим смету производства
+                          </li>
+                          <li>
+                            Подберем материалы и технологии
+                          </li>
+                          <li>
+                            Обработаем поверхности, покрасим по RAL
+                          </li>
+                          <li>
+                            Проверим собираемость с реальными компонентами
+                          </li>
+                          <li>
+                            Оцените в реальности дизайн и эргономику изделия
+                          </li>
+                        </ul>
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-19"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-19" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-19.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-19.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-4" role="tabpanel" aria-labelledby="tab-perform-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Произведем в 2 раза быстрее остальных
+                        </h3>
+                        <p>
+                          80% заказов мы выполняем раньше оговоренного срока
+                          На нашем производстве применяются лучшие мировые методы управления проектами и контроля над их
+                          исполнением. Вам не придется переживать о сроках, все процессы автоматизированы и отлажены!
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-4"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-4" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-4.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-4.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pane-perform-5" role="tabpanel" aria-labelledby="tab-perform-3">
+                  <div class="tab-body">
+                    <div class="tab-body-start">
+                      <div class="tab-body-header">
+                        <h3>
+                          Выполним монтаж и гарантийное обслуживание
+                        </h3>
+                        <p>
+                          Руководитель производства лично проверяет качество и геометрические размеры всех элементов. Вы можете получить изделие удобным способом:
+                        </p>
+                      </div>
+                      <div class="tab-body-main">
+                        <ul class="list-reset">
+                          <li>
+                            Самостоятельно из нашего офиса
+                          </li>
+                          <li>
+                            Оформить доставку любой ТК
+                          </li>
+                          <li>
+                            Если необходимо оказываем помощь в монтаже
+                          </li>
+                        </ul>
+
+                        <p class="desc text-primary">
+                          Специалисты оперативно выезжают по гарантийному случаю — любая неисправность будет устранена в течение 1-2 дней.
+                        </p>
+
+                        <div class="tab-body-picture" data-transfer-target="perform-tab-picture-5"></div>
+                      </div>
+                      <div class="tab-body-footer">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Рассчитать проект
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tab-body-end">
+                      <picture data-transfer-origin="perform-tab-picture-5" data-transfer-breakpoint="991.98">
+                        <source srcset="./img/perform/image-5.webp" type="image/webp">
+                        <img loading="lazy" src="./img/perform/image-5.png" class="image" width="884" height="640"
+                          alt="Картинка">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        @include('partials/sections/service-items.html', {
+          "title": "Подберем материалы, <br> подходящие под ваши задачи"
+        })
+        @include('partials/sections/service-catalog--plastic.html', {
+          "class": "service-catalog--padding"
+        })
+        @include('partials/sections/portfolio.html')
+        @include('partials/sections/advantage.html')
+        @include('partials/sections/service-control.html')
+        @include('partials/sections/order.html')
+        @include('partials/sections/service-warranty.html')
+        @include('partials/sections/quality.html')
+        @include('partials/sections/map.html')
+        @include('partials/sections/service-visual.html', {
+          "sale": true,
+          "suptitle": "До конца августа!",
+          "title": "Скидка 20% на \n первый заказ",
+          "image-desktop": "sale",
+          "image-mobile": "sale"
+        })
+        @include('partials/sections/review.html')
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

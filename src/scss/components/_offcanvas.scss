@@ -145,3 +145,20 @@
     }
   }
 }
+
+.offcanvas-filter {
+
+  .offcanvas-header {
+
+    .filter-title {
+      flex: 1;
+      font-weight: 400;
+      text-transform: initial;
+      text-align: center;
+    }
+
+    .btn-close {
+      margin-left: 0;
+    }
+  }
+}
