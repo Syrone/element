@@ -1,0 +1,166 @@
+@use "mixins" as mixins;
+
+.contacts {
+  position: relative;
+  padding-bottom: 3.75rem;
+
+  > .container {
+
+    @include mixins.breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  .section-header {
+    margin-left: -2.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-title {
+
+    &::after {
+
+      @include mixins.breakpoint-down(lg) {
+        height: 2rem;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 2.625rem;
+    margin-bottom: 1.5rem;
+    margin-left: -2.5rem;
+
+    @include mixins.breakpoint-up(lg) {
+      margin-bottom: 2rem;
+      margin-left: 0;
+    }
+  }
+
+  &-body {
+    padding-inline: 2.5rem 0;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 2;
+      padding-inline: 2.5rem 1rem;
+    }
+
+    @include mixins.breakpoint-up(xxxxl) {
+      grid-column: span 1;
+    }
+
+    &-map {
+      min-height: 15rem;
+      display: flex;
+      flex-direction: column;
+      margin-inline: calc((var(--container-offset) + 2.5rem) * -1) calc(var(--container-offset) * -1);
+      margin-bottom: 3.75rem;
+
+      @include mixins.breakpoint-up(lg) {
+        display: none;
+        margin-inline: 0;
+      }
+    }
+  }
+
+  &-address {
+    font-family: var(--font-second);
+    font-size: 0.9375rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  &-download {
+    --_fs: .9375rem;
+    --_color: var(--primary);
+    --_color-hover: var(--dark);
+    --_color-active: var(--dark);
+
+    text-decoration: underline;
+  }
+
+  &-site,
+  &-phones {
+    margin-block: 2.5rem;
+  }
+
+  &-site,
+  &-phone {
+    --_fs: 0.9375rem;
+    --_fw: 800;
+    --_lh: 1.4;
+
+    text-transform: uppercase;
+  }
+
+  &-site {
+    margin-top: 0;
+  }
+
+  &-messangers {
+    font-size: .9375rem;
+    line-height: 1.4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 1rem;
+    margin-bottom: 2.5rem;
+
+    li {
+      display: flex;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
+
+  &-messanger {
+    --_color: var(--light);
+    --_bg: var(--dark);
+    --_rounded: 50%;
+    --_padding: .375rem;
+    --_icon-size: .875rem;
+
+    --_color-hover: var(--light);
+    --_bg-hover: var(--primary);
+    --_color-active: var(--light);
+    --_bg-active: var(--primary);
+  }
+
+  &-time {
+    font-size: .9375rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+
+    h4 {
+      font-size: 0.9375rem;
+      font-weight: 800;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+  }
+
+  &-map {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: span 3;
+      padding-inline: 2.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    @include mixins.breakpoint-up(xxxxl) {
+      grid-column: span 4;
+    }
+
+    > * {
+      flex: 1;
+    }
+  }
+}

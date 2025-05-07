@@ -8,18 +8,6 @@
     padding-block: 8.75rem;
   }
 
-  .lines {
-
-    > * {
-
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
-        opacity: 0;
-      }
-    }
-  }
-
   .section-header {
 
     @include mixins.breakpoint-up(xxxxl) {

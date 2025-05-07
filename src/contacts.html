@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Контакты'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Контакты'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+    home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+        "class": ""
+        })
+        <section class="contacts">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="contacts-body">
+              <h2 class="contacts-title">
+                Контакты
+              </h2>
+
+              <div class="contacts-body-map"
+                data-transfer-target="contacts-map"></div>
+
+              <div class="section-header">
+                <h2 class="section-title">
+                  НАШ ОФИС И
+                  <br>
+                  ПРОИЗВОДСТВО:
+                </h2>
+              </div>
+
+              <p class="contacts-address">
+                г. Москва, Щербаковская ул., 53, корп. 16 (НПП Сапфир)
+              </p>
+
+              <a href="#" class="btn contacts-download">
+                Скачать схему проезда в PDF
+              </a>
+
+              <ul class="list-reset contacts-phones">
+                <li>
+                  <a href="tel:+78007776579" class="btn contacts-phone">
+                    +7 800 777 65 79
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+74993507379" class="btn contacts-phone">
+                    +7 499 350 73 79
+                  </a>
+                </li>
+              </ul>
+
+              <a href="#" class="btn contacts-site">
+                info-element.ru
+              </a>
+
+              <ul class="list-reset contacts-messangers">
+                <li>
+                  мессенджеры:
+                </li>
+                <li>
+                  <a href="#" class="btn contacts-messanger">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/whatsapp.svg#svg-whatsapp"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn contacts-messanger">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/telegram.svg#svg-telegram"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="list-reset contacts-time">
+                <li>
+                  <h4>
+                    Время работы:
+                  </h4>
+                </li>
+                <li>
+                  Пн. - Пт. с 09:00 до 18:00
+                </li>
+                <li>
+                  Сб. - Вс. - выходной
+                </li>
+              </ul>
+
+              <a href="#" class="btn contacts-download">
+                Скачать наши реквизиты
+              </a>
+            </div>
+
+            <div class="contacts-map"
+              data-transfer-origin="contacts-map"
+              data-transfer-breakpoint="991.98">
+              <iframe
+                src="https://yandex.uz/map-widget/v1/?azimuth=6.081829745400877&ll=37.734599%2C55.783677&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjczOTU0MhJH0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCp0LXRgNCx0LDQutC-0LLRgdC60LDRjyDRg9C70LjRhtCwLCA1M9C6MTYiCg1J8BZCFaMiX0I%2C&z=17.6"
+                width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position: relative">
+              </iframe>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+  </div>
+</body>
+
+</html>
