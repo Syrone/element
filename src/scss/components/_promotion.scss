@@ -263,6 +263,7 @@
     margin-bottom: 2.5rem;
 
     @include mixins.breakpoint-up(lg) {
+      min-height: 25rem;
       justify-content: space-between;
       margin-bottom: 4rem;
       padding-inline: 2rem;

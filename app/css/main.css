@@ -7561,6 +7561,7 @@ textarea {
 }
 @media (min-width: 991.98px) {
   .promotion-page .promotion-card {
+    min-height: 25rem;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
