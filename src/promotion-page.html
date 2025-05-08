@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Акция'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Акция'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+          "class": "lines-first"
+        })
+        <section class="promotion">
+          <div class="lines lines-first">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="promotion-body">
+              <div class="section-header">
+                <h3 class="section-title">
+                  3D-печать пластиком по 12 руб./см3
+                </h3>
+              </div>
+
+              <div class="promotion-page">
+                <article class="promotion-card">
+                  <a href="#" class="stretched-link"></a>
+                  <span class="promotion-card-bg promotion-card-bg--desktop" style="background-image: url(./img/promotion/promotion-page-1.webp);"></span>
+                  <span class="promotion-card-bg promotion-card-bg--mobile" style="background-image: url(./img/promotion/promotion-page-1--mobile.webp);"></span>
+                  <h3 class="promotion-card-title">
+                    3D-печать пластиком по 12 руб./см3
+                  </h3>
+
+                  <div class="promotion-card-label">
+                    12 руб
+                  </div>
+                </article>
+
+                <div class="promotion-response">
+                  <h3>
+                    Про условия акции:
+                  </h3>
+
+                  <p>
+                    Мы предлагаем вам фиксированную цену на 3d-печать по технологии FDM
+                  </p>
+
+                  <ul>
+                    <li>
+                      объем Вашего заказа от 1 до 1000 см = 15 рублей 1 за см
+                    </li>
+                    <li>
+                      объем Вашего заказа от 1000 до 5000 см = 12 рублей за 1 см
+                    </li>
+                    <li>
+                      объем Вашего заказа от 5000 и более = 9 рублей за 1 см
+                    </li>
+                  </ul>
+
+                  <p>
+                    Отправить 3д-модель на просчет можно <a href="#">здесь</a> или на почту
+                  </p>
+
+                  <p>
+                    Если у Вас, нет готовой 3д модели для печати, то мы легко выполним 3д- моделированние любой сложности.
+                  </p>
+
+                  <p>
+                    Также вы можете оставить свои контакты в форме ниже.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/promotion-callback.html', {
+          "title": "Давайте обсудим ваш проект",
+          "desc": "Оставьте заявку на бесплатную консультацию и получите полный каталог с работами и ценами, которых нет на сайте",
+        })
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Акция'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Акция'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+          "class": "lines-first"
+        })
+        <section class="promotion">
+          <div class="lines lines-first">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <h2 class="page-title">
+              Акции и спец предложения от element
+            </h2>
+
+            <div class="promotion-body">
+              <div class="section-header">
+                <h3 class="section-title">
+                  От идеи до готового продукта
+                </h3>
+              </div>
+
+              <div class="promotion-main section-main"
+                data-items-more="">
+                @loop('partials/cards/promotion-card.html', [
+                  {
+                    "image": "promotion-1",
+                    "title": "Визуализация <br> макета в подарок ",
+                    "label": "бесплатно",
+                  },
+                  {
+                    "image": "promotion-2",
+                    "title": "элемент Вашего макета для утверждения",
+                    "label": "",
+                  },
+                  {
+                    "image": "promotion-3",
+                    "title": "3D-печать пластиком по 12 руб./см3",
+                    "label": "12 руб",
+                  },
+                  {
+                    "image": "promotion-4",
+                    "title": "3D-печать полиамидом по 75 руб./.см3",
+                    "label": "75 руб",
+                  },
+                  {
+                    "image": "promotion-5",
+                    "title": "3D-моделирование в подарок",
+                    "label": "бесплатно",
+                  },
+                  {
+                    "image": "promotion-6",
+                    "title": "Бесплатная доставка по Москве",
+                    "label": "бесплатно",
+                  },
+                  {
+                    "image": "promotion-7",
+                    "title": "Скидка до 15% на первый заказ",
+                    "label": "-15%",
+                  },
+                  {
+                    "image": "promotion-8",
+                    "title": "Скидка 5% за подписку на соц.сети ",
+                    "label": "",
+                  },
+                  {
+                    "image": "promotion-9",
+                    "title": "предсерийный образец со скидкой до 50%",
+                    "label": "бесплатно",
+                  },
+                ])
+
+                <div class="section-more">
+                  <button type="button" class="btn btn-xl btn-outline-primary"
+                    data-items-more-button="">
+                    Показать еще
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/promotion-callback.html', {
+          "title": "Давайте обсудим ваш проект",
+          "desc": "Оставьте заявку на бесплатную консультацию и получите полный каталог с работами и ценами, которых нет на сайте",
+        })
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
