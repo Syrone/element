@@ -18488,6 +18488,15 @@ document.querySelectorAll('[data-collapse]')?.forEach(collapse => {
     }
   });
 });
+document.querySelectorAll('[data-text-collapse]').forEach(block => {
+  const btn = block.querySelector('[data-text-collapse-btn]');
+  let isCollapsed = false;
+  btn.addEventListener('click', () => {
+    isCollapsed = !isCollapsed;
+    block.classList.toggle('is-collapsed', isCollapsed);
+    btn.textContent = isCollapsed ? 'Свернуть' : 'Читать дальше…';
+  });
+});
 
 /***/ }),
 
@@ -19044,6 +19053,47 @@ document.querySelectorAll('.service-material-swiper')?.forEach(container => {
       // slideChange() {
       //   updateNav(this)
       // }
+    }
+  });
+});
+document.querySelectorAll('.about-better-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev
+    }
+  });
+});
+document.querySelectorAll('.about-team-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 80,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev
+    }
+  });
+});
+document.querySelectorAll('.about-callback-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev
     }
   });
 });

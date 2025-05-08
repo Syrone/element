@@ -14,3 +14,14 @@ document.querySelectorAll('[data-collapse]')?.forEach(collapse => {
     }
   })
 })
+
+document.querySelectorAll('[data-text-collapse]').forEach(block => {
+  const btn = block.querySelector('[data-text-collapse-btn]')
+  let isCollapsed = false
+
+  btn.addEventListener('click', () => {
+    isCollapsed = !isCollapsed
+    block.classList.toggle('is-collapsed', isCollapsed)
+    btn.textContent = isCollapsed ? 'Свернуть' : 'Читать дальше…'
+  })
+})

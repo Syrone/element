@@ -47,3 +47,42 @@
     }
   }
 }
+
+.text-collapse {
+
+  &-body {
+
+    > * {
+
+      @include mixins.breakpoint-down(sm) {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 14;
+        overflow: hidden;
+      }
+
+      .text-collapse.is-collapsed > & {
+
+        @include mixins.breakpoint-down(sm) {
+          -webkit-line-clamp: none;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    --_fs: .875rem;
+    --_lh: 1.4;
+    --_color: var(--primary);
+
+    --_color-hover: var(--dark);
+
+    --_color-active: var(--dark);
+
+    font-family: var(--font-family);
+
+    @include mixins.breakpoint-up(sm) {
+      display: none;
+    }
+  }
+}

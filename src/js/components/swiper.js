@@ -160,3 +160,50 @@ document.querySelectorAll('.service-material-swiper')?.forEach(container => {
     }
   })
 })
+
+document.querySelectorAll('.about-better-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+  const btnNext = container.querySelector('.swiper-button-next')
+  const btnPrev = container.querySelector('.swiper-button-prev')
+
+  const swiper = new Swiper(swiperEl, {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+  })
+})
+
+document.querySelectorAll('.about-team-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+  const btnNext = container.querySelector('.swiper-button-next')
+  const btnPrev = container.querySelector('.swiper-button-prev')
+
+  const swiper = new Swiper(swiperEl, {
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 80,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+  })
+})
+
+document.querySelectorAll('.about-callback-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper')
+  const btnNext = container.querySelector('.swiper-button-next')
+  const btnPrev = container.querySelector('.swiper-button-prev')
+
+  const swiper = new Swiper(swiperEl, {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+  })
+})

@@ -654,6 +654,112 @@
     }
   }
 
+  &--about {
+    background-color: var(--light-200);
+
+    @include mixins.breakpoint-up(lg) {
+      padding-block: 6.25rem;
+    }
+
+    > .container {
+
+      @include mixins.breakpoint-up(lg) {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+    }
+
+    .section-header {
+
+      @include mixins.breakpoint-up(lg) {
+        padding-right: 1rem;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        grid-column: 2 / 3;
+        padding-inline: 2.5rem 1rem;
+      }
+    }
+
+    .service-help-start {
+
+      @include mixins.breakpoint-up(lg) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column: span 2;
+      }
+    }
+
+    .service-help-end {
+
+      @include mixins.breakpoint-up(lg) {
+        grid-column: span 3;
+        margin-right: 0;
+      }
+
+      @include mixins.breakpoint-up(xl) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      @include mixins.breakpoint-down(lg) {
+        gap: 1.5rem;
+        margin-inline: 0;
+      }
+
+      @include mixins.breakpoint-down(sm) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+
+    .service-help-button {
+      --_color-hover: var(--primary);
+      --_padding: 0 0 0 2rem;
+      --_bg-hover: transparent;
+      --_color-active: var(--primary);
+      --_bg-active: transparent;
+
+      gap: .625rem;
+
+      @include mixins.breakpoint-up(lg) {
+        --_padding: 5rem .75rem 2.5rem 0;
+      }
+
+      @include mixins.breakpoint-up(xl) {
+        --_padding: 10rem 1rem 5rem 0;
+      }
+
+      &-title {
+        display: flex;
+        align-items: center;
+        gap: .625rem;
+
+        &::before {
+          content: '';
+          width: 0.625rem;
+          height: 100%;
+          display: inline-block;
+          flex-shrink: 0;
+          background-color: var(--primary);
+        }
+      }
+
+      &:nth-child(n+4) {
+
+        @include mixins.breakpoint-up(xl) {
+          margin-top: -5rem;
+        }
+      }
+    }
+
+    + .service-control {
+      padding-block: 4rem;
+
+      @include mixins.breakpoint-up(lg) {
+        padding-block: 8.75rem;
+      }
+    }
+  }
+
   + .service-onphoto {
     padding-top: 0;
   }

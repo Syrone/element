@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'О компании'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'О компании'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html')
+        <section class="about-hero">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="about-hero-start">
+              <h2 class="page-title">
+                О НАС
+              </h2>
+
+              <div class="section-header">
+                <h2 class="section-title">
+                  От идеи до готового <br> продукта
+                </h2>
+                <div class="text-collapse"
+                  data-text-collapse="">
+                  <div class="text-collapse-body">
+                    <div>
+                      <p class="section-subtitle">
+                        3D-ELEMENT – это производственная компания, которая более 5 лет выполняет полный комплекс работ от разработки проекта и дизайна до серийного производства. Мы решаем самые смелые, сложные, технические и дизайнерские задачи. У нас большой опыт работы в различных отраслях и направлениях, где каждый проект уникален. В своей работе мы используем современные технологии производства и только качественные материалы! В нашей команде работают настоящие профессионалы и фанаты своего дела, каждый из которых постоянно обучается и совершенствует свои навыки.
+                      </p>
+                      <p class="section-subtitle">
+                        Наши клиенты — новаторы, которые создают что-то новое и уникальное, а это всегда связано с риском. Поэтому мы поддерживаем их на каждом этапе, разделяем их ответственность и сражаемся вместе с ними до результата! Благодаря такому подходу нам уже доверили свои проекты такие компании, как: Роскосмос, Daimler, MAN, Сбербанк, РЖД, Касперский, Mail Group, Концерн Калашников, Росавиация и многие другие.
+                      </p>
+                    </div>
+                  </div>
+                  <button type="button" class="btn text-collapse-btn"
+                    data-text-collapse-btn="">
+                    Читать дальше...
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-hero-end">
+              <div class="yandex-review">
+                <picture class="yandex-review-logo">
+                  <source srcset="./img/logo-yandex.webp" type="image/webp">
+                  <img loading="lazy" src="./img/logo-yandex.png" class="image" width="97" height="25" alt="Яндекс">
+                </picture>
+                <div class="yandex-review-value">
+                  <span>5,0</span>
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/star.svg#svg-star"></use>
+                    </svg>
+                  </span>
+                </div>
+                <p class="yandex-review-desc desc">
+                  Мы одна из немногих компаний, которая имеет более 100 оценок на «Яндексе» с оценкой 5,0
+                </p>
+              </div>
+
+              <picture class="about-hero-picture">
+                <source srcset="./img/about/hero.webp" type="image/webp">
+                <img loading="lazy" src="./img/about/hero.png" class="image" width="1000" height="560" alt="Картинка">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-figures">
+          <span class="section-background about-figures-desktop" style="background-image: url(./img/about/figures-desktop.png);"></span>
+          <span class="section-background about-figures-mobile" style="background-image: url(./img/about/figures-mobile.png);"></span>
+
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                мы
+                <br>
+                в цифрах
+              </h2>
+            </div>
+
+            <div class="about-figures-main">
+              @loop('partials/cards/about-figures.html', [
+                {
+                  "title": "5",
+                  "desc": "Лет успешной работы"
+                },
+                {
+                  "title": "24/7",
+                  "desc": "работает производство"
+                },
+                {
+                  "title": "80%",
+                  "desc": "Заказов сдаем раньше срока"
+                },
+                {
+                  "title": "84%",
+                  "desc": "уровень удовлетворенности клиентов"
+                },
+                {
+                  "title": "5.0",
+                  "desc": "рейтинг на яндексе"
+                },
+                {
+                  "title": "3<span>000</span>",
+                  "desc": "реализованных проектов"
+                },
+                {
+                  "title": "57",
+                  "desc": "единиц оборудования"
+                },
+                {
+                  "title": "15",
+                  "desc": "Минут просчета типовых заказов"
+                },
+                {
+                  "title": "63",
+                  "desc": "Региона и 9 стран территория поставок"
+                },
+              ])
+            </div>
+          </div>
+        </section>
+
+        <section class="order order--help">
+          <div class="lines lines-3-invisible">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="order-body">
+              <div class="order-top">
+                <div class="section-header">
+                  <h2 class="section-title">
+                    ПОМоГАЕМ КОМПАНИЯМ СОЗДАВАТЬ НОВЫЕ И КАЧЕСТВЕННЫЕ ИЗДЕЛИЯ
+                  </h2>
+                  <p class="section-subtitle">
+                    Мы можем помочь вам решить такие задачи, как:
+                  </p>
+                </div>
+
+                <ul class="list-reset">
+                  <li>
+                    Быстро проверить и утвердить изделие перед серийным запуском
+                  </li>
+                  <li>
+                    Сэкономить ваши деньги, снизив стоимость конечного изделия
+                  </li>
+                  <li>
+                    Восстановить сломанные, изношенные детали, которых нет на рынке или сложно купить
+                  </li>
+                  <li>
+                    Произвести изделие, которое поднимет ваш имидж
+                  </li>
+                  <li>
+                    Модернизировать изделие, добавив к нему уникальные свойства и сделав его более функциональным
+                  </li>
+                </ul>
+
+                <div class="order-top-button">
+                  <button type="button" class="btn btn-xl btn-outline-primary">
+                    Решить свою задачу
+                  </button>
+                </div>
+              </div>
+              <div class="order-picture">
+                <div class="order-picture-content">
+                  <picture>
+                    <source srcset="./img/about/help.webp" type="image/webp">
+                    <img loading="lazy" src="./img/about/help.jpg" class="image" width="358" height="700" alt="Картинка">
+                  </picture>
+                  <p class="order-picture-name">
+                    Екатерина Волкова
+                    <span>Руководитель 3D-ELEMENT</span>
+                  </p>
+                </div>
+              </div>
+              <div class="order-logo">
+                <picture>
+                  <source srcset="./img/order/logo.webp" type="image/webp">
+                  <img loading="lazy" src="./img/order/logo.png" class="image" width="161" height="656" alt="Element">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-help service-help--about">
+          <span class="service-help-bg" style="background-image: url(./img/service/bg-8.webp);"></span>
+
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="service-help-start">
+              <span class="service-help-bg" style="background-image: url(./img/service/bg-8.webp);"></span>
+
+              <div class="section-header">
+                <h2 class="section-title">
+                  Вы получите лучший сервис
+                </h2>
+                <p class="section-subtitle">
+                  Сотрудничая с нами, вам будет легко, удобно и надежно
+                </p>
+              </div>
+            </div>
+
+            <div class="service-help-end">
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">01</span>
+                <span class="service-help-button-subtitle">Сделаем сигнальный образец, чтобы вы самостоятельно убедились в высоком качестве</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">02</span>
+                <span class="service-help-button-subtitle">Предоставляем подробный фото/видео отчет о ходе работы и результатах</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">03</span>
+                <span class="service-help-button-subtitle">Предлагаем индивидуальные условия оплаты (предоплата или постоплата)</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">04</span>
+                <span class="service-help-button-subtitle">Поможем сформировать понятное и четкое ТЗ по проекту </span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">05</span>
+                <span class="service-help-button-subtitle">Предоставим все необходимые уставные документы и бухотчетность для проверки</span>
+              </button>
+              <button type="button" class="btn service-help-button">
+                <span class="service-help-button-title">06</span>
+                <span class="service-help-button-subtitle">Общаемся удобным для вас способом (телефон, почта, мессенджеры, лично, зумы)</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/service-control.html')
+        @include('partials/sections/service-warranty.html')
+        @include('partials/sections/advantage.html')
+
+        <section class="about-better">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Выполняем Работы только на лучшем оборудовании
+              </h2>
+            </div>
+
+            <div class="tab">
+              <div class="tab-nav-header">
+                <ul class="list-reset tab-nav scrollable-x" role="tablist">
+                  <li class="tab-nav-item" role="presentation">
+                    <button type="button" class="btn tab-nav-link active" id="tab-better-1" data-bs-toggle="tab"
+                      data-bs-target="#pane-better-1" role="tab" aria-controls="pane-better-1" aria-selected="true">
+                      3D-принтеры
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-better-2" data-bs-toggle="tab"
+                      data-bs-target="#pane-better-2" type="button" role="tab" aria-controls="pane-better-2"
+                      aria-selected="false">
+                      3D-сканеры
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-better-3" data-bs-toggle="tab"
+                      data-bs-target="#pane-better-3" type="button" role="tab" aria-controls="pane-better-3"
+                      aria-selected="false">
+                      ЧПУ станки
+                    </button>
+                  </li>
+                  <li class="tab-nav-item" role="presentation">
+                    <button class="btn tab-nav-link" id="tab-better-4" data-bs-toggle="tab"
+                      data-bs-target="#pane-better-4" type="button" role="tab" aria-controls="pane-better-4"
+                      aria-selected="false">
+                      Другое оборудование
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel"
+                  id="pane-better-1"
+                  aria-labelledby="tab-better-1">
+                  <div class="tab-body">
+                    <div class="about-better-tab"
+                      data-transfer-origin="about-better-1"
+                      data-transfer-breakpoint="991.98">
+                      <div class="about-better-start">
+                        <div class="about-better-swiper">
+                          <div class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-navigation">
+                            <div class="swiper-button-prev">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                            <span class="swiper-navigation-spacer"></span>
+                            <div class="swiper-button-next">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="about-better-end">
+                        <h3 class="about-better-title">
+                          3D System project 660pro
+                        </h3>
+
+                        <ul class="list-reset about-better-list">
+                          <li>
+                            <span>
+                              Технология печати:
+                            </span>
+                            FDM (FFF)
+                          </li>
+                          <li>
+                            <span>
+                              Области печати:
+                            </span>
+                            300 х 200 х 200 мм
+                          </li>
+                          <li>
+                            <span>
+                              Материалы печати:
+                            </span>
+                            Пластиковые нити
+                          </li>
+                          <li>
+                            <span>
+                              Высота слоя:
+                            </span>
+                            от 50 микрон
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-better-2"
+                  aria-labelledby="tab-better-2">
+                  <div class="tab-body">
+                    <div class="about-better-tab"
+                      data-transfer-origin="about-better-2"
+                      data-transfer-breakpoint="991.98">
+                      <div class="about-better-start">
+                        <div class="about-better-swiper">
+                          <div class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-navigation">
+                            <div class="swiper-button-prev">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                            <span class="swiper-navigation-spacer"></span>
+                            <div class="swiper-button-next">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="about-better-end">
+                        <h3 class="about-better-title">
+                          12331231231
+                        </h3>
+
+                        <ul class="list-reset about-better-list">
+                          <li>
+                            <span>
+                              Технология печати:
+                            </span>
+                            FDM (FFF)
+                          </li>
+                          <li>
+                            <span>
+                              Области печати:
+                            </span>
+                            300 х 200 х 200 мм
+                          </li>
+                          <li>
+                            <span>
+                              Материалы печати:
+                            </span>
+                            Пластиковые нити
+                          </li>
+                          <li>
+                            <span>
+                              Высота слоя:
+                            </span>
+                            от 50 микрон
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-better-3"
+                  aria-labelledby="tab-better-3">
+                  <div class="tab-body">
+                    <div class="about-better-tab"
+                      data-transfer-origin="about-better-3"
+                      data-transfer-breakpoint="991.98">
+                      <div class="about-better-start">
+                        <div class="about-better-swiper">
+                          <div class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-navigation">
+                            <div class="swiper-button-prev">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                            <span class="swiper-navigation-spacer"></span>
+                            <div class="swiper-button-next">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="about-better-end">
+                        <h3 class="about-better-title">
+                          0000000000000000
+                        </h3>
+
+                        <ul class="list-reset about-better-list">
+                          <li>
+                            <span>
+                              Технология печати:
+                            </span>
+                            FDM (FFF)
+                          </li>
+                          <li>
+                            <span>
+                              Области печати:
+                            </span>
+                            300 х 200 х 200 мм
+                          </li>
+                          <li>
+                            <span>
+                              Материалы печати:
+                            </span>
+                            Пластиковые нити
+                          </li>
+                          <li>
+                            <span>
+                              Высота слоя:
+                            </span>
+                            от 50 микрон
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel"
+                  id="pane-better-4"
+                  aria-labelledby="tab-better-4">
+                  <div class="tab-body">
+                    <div class="about-better-tab"
+                      data-transfer-origin="about-better-4"
+                      data-transfer-breakpoint="991.98">
+                      <div class="about-better-start">
+                        <div class="about-better-swiper">
+                          <div class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                              <div class="swiper-slide">
+                                <picture class="about-better-picture">
+                                  <source srcset="img/about/better-1.webp" type="image/webp">
+                                  <img loading="lazy" src="img/about/better-1.jpg" class="image" width="780" height="420" alt="Картинка">
+                                </picture>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-navigation">
+                            <div class="swiper-button-prev">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                            <span class="swiper-navigation-spacer"></span>
+                            <div class="swiper-button-next">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="about-better-end">
+                        <h3 class="about-better-title">
+                          444444444444444
+                        </h3>
+
+                        <ul class="list-reset about-better-list">
+                          <li>
+                            <span>
+                              Технология печати:
+                            </span>
+                            FDM (FFF)
+                          </li>
+                          <li>
+                            <span>
+                              Области печати:
+                            </span>
+                            300 х 200 х 200 мм
+                          </li>
+                          <li>
+                            <span>
+                              Материалы печати:
+                            </span>
+                            Пластиковые нити
+                          </li>
+                          <li>
+                            <span>
+                              Высота слоя:
+                            </span>
+                            от 50 микрон
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion"
+              data-collapse="">
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  3d-ПРИНТЕРЫ
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div data-transfer-target="about-better-1"></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  3d-СКАНЕРЫ
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div data-transfer-target="about-better-2"></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  ЧПУ СТАНКИ
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div data-transfer-target="about-better-3"></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  ЛИТЬЕВЫЕ МАШИНЫ
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div data-transfer-target="about-better-4"></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="btn accordion-button"
+                  data-collapse-button="">
+                  ДРУГОЕ ОБОРУДОВАНИЕ
+                  <span class="icon accordion-button-icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-right-up.svg#svg-arrow-right-up"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-body">
+                  <div>
+                    ДРУГОЕ ОБОРУДОВАНИЕ
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-team">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Над Вашим проектом будет работать команда профессионалов
+              </h2>
+              <p class="section-subtitle">
+                Все наши сотрудники постоянно обучаются, посещают образовательные мероприятия для повышения квалификации и проходят ежегодную аттестацию внутри компании.
+              </p>
+            </div>
+
+            <div class="about-team-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    @include('partials/cards/about-team.html')
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/about-team.html')
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/about-team.html')
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/about-team.html')
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/about-team.html')
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/about-team.html')
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/about-team.html')
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-prev">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </div>
+                <span class="swiper-navigation-spacer"></span>
+                <div class="swiper-button-next">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-team-desc">
+              <p>
+                Характеристика является важным документом, в котором указывается персональная информация о сотруднике, с описанием его личных и профессиональных качеств. Составляется документ в зависимости от требований и органов, куда он будет подаваться.
+              </p>
+              <p>
+                Можно конечно скачать образец из интернета, но лучше составить свою, индивидуальную (личную) характеристику.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-callback">
+          <div class="lines lines-inline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Хотите увидеть, как мы делаем проекты?
+              </h2>
+            </div>
+
+            <div class="about-callback-main">
+              <div class="about-callback-info">
+                <p class="section-subtitle">
+                  Приезжайте к нам на производство и убедитесь в нашем качестве
+                </p>
+
+                <p class="about-callback-list-title">
+                  На встрече Вас ждет:
+                </p>
+                <ul class="list-reset about-callback-list">
+                  <li>
+                    Образцы и примеры изделий из различных материалов
+                  </li>
+                  <li>
+                    Консультация и ответы на вопросы по Вашему проекту
+                  </li>
+                  <li>
+                    Чашка ароматного кофе или чая с вкусными сладостями
+                  </li>
+                  <li>
+                    Экскурсия по производственному цеху
+                  </li>
+                </ul>
+              </div>
+
+              <div class="about-callback-swiper">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      @include('partials/cards/about-callback.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/about-callback.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/about-callback.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/about-callback.html')
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-navigation">
+                  <div class="swiper-button-prev">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="swiper-navigation-spacer"></span>
+                  <div class="swiper-button-next">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <form class="form">
+                <div class="form-header">
+                  <h3 class="section-title">
+                    Оставьте заявку и посетите производство в удобное для вас время
+                  </h3>
+                </div>
+                <div class="form-body">
+                  <input type="text" placeholder="Имя" />
+                  <input type="tel" placeholder="Телефон" />
+                </div>
+                <div class="form-footer">
+                  <button class="btn btn-xl btn-outline-primary form-submit">
+                    Отправить
+                  </button>
+                  <div class="form-contacts">
+                    <div class="form-contact">
+                      Напишите нам:
+                      <a href="#">
+                        <picture>
+                          <source srcset="./img/order/telegram.webp" type="image/webp">
+                          <img loading="lazy" src="./img/order/telegram.png" class="image" width="32" height="32" alt="Telegram">
+                        </picture>
+                      </a>
+                      <a href="#">
+                        <picture>
+                          <source srcset="./img/order/whatsapp.webp" type="image/webp">
+                          <img loading="lazy" src="./img/order/whatsapp.png" class="image" width="32" height="32" alt="Whatsapp">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="form-contact">
+                      Или позвоните:
+                      <a href="#">+7 (499) 350-73-79</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

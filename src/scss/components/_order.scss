@@ -106,6 +106,22 @@
         }
       }
     }
+
+    &-button {
+      display: none;
+
+      @include mixins.breakpoint-up(lg) {
+        display: block;
+        margin-top: 4rem;
+      }
+
+      .btn {
+
+        @include mixins.breakpoint-up(lg) {
+          min-width: 22.5rem;
+        }
+      }
+    }
   }
 
   &-picture {
@@ -132,6 +148,12 @@
       font-weight: 700;
       line-height: 1.4;
       margin-top: 1.25rem;
+
+      > span {
+        display: block;
+        font-size: .75rem;
+        font-weight: 500;
+      }
     }
   }
 
@@ -148,6 +170,66 @@
       @include mixins.breakpoint-up(lg) {
         width: 5.625rem;
       }
+    }
+  }
+
+  &--help {
+
+    .section-header {
+
+      @include mixins.breakpoint-down(lg) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .section-subtitle {
+
+      @include mixins.breakpoint-down(lg) {
+        margin-top: 2rem;
+      }
+    }
+
+    .order-top {
+
+      @include mixins.breakpoint-up(lg) {
+        grid-column: span 2;
+      }
+
+      @include mixins.breakpoint-up(xxl) {
+        grid-column: 2 / 4;
+      }
+
+      ul {
+
+        @include mixins.breakpoint-down(lg) {
+          gap: 1rem;
+        }
+      }
+    }
+
+    .order-picture {
+      display: none;
+
+      @include mixins.breakpoint-up(lg) {
+        display: flex;
+        grid-column: span 2;
+      }
+
+      @include mixins.breakpoint-up(xl) {
+        grid-column: initial;
+      }
+
+      &-name {
+
+        @include mixins.breakpoint-up(lg) {
+          text-align: end;
+          padding-right: 1.5rem;
+        }
+      }
+    }
+
+    + .service-help {
+      margin-top: 0;
     }
   }
 }
