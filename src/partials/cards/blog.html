@@ -1,0 +1,49 @@
+<article class="blog-card">
+  <a href="#" class="stretched-link"></a>
+
+  <div class="blog-card-header">
+    @if (label.text !== "") {
+      <div class="blog-card-label @label.class">
+        @label.text
+      </div>
+    }
+
+    <picture class="blog-card-picture">
+      <source srcset="./img/blog/@image.webp" type="image/webp">
+      <img loading="lazy" src="./img/blog/@image.jpg" class="image" width="300" height="220" alt="Картинка">
+    </picture>
+  </div>
+
+  <div class="blog-card-main">
+    <div class="blog-card-data">
+      <a href="#" class="btn blog-card-tag">
+        #instagram
+      </a>
+
+      <div class="blog-card-actions">
+        <time datetime="" class="blog-card-date">
+          30.08.2021
+        </time>
+
+        <div class="blog-card-watch">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/watch.svg#svg-watch"></use>
+            </svg>
+          </span>
+          123
+        </div>
+      </div>
+    </div>
+
+    <h4 class="blog-card-title">
+      @title
+    </h4>
+
+    @if (desc !== "") {
+      <p class="desc blog-card-desc">
+        @desc
+      </p>
+    }
+  </div>
+</article>

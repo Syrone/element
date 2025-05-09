@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Блог'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Блог'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+          "class": "lines-first-last"
+        })
+        <section class="blog">
+          <div class="lines lines-first-last">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="blog-start">
+              <h2 class="page-title">
+                Блог
+              </h2>
+
+              <ul class="list-reset blog-nav">
+                <li>
+                  <button type="button" class="btn blog-nav-btn is-active">
+                    Все
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn blog-nav-btn">
+                    Статьи и обзоры
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn blog-nav-btn">
+                    Частные вопросы
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn blog-nav-btn">
+                    Новости
+                  </button>
+                </li>
+              </ul>
+
+              <ul class="list-reset blog-tags"
+                data-transfer-origin="search-tags"
+                data-transfer-breakpoint="991.98">
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #instagram <span>25</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #YouTube <span>11</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #Новости
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #Дизайн
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #Мнение
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #Facebook <span>15</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #TikTok <span>8</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #ЯндексДзен
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #Телеграм
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #SMM
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #Контент
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-tags-btn">
+                    #Разработка
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="blog-main">
+              <form class="search">
+                <h3 class="search-title">
+                  Настрой свой фильтр
+                </h3>
+
+                <div class="search-control">
+                  <input type="text" placeholder="Что ищем? Например, статьи">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/search.svg#svg-search"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="search-tags"
+                  data-transfer-target="search-tags"></div>
+
+                <div class="search-submit">
+                  <button type="button" class="btn btn-base btn-outline-primary">
+                    найти
+                  </button>
+                </div>
+
+                <p class="search-find">
+                  Найдено: 40 стр.
+                </p>
+              </form>
+
+              <article class="blog-main-card">
+                <div class="blog-main-card-header">
+                  <h3 class="blog-main-card-title">
+                    Как печатать АВС пластиком на 3d-принтере с открытой камерой.
+                  </h3>
+
+                  <div class="blog-main-card-actions">
+                    <time datetime="" class="blog-main-card-date">
+                      30.08.2021 | 15 : 23
+                    </time>
+
+                    <div class="blog-main-card-watch">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/watch.svg#svg-watch"></use>
+                        </svg>
+                      </span>
+											123
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-main-card-main">
+                  <picture class="blog-main-card-picture">
+                    <source
+                      srcset="./img/blog/main-image-1--mobile.webp"
+                      type="image/webp"
+                      media="(max-width: 991.98px)">
+                    <source
+                      srcset="./img/blog/main-image-1--mobile.jpg"
+                      type="image/jpeg"
+                      media="(max-width: 991.98px)">
+
+                    <source srcset="./img/blog/main-image-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/blog/main-image-1.jpg" class="image" width="1000" height="380" alt="Картинка">
+                  </picture>
+                </div>
+              </article>
+
+              <div class="blog-main-items">
+                @loop('partials/cards/blog.html', [
+                  {
+                    "label": { "text": "Статьи", "class": "danger" },
+                    "image": "image-1",
+                    "title": "Лайки не имеют значения - миф?",
+                    "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?",
+                  },
+                  {
+                    "label": { "text": "Частые вопросы", "class": "success" },
+                    "image": "image-2",
+                    "title": "A-B-тесты",
+                    "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса...",
+                  },
+                  {
+                    "label": { "text": "Новости", "class": "system" },
+                    "image": "image-3",
+                    "title": "Лайки не имеют значения - миф?",
+                    "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?",
+                  },
+                  {
+                    "label": { "text": "Статьи", "class": "danger" },
+                    "image": "image-4",
+                    "title": "Лайки не имеют значения - миф?",
+                    "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?",
+                  },
+                  {
+                    "label": { "text": "Статьи", "class": "danger" },
+                    "image": "image-5",
+                    "title": "A-B-тесты",
+                    "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса...",
+                  },
+                  {
+                    "label": { "text": "Новости", "class": "system" },
+                    "image": "image-6",
+                    "title": "Лайки не имеют значения - миф?",
+                    "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?",
+                  },
+                ])
+              </div>
+            </div>
+            <form class="form blog-end"
+              data-transfer-origin="blog-end"
+              data-transfer-breakpoint="991.98">
+              <h2 class="form-title">
+                Рады видеть вас в нашем блоге!
+              </h2>
+
+              <p class="form-desc">
+                Здесь мы бесплатно делимся своей экспертизой. Рассказываем о различных технологиях производства, материалах, и делаем обзоры.
+              </p>
+
+              <h3 class="form-subtitle">
+                Подписывайтесь и узнайте первым о последних новостях, и акциях
+              </h3>
+
+              <div class="form-body">
+                <input type="email" placeholder="e-mail" />
+              </div>
+
+              <button type="submit" class="btn btn-xl btn-outline-primary">
+                Подписаться
+              </button>
+            </form>
+          </div>
+        </section>
+
+        @include('partials/sections/promotion-callback.html', {
+          "title": "Давайте обсудим ваш проект",
+          "desc": "Оставьте заявку на бесплатную консультацию и получите полный каталог с работами и ценами, которых нет на сайте",
+        })
+
+        <section class="blog-recomend">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="blog-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-7",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-8",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-9",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-10",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-11",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-12",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-7",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-8",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-9",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-10",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-11",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-12",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-7",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-8",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-9",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-10",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-11",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-12",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-7",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-8",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-9",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-10",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-11",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-12",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-7",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-8",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-9",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-10",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-11",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-12",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-7",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-8",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-9",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-10",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Статьи", "class": "danger" },
+                      "image": "image-11",
+                      "title": "A-B-тесты",
+                      "desc": "A/B тестирование — это мощный маркетинговый инструмент для повышения эффективности работы вашего интернет-ресурса..."
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('partials/cards/blog.html', {
+                      "label": { "text": "Новости", "class": "system" },
+                      "image": "image-12",
+                      "title": "Лайки не имеют значения - миф?",
+                      "desc": "Стоит ли продолжать писать посты илиполностью перходить на видеоконтент?"
+                    })
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-footer">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-navigation">
+                  <div class="swiper-button-prev">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="swiper-navigation-spacer"></span>
+                  <div class="swiper-button-next">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-form"
+              data-transfer-target="blog-end"></div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

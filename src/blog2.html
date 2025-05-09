@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Блог'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Блог'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+          "class": "lines-first-last"
+        })
+        <section class="blog blog--article">
+          <div class="lines lines-first-last">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="blog-start">
+              <h2 class="section-title">
+                Оглавление
+              </h2>
+
+              <ol class="blog-article-nav">
+                <li>
+                  <a href="#" class="btn blog-article-nav-link">
+                    Как печатать ABC пластиком
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-article-nav-link">
+                    Базовые материалы для 3D печати
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn blog-article-nav-link">
+                    Дополнительная информация
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="blog-main">
+              <article class="blog-main-card">
+                <div class="blog-main-card-header">
+                  <h3 class="blog-main-card-title">
+                    Как печатать АВС пластиком на 3d-принтере с открытой камерой.
+                  </h3>
+
+                  <div class="blog-main-card-actions"
+                    data-transfer-target="blog-article-tag">
+                    <time datetime="" class="blog-main-card-date">
+                      30.08.2021 | 15 : 23
+                    </time>
+
+                    <div class="blog-main-card-watch">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/watch.svg#svg-watch"></use>
+                        </svg>
+                      </span>
+											123
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-main-card-main">
+                  <picture class="blog-main-card-picture">
+                    <source
+                      srcset="./img/blog/main-image-1--mobile.webp"
+                      type="image/webp"
+                      media="(max-width: 991.98px)">
+                    <source
+                      srcset="./img/blog/main-image-1--mobile.jpg"
+                      type="image/jpeg"
+                      media="(max-width: 991.98px)">
+
+                    <source srcset="./img/blog/main-image-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/blog/main-image-1.jpg" class="image" width="1000" height="380" alt="Картинка">
+                  </picture>
+                </div>
+              </article>
+
+              <div class="blog-article-data">
+                <a href="#" class="btn blog-article-tag"
+                  data-transfer-origin="blog-article-tag"
+                  data-transfer-breakpoint="991.98"
+                  data-transfer-placement="last">
+                  #Разработка
+                </a>
+
+                <div class="blog-article-actions">
+                  <div class="blog-article-time">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/time.svg#svg-time"></use>
+                      </svg>
+                    </span>
+                    <a href="#" class="btn">
+                      Время чтения: 10 мин.
+                    </a>
+                  </div>
+
+                  <div class="blog-article-notime">
+                    <a href="#" class="btn">
+                      Нет времени читать?
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-article-response">
+                <div>
+                  <h3>
+                    как печатать ABC пластиком
+                  </h3>
+
+                  <div>
+                    <p>
+                      Наличие 3D принтеры открывает двери во вселенную безграничного творчества. Функциональность готовой продукции может быть различной – от медицинских протезов до сувениров и игрушек. Понимание особенностей различных видов пластиков, позволит быстро и качественно реализовать ваши задумки.
+                      Filament (филамент) для 3D-принтеров производятся из различного сырья. В нашей статье мы рассмотрим популярные пластики для ежедневного использования, такой как PLA и PETG, а так же экзотические нити, которые позволят проявиться творческому подходу.
+                    </p>
+                    <p>
+                      В дополнение к термопластам, которые содержат обычные типы пластиков для 3D-принтера (такие как PLA и ABS), филамент для 3D-печати может состоять из нейлона, поликарбоната, углеродного волокна, полипропилена и других полимеров. Выпускают материалы, которые могут проводить электричество и даже светиться в темноте!
+                    </p>
+                    <p>
+                      Благодаря такому разнообразию материалов, стало проще, чем когда-либо, создавать функциональные, красивые и высокоэффективные модели и прототипы. Чтобы разобраться в разнообразии филамента, мы создали это руководство по пластикам для 3д-печати. Оно состоит из трех частей и описывает большое количество различных материалов.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <h3>
+                    Базовые материалы для 3D печати
+                  </h3>
+
+                  <div>
+                    <p>
+                      Это первая категория пластиков, которые наиболее часто используются в 3D-печати. Популярность этих материалов базируется на простоте использования и физических свойствах. В сфере домашней 3D-печати одним из основных материалов является полимолочная кислота (PLA). Ее часто сравнивают с ABS, вторым по популярности филаментом, и для этого есть важные причины.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <h3>
+                    Дополнительная информация
+                  </h3>
+
+                  <div>
+                    <p>
+                      Главная причина популярности материала – с ним легко печатать. PLA имеет более низкую температур плавления, чем ABS, он не деформируется (имеет пониженную усадку), что позволяет обойтись без нагревательного стола (хотя его наличие определенно поможет). Другим важным преимуществом PLA является отсутствие неприятного запаха во время печати. Обычно этот филамент рекламируют, как полимер без запаха, но многие утверждают о наличии легкого запаха конфет или кондитерских изделий во время печати.
+                    </p>
+                    <h4>
+                      PLA пластик
+                    </h4>
+                    <p>
+                      PLA является биоразлагаемым термопластиком, что делает его более экологически чистым, чем большинство нитей для 3D-принтеров. Производится филамент из ежегодно обновляемых ресурсов, таких, как кукурузный крахмал или сахарный тростник.
+                    </p>
+
+                    <blockquote>
+                      <p>
+                        Наряду с ABS, PLA является базовым материалом для производства экзотического пластика, который имеет проводящие свойства или светится в темноте. Пластик могут пропитываться частицами дерева или металла, что кардинально меняет свойства.
+                      </p>
+                    </blockquote>
+
+                    <div class="share">
+                      <h5 class="share-title">
+                        Поделиться статьей:
+                      </h5>
+                      <ul class="list-reset share-list">
+                        <li>
+                          <a href="#" class="btn">
+                            <img loading="lazy" src="./img/order/telegram.webp" class="image" width="32" height="32" alt="Telegram">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn">
+                            <img loading="lazy" src="./img/order/whatsapp.webp" class="image" width="32" height="32" alt="Whatsapp">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn">
+                            <img loading="lazy" src="./img/order/vk.webp" class="image" width="32" height="32" alt="Vk">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn">
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="img/icons/copy.svg#svg-copy"></use>
+                              </svg>
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-article-swiper">
+                <h3 class="blog-article-swiper-title">
+                  Читать также:
+                </h3>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-13",
+                        "title": "Лайки не имеют значения - миф?",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-14",
+                        "title": "Июль 2021 года стал самым жарким месяцем за всю историю метеонаблюдения",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-15",
+                        "title": "В ВОЗ оценили идею обязательной вакцинации",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-13",
+                        "title": "Лайки не имеют значения - миф?",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-14",
+                        "title": "Июль 2021 года стал самым жарким месяцем за всю историю метеонаблюдения",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-15",
+                        "title": "В ВОЗ оценили идею обязательной вакцинации",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-13",
+                        "title": "Лайки не имеют значения - миф?",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-14",
+                        "title": "Июль 2021 года стал самым жарким месяцем за всю историю метеонаблюдения",
+                        "desc": ""
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/cards/blog.html', {
+                        "label": { "text": "", "class": "" },
+                        "image": "image-15",
+                        "title": "В ВОЗ оценили идею обязательной вакцинации",
+                        "desc": ""
+                      })
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-navigation">
+                  <div class="swiper-button-prev">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="swiper-navigation-spacer"></span>
+                  <div class="swiper-button-next">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="form blog-end">
+              <h2 class="form-title">
+                Одно письмо с лучшими материалами за неделю
+              </h2>
+
+              <p class="form-desc">
+                Подписывайтесь и узнайте первым о последних новостях и акциях
+              </p>
+
+              <div class="form-body">
+                <input type="email" placeholder="e-mail" />
+              </div>
+
+              <button type="submit" class="btn btn-xl btn-outline-primary">
+                Подписаться
+              </button>
+            </form>
+          </div>
+        </section>
+
+        @include('partials/sections/promotion-callback.html', {
+          "title": "Давайте обсудим ваш проект",
+          "desc": "Оставьте заявку на бесплатную консультацию и получите полный каталог с работами и ценами, которых нет на сайте",
+        })
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

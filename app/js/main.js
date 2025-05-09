@@ -18913,7 +18913,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Grid]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Grid]);
 document.querySelectorAll('.portfolio-swiper')?.forEach(container => {
   const swiperEl = container.querySelector('.swiper');
   const btnNext = container.querySelector('.swiper-button-next');
@@ -19094,6 +19094,85 @@ document.querySelectorAll('.about-callback-swiper')?.forEach(container => {
     navigation: {
       nextEl: btnNext,
       prevEl: btnPrev
+    }
+  });
+});
+document.querySelectorAll('.blog-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const pagination = container.querySelector('.swiper-pagination');
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    slidesPerView: 3,
+    spaceBetween: 48,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev
+    },
+    pagination: {
+      el: pagination,
+      clickable: true,
+      renderBullet: (index, className) => {
+        const num = String(index + 1).padStart(2, '0');
+        return `<span class="${className}">${num}</span>`;
+      }
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        grid: {
+          fill: 'row',
+          rows: 3
+        }
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        grid: {
+          fill: 'row',
+          rows: 3
+        }
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 48,
+        grid: {
+          fill: 'row',
+          rows: 2
+        }
+      }
+    }
+  });
+});
+document.querySelectorAll('.blog-article-swiper')?.forEach(container => {
+  const swiperEl = container.querySelector('.swiper');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.125,
+        spaceBetween: 32
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 32
+      },
+      991: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1399: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
     }
   });
 });

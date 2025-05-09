@@ -37,8 +37,8 @@
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px solid var(--dark);
-    padding: 0 10px 10px 10px;
+    border-bottom: .125rem solid var(--dark);
+    padding: 0 .625rem .625rem .625rem;
     margin: 0 0 3rem 0;
 
     &::placeholder {
