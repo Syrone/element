@@ -176,6 +176,10 @@
   background-color: var(--light-200);
   padding-block: 4.5rem;
 
+  .section-title {
+    text-transform: uppercase;
+  }
+
   .form {
     width: 100%;
     max-width: 100%;

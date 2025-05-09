@@ -1,0 +1,162 @@
+@use "mixins" as mixins;
+
+.delivery {
+  position: relative;
+  padding-bottom: 4rem;
+
+  @include mixins.breakpoint-up(lg) {
+    padding-bottom: 8.75rem;
+  }
+
+  .lines {
+
+    > * {
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        opacity: 0;
+      }
+    }
+  }
+
+  > .container {
+
+    @include mixins.breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include mixins.breakpoint-up(xxl) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  &-first,
+  &-second {
+
+    @include mixins.breakpoint-up(lg) {
+      padding-inline: 1.75rem 1rem;
+    }
+
+    @include mixins.breakpoint-up(xxxxl) {
+      padding-inline: 2.5rem 1rem;
+    }
+  }
+
+  .page-title {
+    font-size: 1.375rem;
+    margin-bottom: 2rem;
+
+    @include mixins.breakpoint-up(lg) {
+      font-size: 2.625rem;
+    }
+  }
+
+  &-second {
+
+    .page-title {
+
+      @include mixins.breakpoint-down(lg) {
+        font-size: 0.9375rem;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &-subtitle {
+    font-size: .9375rem;
+    line-height: 1.4;
+
+    @include mixins.breakpoint-up(lg) {
+      font-size: 1rem;
+    }
+  }
+
+  &-partners,
+  &-pay {
+    padding-block: 2.5rem;
+    margin-top: auto;
+  }
+
+  &-partners {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 3.75rem;
+    align-items: center;
+    justify-items: center;
+
+    li {
+      display: flex;
+
+      .image {
+        display: block;
+      }
+    }
+  }
+
+  &-pay {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1rem;
+
+    li {
+      display: flex;
+      position: relative;
+      padding-left: 1.5rem;
+
+      &::before {
+        content: '';
+        width: 0.375rem;
+        height: 1.375rem;
+        display: block;
+        background-color: var(--primary);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &-map {
+    margin-top: 4rem;
+    position: relative;
+    z-index: 5;
+
+    @include mixins.breakpoint-up(lg) {
+      grid-column: -1 / 1;
+      margin-top: 0;
+    }
+
+    @include mixins.breakpoint-up(xxl) {
+      grid-column: span 3;
+    }
+
+    &-label {
+      font-family: var(--font-second);
+      font-size: .9375rem;
+      font-weight: 800;
+      color: var(--light);
+      text-transform: uppercase;
+      background-color: var(--primary-rgba-90);
+      padding: 1.75rem 1.25rem;
+
+      @include mixins.breakpoint-up(sm) {
+        max-width: 20rem;
+        padding: 2rem 1.25rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+    }
+
+    iframe {
+      min-height: 12.5rem;
+
+      @include mixins.breakpoint-up(sm) {
+        min-height: 25rem;
+      }
+    }
+  }
+}

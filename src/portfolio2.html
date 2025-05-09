@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Портфолио'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Портфолио'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+          "class": "lines-first"
+        })
+        <section class="portfolio-page">
+          <div class="lines lines-first">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="portfolio-page-start">
+              <h2 class="page-title">
+                Портфолио
+              </h2>
+              <div class="section-header">
+                <h3 class="section-title">
+                  ВЫПОЛНиЛИ БОЛЕЕ 3000 ПРОЕКТОВ
+                </h3>
+
+                <p class="section-subtitle">
+                  Вкладываем душу в каждый проект
+                </p>
+              </div>
+
+              <div class="filter-mobile"
+                data-transfer-target="filter-mobile">
+                <button type="button" class="btn btn-lg btn-outline-dark filter-offcanvas-button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvas-filter"
+                  aria-controls="Меню Фильтров">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/filter.svg#svg-filter"></use>
+                    </svg>
+                  </span>
+
+                  Фильтры
+                </button>
+              </div>
+
+              <form class="filter"
+                data-transfer-origin="offcanvas-filter-body"
+                data-transfer-breakpoint="991.98">
+                <h3 class="filter-title"
+                  data-transfer-origin="offcanvas-filter-header"
+                  data-transfer-breakpoint="991.98">
+                  Фильтры
+                </h3>
+
+                <div class="filter-display"
+                  data-transfer-origin="filter-mobile"
+                  data-transfer-breakpoint="991.98">
+                  <h4 class="filter-title">
+                    Отображение:
+                  </h4>
+
+                  <ul class="list-reset filter-display-list">
+                    <li>
+                      <button type="button" class="btn is-active">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/icons/grid.svg#svg-grid"></use>
+                          </svg>
+                        </span>
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/icons/grid-outline.svg#svg-grid-outline"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="btn">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/icons/grid2.svg#svg-grid2"></use>
+                          </svg>
+                        </span>
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/icons/grid-outline2.svg#svg-grid-outline2"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="accordion filter-accordion"
+                  data-collapse="">
+                  <div class="accordion-item">
+                    <button type="button" class="btn accordion-button"
+                      data-collapse-button="">
+                      Направление
+                      <span class="icon accordion-button-icon">
+                        <svg>
+                          <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="accordion-body">
+                      <div>
+                        <div class="filter-items"
+                          data-items-more="">
+                          <div class="filter-checkboxes">
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                          </div>
+
+                          <div class="filter-items-more">
+                            <button type="button" class="btn"
+                              data-items-more-button="">
+                              Показать еще
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button type="button" class="btn accordion-button"
+                      data-collapse-button="">
+                      Материалы
+                      <span class="icon accordion-button-icon">
+                        <svg>
+                          <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="accordion-body">
+                      <div>
+                        <div class="filter-items"
+                          data-items-more="">
+                          <div class="filter-checkboxes">
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                          </div>
+
+                          <div class="filter-items-more">
+                            <button type="button" class="btn"
+                              data-items-more-button="">
+                              Показать еще
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button type="button" class="btn accordion-button"
+                      data-collapse-button="">
+                      Технологии производства
+                      <span class="icon accordion-button-icon">
+                        <svg>
+                          <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="accordion-body">
+                      <div>
+                        <div class="filter-items"
+                          data-items-more="">
+                          <div class="filter-checkboxes">
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Банкетка
+                              </p>
+                            </label>
+                          </div>
+
+                          <div class="filter-items-more">
+                            <button type="button" class="btn"
+                              data-items-more-button="">
+                              Показать еще
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button type="button" class="btn accordion-button"
+                      data-collapse-button="">
+                      ВИД ПРОЕКТА
+                      <span class="icon accordion-button-icon">
+                        <svg>
+                          <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="accordion-body">
+                      <div>
+                        <div class="filter-items">
+                          <div class="filter-checkboxes">
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Все
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Фото
+                              </p>
+                            </label>
+                            <label class="form-check">
+                              <input type="checkbox" class="form-check-input">
+                              <p class="form-check-label">
+                                Кейсы
+                              </p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-footer">
+                  <button type="button" class="btn btn-base btn-outline-primary filter-apply">
+                    Применить
+                  </button>
+                  <button type="button" class="btn filter-reset">
+                    Сбросить фильтры
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="portfolio-page-end section-main grid-detail"
+              data-items-more="">
+              @loop('partials/cards/portfolio-page.html', [
+                {
+                  "image": "image-6"
+                },
+                {
+                  "image": "image-7"
+                },
+                {
+                  "image": "image-8"
+                },
+                {
+                  "image": "image-9"
+                },
+                {
+                  "image": "image-10"
+                },
+                {
+                  "image": "image-11"
+                },
+                {
+                  "image": "image-12"
+                },
+                {
+                  "image": "image-13"
+                },
+                {
+                  "image": "image-14"
+                },
+                {
+                  "image": "image-15"
+                },
+              ])
+              <div class="section-more">
+                <button type="button" class="btn btn-xl btn-outline-primary"
+                  data-items-more-button="">
+                  Показать еще
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/promotion-callback.html', {
+          "title": "Давайте обсудим ваш проект",
+          "desc": "Оставьте заявку на бесплатную консультацию и получите полный каталог с работами и ценами, которых нет на сайте",
+        })
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

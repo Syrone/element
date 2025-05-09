@@ -38,6 +38,8 @@
 @use "./components/about";
 @use "./components/promotion";
 @use "./components/blog";
+@use "./components/delivery";
+@use "./components/cases";
 @use "./components/footer";
 @use "./components/filter";
 @use "./components/collapse";
@@ -48,3 +50,4 @@
 @use "./components/swiper";
 @use "./components/fancybox";
 @use "./components/range-slider";
+@use "./components/modal";

@@ -136,5 +136,7 @@
   &-reset {
     --_fs: 1rem;
     --_color: #474750;
+
+    font-family: var(--font-family);
   }
 }

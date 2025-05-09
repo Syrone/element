@@ -101,7 +101,9 @@
                 из которых постоянно обучается и совершенствует свои навыки.
               </p>
               <div class="fromto-footer">
-                <button type="button" class="btn btn-xl btn-outline-primary fromto-button">
+                <button type="button" class="btn btn-xl btn-outline-primary fromto-button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#form-callback">
                   О компании
                 </button>
               </div>
@@ -274,6 +276,7 @@
       </div>
     </div>
 
+    @include('partials/modals.html')
     @include('partials/offcanvases.html')
   </main>
 

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Доставка и оплата'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Доставка и оплата'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+    home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+        "class": "lines-first-second"
+        })
+        <section class="delivery">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="delivery-first">
+              <h2 class="page-title">
+                Доставка
+              </h2>
+
+              <p class="delivery-subtitle">
+                Осуществляем доставку по все России, а также за ее пределами и в страны СНГ. Мы сотрудинчаем с основными крупными транспортными компаниями.
+              </p>
+
+              <ul class="list-reset delivery-partners">
+                <li>
+                  <picture>
+                    <source srcset="./img/delivery/partner-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/delivery/partner-1.png" class="image" width="142" height="66" alt="Партнер">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/delivery/partner-2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/delivery/partner-2.png" class="image" width="119" height="27" alt="Партнер">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/delivery/partner-3.webp" type="image/webp">
+                    <img loading="lazy" src="./img/delivery/partner-3.png" class="image" width="67" height="66" alt="Партнер">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/delivery/partner-4.webp" type="image/webp">
+                    <img loading="lazy" src="./img/delivery/partner-4.png" class="image" width="116" height="66" alt="Партнер">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/delivery/partner-5.webp" type="image/webp">
+                    <img loading="lazy" src="./img/delivery/partner-5.png" class="image" width="118" height="66" alt="Партнер">
+                  </picture>
+                </li>
+                <li>
+                  <picture>
+                    <source srcset="./img/delivery/partner-6.webp" type="image/webp">
+                    <img loading="lazy" src="./img/delivery/partner-6.png" class="image" width="118" height="66" alt="Партнер">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+
+            <div class="delivery-second">
+              <h2 class="page-title">
+                Оплата
+              </h2>
+
+              <p class="delivery-subtitle">
+                Мы предлагаем различные формы оплаты как для юр. лиц, так и для физических. С постоянными клиентами работаем по постоплате
+              </p>
+
+              <ul class="list-reset delivery-pay">
+                <li>
+                  Оплата по счету (банковский перевод)
+                </li>
+                <li>
+                  Банковские карты (российские и зарубежные)
+                </li>
+                <li>
+                  Наличными
+                </li>
+                <li>
+                  СБП, SberPay, T-Pay, Mir Pay
+                </li>
+                <li>
+                  Электронные деньги (ЮMoney)
+                </li>
+              </ul>
+
+              <p class="desc text-primary delivery-desc">
+                Сумма минимального заказа 15000 руб.
+              </p>
+            </div>
+
+            <div class="delivery-map">
+              <div class="delivery-map-label">
+                Самовывоз по адресу: г. Москва, ул.Щербаковская, д. 53, корп. 16 (НПП Сапфир)
+              </div>
+              <iframe
+                src="https://yandex.uz/map-widget/v1/?azimuth=6.081829745400877&ll=37.734599%2C55.783677&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjczOTU0MhJH0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCp0LXRgNCx0LDQutC-0LLRgdC60LDRjyDRg9C70LjRhtCwLCA1M9C6MTYiCg1J8BZCFaMiX0I%2C&z=17.6"
+                width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position: relative">
+              </iframe>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/promotion-callback.html', {
+          "title": "Давайте обсудим ваш проект",
+          "desc": "Оставьте заявку на бесплатную консультацию и получите полный каталог с работами и ценами, которых нет на сайте",
+        })
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+  </div>
+</body>
+
+</html>

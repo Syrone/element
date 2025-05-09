@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Отзывы'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Отзывы'})
+
+  <div class="site-container">
+    @include('partials/header.html', {
+      home: false
+    })
+
+    <main class="main">
+      <div class="main-section">
+        @include('partials/sections/breadcrumbs.html', {
+          "class": "lines-first"
+        })
+        <section class="review-page">
+          <div class="lines lines-first">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="container">
+            <div class="review-page-start">
+              <h2 class="page-title">
+                Отзывы
+              </h2>
+              <div class="section-header">
+                <h3 class="section-title">
+                  От идеи до готового продукта
+                </h3>
+
+                <p class="section-subtitle">
+                  За все время работы у нас не было ни одного суда или негативного отзыва.
+                </p>
+
+                <p class="section-subtitle">
+                  Более 1500 клиентов доверили нам свои проекты. Среди них ведущие предприятия страны, госкорпорации, компании ВПК, а также малый и средний бизнес
+                </p>
+              </div>
+            </div>
+
+            <div class="review-page-end">
+              <div class="tab">
+                <div class="tab-nav-header">
+                  <ul class="list-reset tab-nav scrollable-x" role="tablist">
+                    <li class="tab-nav-item" role="presentation">
+                      <button type="button" class="btn tab-nav-link active" id="tab-perform-1" data-bs-toggle="tab"
+                        data-bs-target="#pane-perform-1" role="tab" aria-controls="pane-perform-1" aria-selected="true">
+                        В яндексе
+                      </button>
+                    </li>
+                    <li class="tab-nav-item" role="presentation">
+                      <button class="btn tab-nav-link" id="tab-perform-2" data-bs-toggle="tab"
+                        data-bs-target="#pane-perform-2" type="button" role="tab" aria-controls="pane-perform-2"
+                        aria-selected="false">
+                        На бланках <span class="badge">10</span>
+                      </button>
+                    </li>
+                    <li class="tab-nav-item" role="presentation">
+                      <button class="btn tab-nav-link" id="tab-perform-3" data-bs-toggle="tab"
+                        data-bs-target="#pane-perform-3" type="button" role="tab" aria-controls="pane-perform-3"
+                        aria-selected="false">
+                        Аудио отзывы <span class="badge">13</span>
+                      </button>
+                    </li>
+                    <li class="tab-nav-item" role="presentation">
+                      <button class="btn tab-nav-link" id="tab-perform-4" data-bs-toggle="tab"
+                        data-bs-target="#pane-perform-4" type="button" role="tab" aria-controls="pane-perform-4"
+                        aria-selected="false">
+                        Видео отзывы <span class="badge">7</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="pane-perform-1" role="tabpanel"
+                    aria-labelledby="tab-perform-1">
+                    <div class="tab-body">
+                      <div class="review-page-tab review-page-tab--yandex" style="background-image: url(./img/review/review-yandex.webp);">
+                        <picture class="review-page-tab-sreenshot">
+                          <source srcset="./img/review/review-sreenshot.webp" type="image/webp">
+                          <img loading="lazy" src="./img/review/review-sreenshot.png" class="image" width="548" height="610" alt="Картинка">
+                        </picture>
+
+                        <div class="yandex-review">
+                          <picture class="yandex-review-logo">
+                            <source srcset="./img/logo-yandex.webp" type="image/webp">
+                            <img loading="lazy" src="./img/logo-yandex.png" class="image" width="97" height="25" alt="Яндекс">
+                          </picture>
+                          <div class="yandex-review-value">
+                            <span>5,0</span>
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="img/icons/star.svg#svg-star"></use>
+                              </svg>
+                            </span>
+                          </div>
+                          <p class="yandex-review-desc desc">
+                            Мы одна из немногих компаний, которая имеет более 100 оценок на «Яндексе» с оценкой 5,0
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="review-page-tab-more">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Показать еще отзывы
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pane-perform-2" role="tabpanel" aria-labelledby="tab-perform-2">
+                    <div class="tab-body">
+                      <div class="review-page-tab review-page-tab--blanks">
+                        @loop('partials/cards/review-blank.html', [
+                          {
+                            "image": "image-1"
+                          },
+                          {
+                            "image": "image-2"
+                          },
+                          {
+                            "image": "image-3"
+                          },
+                          {
+                            "image": "image-4"
+                          },
+                          {
+                            "image": "image-1"
+                          },
+                          {
+                            "image": "image-2"
+                          },
+                          {
+                            "image": "image-3"
+                          },
+                          {
+                            "image": "image-4"
+                          },
+                        ])
+                      </div>
+
+                      <div class="review-page-tab-more">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Показать еще отзывы
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pane-perform-3" role="tabpanel" aria-labelledby="tab-perform-3">
+                    <div class="tab-body">
+                      <div class="review-page-tab review-page-tab--audio">
+                        @loop('partials/cards/review-audio.html', [
+                          {
+                            "image": "review-audio"
+                          },
+                          {
+                            "image": "review-audio"
+                          },
+                          {
+                            "image": "review-audio"
+                          },
+                          {
+                            "image": "review-audio"
+                          },
+                          {
+                            "image": "review-audio"
+                          },
+                          {
+                            "image": "review-audio"
+                          },
+                        ])
+                      </div>
+
+                      <div class="review-page-tab-more">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Показать еще отзывы
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pane-perform-4" role="tabpanel" aria-labelledby="tab-perform-3">
+                    <div class="tab-body">
+                      <div class="review-page-tab review-page-tab--video">
+                        @loop('partials/cards/review-audio.html', [
+                          {
+                            "image": "review-video-1"
+                          },
+                          {
+                            "image": "review-video-2"
+                          },
+                          {
+                            "image": "review-video-3"
+                          },
+                          {
+                            "image": "review-video-4"
+                          },
+                        ])
+                      </div>
+
+                      <div class="review-page-tab-more">
+                        <button type="button" class="btn btn-xl btn-outline-primary">
+                          Показать еще отзывы
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        @include('partials/sections/promotion-callback.html', {
+          "title": "Давайте обсудим ваш проект",
+          "desc": "Оставьте заявку на бесплатную консультацию и получите полный каталог с работами и ценами, которых нет на сайте",
+        })
+      </div>
+
+      @include('partials/offcanvases.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -3,22 +3,22 @@
 .modal {
   // scss-docs-start modal-css-vars
   --bs-modal-zindex: 1055;
-  --bs-modal-width: 43rem;
-  --bs-modal-padding: 1.25rem;
+  --bs-modal-width: 38.75rem;
+  --bs-modal-padding: 3.75rem var(--container-offset);
   --bs-modal-margin: var(--container-offset);
-  --bs-modal-color: #000;
+  --bs-modal-color: inherit;
   --bs-modal-bg: var(--body-bg);
   --bs-modal-border-color: transparent;
   --bs-modal-border-width: 0;
-  --bs-modal-border-radius: var(--rounded);
-  --bs-modal-box-shadow: 0px 1.25rem 2.5rem 0px rgba(0, 0, 0, 0.10);
+  --bs-modal-border-radius: 0;
+  --bs-modal-box-shadow: unset;
   --bs-modal-inner-border-radius: 0;
   --bs-modal-header-padding-x: 0;
   --bs-modal-header-padding-y: 0;
   --bs-modal-header-padding: var(--bs-modal-padding); // Todo in v6: Split this padding into x and y
-  --bs-modal-header-border-color: var(--gray-color-400);
+  --bs-modal-header-border-color: transparent;
   --bs-modal-header-border-width: 1px;
-  --bs-modal-title-line-height: normal;
+  --bs-modal-title-line-height: 1.3;
   --bs-modal-footer-gap: 0;
   --bs-modal-footer-bg: transparent;
   --bs-modal-footer-border-color: transparent;
@@ -43,7 +43,6 @@
 
   @include mixins.breakpoint-up(lg) {
     --bs-modal-margin: 2rem;
-    --bs-modal-padding: 1.5rem;
     --bs-modal-box-shadow: unset;
   }
 
@@ -150,19 +149,40 @@
 // Top section of the modal w/ title and dismiss
 .modal-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin-bottom: 2.5rem;
   border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
-  padding-bottom: 1rem;
   flex-shrink: 0;
+
+  @include mixins.breakpoint-up(lg) {
+    margin-bottom: 3.75rem;
+  }
 }
 
 // Title text within header
 .modal-title {
-  font-family: var(--font-family);
-  font-size: var(--fs-lg);
-  font-weight: 600;
+  font-family: var(--font-second);
+  font-size: 1.25rem;
+  font-weight: 800;
   line-height: var(--bs-modal-title-line-height);
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+
+  @include mixins.breakpoint-up(lg) {
+    font-size: 1.5rem;
+  }
+}
+
+.modal-subtitle {
+  max-width: 25rem;
+  font-size: 0.9375rem;
+}
+
+.modal-header,
+.modal-body {
+  max-width: 26.25rem;
+  margin-inline: auto;
 }
 
 // Modal body
@@ -176,6 +196,56 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
+
+  .form {
+    width: 100%;
+    max-width: unset;
+    margin-top: unset;
+
+    &-body {
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+
+      @include mixins.breakpoint-up(lg)  {
+        gap: 2.5rem;
+      }
+    }
+
+    &-download {
+      align-self: center;
+      margin-top: .5rem;
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 0;
+      }
+    }
+
+    &-footer {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+
+    &-policy {
+      font-size: 0.9375rem;
+      color: #BABABC;
+
+      .btn {
+        --_fs: inherit;
+        --_fw: inherit;
+        --_lh: inherit;
+        --_color: var(--primary);
+
+        --_color-hover: var(--dark);
+
+        --_color-active: var(--dark);
+
+        display: inline;
+        font-family: inherit;
+      }
+    }
+  }
 }
 
 // Footer (for actions)
