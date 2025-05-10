@@ -186,7 +186,7 @@
 
     &-title {
       font-size: .9375rem;
-      font-weight: 800;
+      font-weight: 900;
 
       @include mixins.breakpoint-up(lg) {
         font-size: 1.25rem;

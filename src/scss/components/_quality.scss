@@ -5,7 +5,7 @@
   padding-block: 4rem;
 
   @include mixins.breakpoint-up(lg) {
-    padding-block: 8.75rem;
+    padding-block: 8.75rem 2.75rem;
   }
 
   &-bg {
@@ -46,6 +46,7 @@
   .section-subtitle {
 
     @include mixins.breakpoint-up(lg) {
+      max-width: 17.5rem;
       margin-top: 2rem;
     }
   }
@@ -114,7 +115,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    font-weight: 800;
+    font-weight: 900;
 
     @include mixins.breakpoint-up(lg) {
       margin-bottom: 2.5rem;

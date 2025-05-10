@@ -73,7 +73,20 @@
       }
 
       @include mixins.breakpoint-up(xxl) {
-        --_fs: 1rem;
+        --_fs: .9375rem;
+
+        gap: .625rem;
+      }
+
+      @media (hover: hover) {
+
+        &:is(:hover, :focus-visible) {
+          text-shadow:
+            .03125em  0   currentColor,
+            -.03125em  0   currentColor,
+            0    .03125em currentColor,
+            0   -.03125em currentColor;
+        }
       }
     }
   }
@@ -83,7 +96,7 @@
 
     @include mixins.breakpoint-up(xxxxl) {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
       gap: .75rem;
       margin-left: auto;
     }
@@ -92,6 +105,13 @@
   .socials-list,
   .contacts-list-item {
     justify-content: flex-end;
+  }
+
+  .contacts-list {
+
+    &-link {
+      --_lh: inherit;
+    }
   }
 
   .btn-menu {

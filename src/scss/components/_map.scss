@@ -52,7 +52,7 @@
     @include mixins.breakpoint-up(lg) {
       gap: 1.5rem;
       font-family: var(--font-second);
-      font-weight: 800;
+      font-weight: 900;
       text-transform: uppercase;
       margin-left: 2.5rem;
     }
@@ -93,7 +93,7 @@
 
   &-title {
     font-size: .9375rem;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
 
     @include mixins.breakpoint-up(lg) {

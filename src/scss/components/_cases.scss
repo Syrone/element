@@ -75,7 +75,7 @@
 
   &-title {
     font-size: 1.125rem;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     padding-left: 2rem;
     position: relative;
@@ -185,7 +185,7 @@
 
     &-title {
       font-size: 1.25rem;
-      font-weight: 800;
+      font-weight: 900;
       text-transform: uppercase;
 
       @include mixins.breakpoint-up(lg) {
@@ -196,7 +196,7 @@
     &-detail,
     &-quantity {
       font-size: .875rem;
-      font-weight: 800;
+      font-weight: 900;
       line-height: 1.3;
       text-transform: uppercase;
 

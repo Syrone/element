@@ -102,8 +102,7 @@
       @include mixins.breakpoint-up(lg) {
         width: 100%;
         max-width: 61.25rem;
-        display: flex;
-        align-items: center;
+        display: block;
         margin-block: -4rem -9rem;
       }
 
@@ -125,7 +124,7 @@
 
       h3 {
         font-size: .9375rem;
-        font-weight: 800;
+        font-weight: 900;
       }
 
       p {
@@ -220,6 +219,7 @@
 
         @include mixins.breakpoint-up(lg) {
           min-width: 24.375rem;
+          flex: initial;
         }
       }
     }

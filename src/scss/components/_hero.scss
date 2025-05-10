@@ -28,14 +28,23 @@
     z-index: 10;
 
     @include mixins.breakpoint-up(lg) {
-      min-height: 100vh;
+      height: 100vh;
+      max-height: 1008px;
       gap: 3.75rem;
       padding-block: calc(var(--header-height, 0rem) + 2.5rem) 5rem;
 
       @supports (height: 100dvh) {
-        min-height: 100dvh;
+        height: 100dvh;
       }
     }
+  }
+
+  &-title {
+    max-width: 1200px;
+  }
+
+  &-desc {
+    max-width: 680px;
   }
 
   &-content {
@@ -47,6 +56,7 @@
 
     @include mixins.breakpoint-up(lg) {
       padding-left: 20%;
+      gap: 1.5rem;
     }
   }
 
@@ -64,7 +74,7 @@
       position: relative;
 
       @include mixins.breakpoint-up(lg) {
-        font-size: 2.75rem;
+        font-size: 2.8125rem;
       }
 
       span {
@@ -129,7 +139,6 @@
 
       @include mixins.breakpoint-up(lg) {
         max-width: 10rem;
-        font-size: 1rem;
       }
     }
   }

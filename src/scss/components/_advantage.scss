@@ -55,7 +55,7 @@
       width: 100%;
       font-family: var(--font-second);
       font-size: 1rem;
-      font-weight: 800;
+      font-weight: 900;
       line-height: 1.4;
       text-transform: uppercase;
       border-top: 1px solid var(--dark-rgba-50);
@@ -110,11 +110,13 @@
   }
 
   &-image {
+    height: 21.25rem;
     display: block;
-    aspect-ratio: 4 / 3;
 
     @include mixins.breakpoint-down(lg) {
       width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
       margin-bottom: 1rem;
     }
   }
