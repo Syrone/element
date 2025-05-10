@@ -96,8 +96,8 @@
 
     @include mixins.breakpoint-up(xxxxl) {
       display: flex;
-      flex-direction: column;
-      gap: .75rem;
+      flex-direction: row-reverse;
+      gap: 1.25rem;
       margin-left: auto;
     }
   }
@@ -105,6 +105,11 @@
   .socials-list,
   .contacts-list-item {
     justify-content: flex-end;
+  }
+
+  .socials-list {
+    margin-top: .25rem;
+    align-items: flex-start;
   }
 
   .contacts-list {
@@ -124,6 +129,19 @@
 
 .header--home {
   background-color: transparent;
+
+  .header-end {
+
+    @include mixins.breakpoint-up(xxxxl) {
+      flex-direction: column;
+      gap: .75rem;
+    }
+  }
+
+  .socials-list {
+    margin-top: 0;
+    align-items: center;
+  }
 }
 
 .header--sticky {

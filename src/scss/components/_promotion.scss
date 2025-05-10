@@ -69,6 +69,20 @@
       gap: 2.5rem;
       padding-inline: 3.75rem;
     }
+
+    .section-more {
+
+      @include mixins.breakpoint-up(lg) {
+        display: block;
+      }
+
+      .btn {
+
+        @include mixins.breakpoint-up(lg) {
+          min-width: 19.5rem;
+        }
+      }
+    }
   }
 
   &-card {
@@ -148,8 +162,8 @@
     }
 
     &:first-child,
-    &:nth-last-child(2),
-    &:last-child {
+    &:nth-last-child(3),
+    &:nth-last-child(2) {
 
       @include mixins.breakpoint-up(xxl) {
         grid-column: span 2;
@@ -194,6 +208,7 @@
       margin-bottom: 1.5rem;
 
       @include mixins.breakpoint-up(lg) {
+        max-width: 32rem;
         grid-column: span 2;
         grid-row: span 2;
         gap: 2rem;

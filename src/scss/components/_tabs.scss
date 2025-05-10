@@ -9,6 +9,8 @@
     @include mixins.breakpoint-up(lg) {
       margin-inline: -2.5rem;
       padding-inline: 2.5rem;
+
+      justify-content: space-between;
     }
 
     &,
@@ -21,10 +23,6 @@
     }
 
     &-item {
-
-      @include mixins.breakpoint-up(lg) {
-        flex: 1;
-      }
 
       &:not(:last-child) {
         padding-right: 1rem;
@@ -43,25 +41,24 @@
       min-width: 12.5rem;
       flex: 1;
       justify-content: flex-start;
+      font-family: var(--font-family);
       margin-bottom: -1px;
       border-top: none;
       border-inline: none;
       text-align: start;
-      text-transform: uppercase;
       transition-property: color, border, text-shadow;
 
       @include mixins.breakpoint-up(lg) {
-        min-width: 18.75rem;
+        min-width: 12.6875rem;
       }
 
       &.active {
+        --_fw: 900;
+
+        font-family: var(--font-second);
         color: var(--primary);
         border-color: var(--primary);
-        text-shadow:
-          .03125em  0   currentColor,
-          -.03125em  0   currentColor,
-          0    .03125em currentColor,
-          0   -.03125em currentColor;
+        text-transform: uppercase;
       }
     }
   }
@@ -187,9 +184,9 @@
       margin: 2rem 0 2.5rem;
 
       @include mixins.breakpoint-up(lg) {
-        max-width: initial;
+        max-width: 1130px;
         align-items: stretch;
-        margin: 0 -2.5rem 0 0;
+        margin: 0 -2.5rem 0 auto;
       }
 
       picture {
@@ -218,6 +215,8 @@
         flex: 1;
 
         @include mixins.breakpoint-up(lg) {
+          --_height: 5.4375rem;
+
           min-width: 24.375rem;
           flex: initial;
         }

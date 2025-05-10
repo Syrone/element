@@ -39,7 +39,7 @@
     }
 
     @include mixins.breakpoint-up(xxl) {
-      margin-block: -5rem;
+      margin-block: -5rem -7rem;
     }
   }
 

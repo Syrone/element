@@ -160,6 +160,37 @@
     @include mixins.breakpoint-up(xxl) {
       grid-column: initial;
     }
+
+    .filter {
+
+      @include mixins.breakpoint-up(xxxxl) {
+        max-width: 16.6875rem;
+      }
+
+      &-accordion {
+
+        .accordion-button {
+
+          @include mixins.breakpoint-up(lg) {
+            --_fs: 1rem;
+          }
+        }
+      }
+
+      &-title {
+
+        @include mixins.breakpoint-up(lg) {
+          font-size: 1rem;
+        }
+      }
+
+      &-apply {
+
+        @include mixins.breakpoint-up(lg) {
+          --_height: 3rem;
+        }
+      }
+    }
   }
 
   &-end {
@@ -191,6 +222,8 @@
       }
 
       .portfolio-page-card {
+        grid-row: initial;
+        grid-column: initial;
         min-height: unset;
         display: flex;
         flex-direction: column;
@@ -317,6 +350,21 @@
               text-decoration: underline;
             }
           }
+        }
+      }
+    }
+
+    .section-more {
+
+      @include mixins.breakpoint-up(lg) {
+        margin-top: 2.5rem;
+        display: block;
+      }
+
+      .btn {
+
+        @include mixins.breakpoint-up(lg) {
+          min-width: 19.5rem;
         }
       }
     }
@@ -451,6 +499,10 @@
       }
     }
 
+    &-info {
+      display: none;
+    }
+
     &-hover {
       display: inline-block;
       color: var(--light);
@@ -496,7 +548,13 @@
       }
     }
 
-    &:first-child,
+    &:first-child {
+
+      @include mixins.breakpoint-up(md) {
+        grid-column: span 2;
+      }
+    }
+
     &:nth-child(6) {
 
       @include mixins.breakpoint-up(md) {

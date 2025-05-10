@@ -173,6 +173,16 @@
 
 .dropdown--header {
 
+  .dropdown-toggle {
+
+    &.show {
+      --_fw: 900;
+
+      text-transform: uppercase;
+      text-shadow: unset;
+    }
+  }
+
   .dropdown-menu {
     --bs-dropdown-padding-x: 0rem;
     --bs-dropdown-padding-y: 0rem;

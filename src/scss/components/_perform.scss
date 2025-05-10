@@ -42,8 +42,33 @@
 
       &-nav {
 
+        @include mixins.breakpoint-up(lg) {
+          justify-content: initial;
+        }
+
         &-item {
           flex: initial;
+
+          &:first-child {
+
+            @include mixins.breakpoint-up(xxxxxl) {
+              padding-right: 8.75rem;
+            }
+          }
+        }
+
+        &-link {
+
+          @include mixins.breakpoint-up(lg) {
+            min-width: 12.1875rem;
+          }
+        }
+      }
+
+      &-body {
+
+        &-start {
+          min-height: unset;
         }
       }
     }

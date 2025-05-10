@@ -56,6 +56,7 @@
     }
 
     &::after {
+      height: 100%;
 
       @include mixins.breakpoint-up(lg) {
         display: none;
@@ -91,6 +92,7 @@
     transition-timing-function: var(--transition-timing-function);
 
     @include mixins.breakpoint-up(lg) {
+      min-height: calc(2em * 1.3);
       margin-bottom: 2rem;
       padding-left: 1.5rem;
       padding-block: 0;
@@ -132,9 +134,8 @@
         display: block;
         background-color: var(--primary);
         position: absolute;
-        top: 50%;
+        top: -.25em;
         left: 0;
-        transform: translateY(-50%);
 
         transition-property: opacity;
         transition-duration: var(--transition-duration);
@@ -300,6 +301,16 @@
 
     @include mixins.breakpoint-up(lg) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  .section-title {
+
+    br {
+
+      @include mixins.breakpoint-down(xxxxl) {
+        display: none;
+      }
     }
   }
 
@@ -513,11 +524,22 @@
 
     .section-title {
 
+      @include mixins.breakpoint-up(lg) {
+        max-width: 25.875rem;
+      }
+
       &::after {
 
         @include mixins.breakpoint-up(xxl) {
           margin-left: -2.5rem;
         }
+      }
+    }
+
+    .section-subtitle {
+
+      @include mixins.breakpoint-up(lg) {
+        max-width: 16.5rem;
       }
     }
 
@@ -1011,6 +1033,13 @@
 
   &--engineering {
 
+    .section-title {
+
+      @include mixins.breakpoint-up(lg) {
+        max-width: 40rem;
+      }
+    }
+
     .service-catalog-card {
 
       &:nth-child(4) {
@@ -1247,6 +1276,18 @@
 
         .image {
           width: 100%;
+        }
+      }
+
+      &-footer {
+
+        .btn {
+
+          @include mixins.breakpoint-up(lg) {
+            --_height: 5.4375rem;
+
+            min-width: 21.25rem;
+          }
         }
       }
 
@@ -1694,6 +1735,9 @@
         .btn {
 
           @include mixins.breakpoint-up(lg) {
+            --_height: 5.4375rem;
+
+            min-width: 27.8125rem;
             flex: initial;
           }
         }

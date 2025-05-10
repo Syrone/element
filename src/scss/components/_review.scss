@@ -93,6 +93,10 @@
       margin-top: 3.5rem;
       margin-left: 2.5rem;
     }
+
+    @include mixins.breakpoint-up(xxxxl) {
+      min-width: 17.625rem;
+    }
   }
 
   &-start {
@@ -137,6 +141,7 @@
       }
 
       &-navigation {
+        background-color: var(--primary);
 
         @include mixins.breakpoint-up(lg) {
           margin-top: 6.25rem;
@@ -205,6 +210,7 @@
         }
 
         &-navigation {
+          background-color: var(--primary);
 
           @include mixins.breakpoint-up(lg) {
             display: flex;

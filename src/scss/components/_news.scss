@@ -37,6 +37,14 @@
     transition-timing-function: var(--transition-timing-function);
 
     @include mixins.breakpoint-up(lg) {
+      padding: 3rem 1.5rem;
+    }
+
+    @include mixins.breakpoint-up(xxl) {
+      padding: 3.5rem 2rem;
+    }
+
+    @include mixins.breakpoint-up(xxxxl) {
       padding: 4rem 2.5rem;
     }
 
@@ -99,6 +107,7 @@
       margin-bottom: 2.25rem;
 
       @include mixins.breakpoint-up(lg) {
+        min-height: 10rem;
         margin-bottom: 2rem;
       }
     }

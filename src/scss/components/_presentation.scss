@@ -51,6 +51,10 @@
     > * {
       opacity: 1;
 
+      &:nth-child(1) {
+        border-right: none;
+      }
+
       &:not(:nth-child(3)) {
         background-color: var(--dark-rgba-90);
       }
