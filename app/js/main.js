@@ -19479,6 +19479,7 @@ document.querySelectorAll('.blog-swiper')?.forEach(container => {
   const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperEl, {
     slidesPerView: 3,
     spaceBetween: 48,
+    allowTouchMove: false,
     pagination: {
       el: pagination,
       clickable: true,

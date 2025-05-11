@@ -192,6 +192,10 @@
       picture {
         width: 100%;
         display: block;
+
+        @include mixins.breakpoint-up(lg) {
+          height: 100%;
+        }
       }
 
       .image {
@@ -203,6 +207,7 @@
         aspect-ratio: 4/3;
 
         @include mixins.breakpoint-up(lg) {
+          height: 100%;
           aspect-ratio: initial;
         }
       }

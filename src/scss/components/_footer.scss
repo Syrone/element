@@ -25,11 +25,19 @@
       gap: 1.5rem;
     }
 
+    @include mixins.breakpoint-up(xxxxl) {
+      margin-right: -2rem;
+    }
+
     &-text {
       display: block;
 
+      @include mixins.breakpoint-up(xxxxl) {
+        max-width: initial;
+      }
+
       @include mixins.breakpoint-down(lg) {
-        max-width: 20rem;
+        max-width: 25rem;
       }
     }
   }
@@ -93,7 +101,7 @@
 
       font-family: var(--font-family);
       justify-content: flex-start;
-      gap: 1rem;
+      gap: 1.5rem;
       text-align: start;
 
       @include mixins.breakpoint-up(lg) {
@@ -103,7 +111,14 @@
 
       @include mixins.breakpoint-up(xxl) {
         --_padding: 0 2.5rem;
-        --_icon-size: 1rem;
+        --_icon-size: .9375rem;
+      }
+
+      .icon {
+
+        @include mixins.breakpoint-up(xxxxl) {
+          margin-right: -1rem;
+        }
       }
     }
   }
@@ -145,6 +160,7 @@
       --_color: inherit;
       --_padding: .5rem 0;
 
+      font-family: var(--font-family);
       justify-content: initial;
       text-align: start;
 
@@ -187,6 +203,10 @@
     display: flex;
     flex-direction: column;
 
+    @include mixins.breakpoint-up(lg) {
+      margin-bottom: 0.5rem;
+    }
+
     .btn {
       --_fw: 800;
       --_color: inherit;
@@ -199,13 +219,10 @@
       }
 
       &:last-child {
-        margin-top: 1rem;
+        --_fs: 1.25rem;
 
-        @include mixins.breakpoint-down(lg) {
-          --_fs: 1.25rem;
-
-          margin-top: 1.75rem;
-        }
+        font-family: var(--font-family);
+        margin-top: 1.75rem;
       }
     }
   }

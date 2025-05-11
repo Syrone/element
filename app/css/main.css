@@ -10024,12 +10024,22 @@ textarea {
     gap: 1.5rem;
   }
 }
+@media (min-width: 1599.98px) {
+  .footer .brand {
+    margin-right: -2rem;
+  }
+}
 .footer .brand-text {
   display: block;
 }
+@media (min-width: 1599.98px) {
+  .footer .brand-text {
+    max-width: initial;
+  }
+}
 @media (max-width: 992px) {
   .footer .brand-text {
-    max-width: 20rem;
+    max-width: 25rem;
   }
 }
 .footer .socials-list {
@@ -10101,7 +10111,7 @@ textarea {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
   text-align: start;
 }
 @media (min-width: 991.98px) {
@@ -10113,7 +10123,12 @@ textarea {
 @media (min-width: 1399.98px) {
   .footer-bottom-link {
     --_padding: 0 2.5rem;
-    --_icon-size: 1rem;
+    --_icon-size: .9375rem;
+  }
+}
+@media (min-width: 1599.98px) {
+  .footer-bottom-link .icon {
+    margin-right: -1rem;
   }
 }
 .footer-group {
@@ -10156,6 +10171,7 @@ textarea {
   --_lh: 1.4;
   --_color: inherit;
   --_padding: .5rem 0;
+  font-family: var(--font-family);
   -webkit-box-pack: initial;
   -ms-flex-pack: initial;
   justify-content: initial;
@@ -10200,6 +10216,11 @@ textarea {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+@media (min-width: 991.98px) {
+  .footer-phones {
+    margin-bottom: 0.5rem;
+  }
+}
 .footer-phones .btn {
   --_fw: 800;
   --_color: inherit;
@@ -10214,13 +10235,9 @@ textarea {
   }
 }
 .footer-phones .btn:last-child {
-  margin-top: 1rem;
-}
-@media (max-width: 992px) {
-  .footer-phones .btn:last-child {
-    --_fs: 1.25rem;
-    margin-top: 1.75rem;
-  }
+  --_fs: 1.25rem;
+  font-family: var(--font-family);
+  margin-top: 1.75rem;
 }
 
 .filter {
@@ -10710,6 +10727,11 @@ textarea {
   width: 100%;
   display: block;
 }
+@media (min-width: 991.98px) {
+  .tab-body-fullpicture picture {
+    height: 100%;
+  }
+}
 .tab-body-fullpicture .image {
   width: 100%;
   display: block;
@@ -10725,6 +10747,7 @@ textarea {
 }
 @media (min-width: 991.98px) {
   .tab-body-fullpicture .image {
+    height: 100%;
     aspect-ratio: initial;
   }
 }
@@ -10909,7 +10932,6 @@ textarea {
 
 .dropdown--header .dropdown-toggle.show {
   --_fw: 900;
-  text-transform: uppercase;
   text-shadow: unset;
 }
 .dropdown--header .dropdown-menu {
