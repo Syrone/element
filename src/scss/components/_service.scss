@@ -893,6 +893,10 @@
       @include mixins.breakpoint-up(xl) {
         font-size: .9375rem;
       }
+
+      @include mixins.breakpoint-up(xxxxxl) {
+        margin-right: -1rem;
+      }
     }
 
     &-button {

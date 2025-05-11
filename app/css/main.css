@@ -2721,6 +2721,11 @@ textarea {
     font-size: 0.9375rem;
   }
 }
+@media (min-width: 1799.98px) {
+  .service-catalog-card-title {
+    margin-right: -1rem;
+  }
+}
 .service-catalog-card-button {
   --_fs: .9375rem;
   --_fw: 800;
@@ -4541,13 +4546,8 @@ textarea {
   flex: initial;
 }
 @media (min-width: 1799.98px) {
-  .perform--modeling .tab-nav-item:first-child {
+  .perform--modeling .tab-nav-item:not(:last-child) {
     padding-right: 8.75rem;
-  }
-}
-@media (min-width: 991.98px) {
-  .perform--modeling .tab-nav-link {
-    min-width: 12.1875rem;
   }
 }
 .perform--modeling .tab-body-start {
@@ -8958,6 +8958,7 @@ textarea {
     width: 100%;
     max-width: initial;
     grid-column: initial;
+    align-self: flex-start;
     background-color: var(--light-200);
     margin-block: -6.375rem 8.75rem;
     padding: 6.375rem 1.5rem 2.5rem;
@@ -10552,7 +10553,6 @@ textarea {
   --_fs: .9375rem;
   --_border-width: 2px;
   --_padding: .5rem 0;
-  min-width: 12.5rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -10566,11 +10566,6 @@ textarea {
   text-align: start;
   -webkit-transition-property: color, border, text-shadow;
   transition-property: color, border, text-shadow;
-}
-@media (min-width: 991.98px) {
-  .tab-nav-link {
-    min-width: 12.6875rem;
-  }
 }
 .tab-nav-link.active {
   --_fw: 900;

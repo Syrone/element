@@ -38,7 +38,6 @@
       --_border-width: 2px;
       --_padding: .5rem 0;
 
-      min-width: 12.5rem;
       flex: 1;
       justify-content: flex-start;
       font-family: var(--font-family);
@@ -47,10 +46,6 @@
       border-inline: none;
       text-align: start;
       transition-property: color, border, text-shadow;
-
-      @include mixins.breakpoint-up(lg) {
-        min-width: 12.6875rem;
-      }
 
       &.active {
         --_fw: 900;
