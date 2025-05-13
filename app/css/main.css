@@ -1734,6 +1734,9 @@ textarea {
 }
 @media (min-width: 991.98px) {
   .fromto-to .fromto-text {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     bottom: 0;
     right: auto;
     text-align: start;
@@ -5828,6 +5831,7 @@ textarea {
 }
 @media (min-width: 991.98px) {
   .presentation .section-header {
+    margin-right: 1rem;
     margin-bottom: 6.25rem;
   }
 }

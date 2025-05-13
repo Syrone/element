@@ -133,6 +133,7 @@
       text-align: end;
 
       @include mixins.breakpoint-up(lg) {
+        justify-content: flex-end;
         bottom: 0;
         right: auto;
         text-align: start;

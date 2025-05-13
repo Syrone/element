@@ -80,6 +80,7 @@
     margin-bottom: 3rem;
 
     @include mixins.breakpoint-up(lg) {
+      margin-right: 1rem;
       margin-bottom: 6.25rem;
     }
   }
