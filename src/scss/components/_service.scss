@@ -106,25 +106,6 @@
       padding-left: 2.5rem;
     }
 
-    > span {
-      display: block;
-      transition-property: transform;
-      transition-duration: var(--transition-duration);
-      transition-timing-function: var(--transition-timing-function);
-
-      .service-item.is-active > & {
-
-        @include mixins.breakpoint-up(xl) {
-          width: 80%;
-          transform: scale(1.25);
-        }
-
-        @include mixins.breakpoint-up(xxl) {
-          transform: scale(1.33333) translateX(1.625em);
-        }
-      }
-    }
-
     &::before {
 
       @include mixins.breakpoint-up(lg) {

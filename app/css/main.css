@@ -1883,32 +1883,6 @@ textarea {
     padding-left: 2.5rem;
   }
 }
-.service-title > span {
-  display: block;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: var(--transition-duration);
-  transition-duration: var(--transition-duration);
-  -webkit-transition-timing-function: var(--transition-timing-function);
-  transition-timing-function: var(--transition-timing-function);
-}
-@media (min-width: 1199.98px) {
-  .service-item.is-active > .service-title > span {
-    width: 80%;
-    -webkit-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    transform: scale(1.25);
-  }
-}
-@media (min-width: 1399.98px) {
-  .service-item.is-active > .service-title > span {
-    -webkit-transform: scale(1.33333) translateX(1.625em);
-    -ms-transform: scale(1.33333) translateX(1.625em);
-    transform: scale(1.33333) translateX(1.625em);
-  }
-}
 @media (min-width: 991.98px) {
   .service-title::before {
     content: "";
